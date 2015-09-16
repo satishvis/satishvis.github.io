@@ -1,0 +1,45 @@
+a {
+    color: #8C0000;
+}
+a:focus,
+a:hover {
+    color: #400010;
+    text-decoration: none;
+}
+#menu-toggle {
+    background-color: #E1D6C2;
+    border: 1px solid #802F27;
+}
+.jumbotron {
+    background-color: #E1D6C2;
+    border: 1px solid #802F27;
+}
+
+
+#table-of-contents {
+    padding-right: 3px;
+    float: left;
+    margin-right:15px;
+    
+    border: 1px solid #802F27;
+}
+
+p.topic-title {
+    text-align: center;
+    text-decoration: underline
+}
+
+.simple {
+    padding-left: 5 px;
+}
+img.align-center {
+    margin: auto;
+    margin-right: 10px;
+    max-width: 800px;
+}
+
+@media screen and (max-width: 875px) {
+    .jumbotron > h1 {
+        font-size: 32px;
+    }
+}

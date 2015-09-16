@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>TechBlog - SV</title><link href="http://satishvis.github.io/" rel="alternate"></link><link href="http://satishvis.github.io/feeds/thoughts.atom.xml" rel="self"></link><id>http://satishvis.github.io/</id><updated>2015-09-16T10:24:00+05:30</updated><entry><title>My Start</title><link href="http://satishvis.github.io/posts/2015/09/my-start/" rel="alternate"></link><updated>2015-09-16T10:24:00+05:30</updated><author><name>Satish Viswanathan</name></author><id>tag:satishvis.github.io,2015-09-16:posts/2015/09/my-start/</id><summary type="html">&lt;p&gt;My first post.&lt;/p&gt;
+</summary><category term="python"></category><category term="pelican"></category></entry></feed>
