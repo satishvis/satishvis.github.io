@@ -6,9 +6,22 @@ a:hover {
     color: #400010;
     text-decoration: none;
 }
+ul.sidebar_submenu 
+li.active {
+    background: #323232 none repeat scroll 0% 0%;
+    border-width: 5px;
+    border-style: none none none solid;
+    border-color: -moz-use-text-color -moz-use-text-color -moz-use-text-color #802F27;
+    -moz-border-top-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    border-image: none;
+    text-indent: 35px;
+}
 #menu-toggle {
-    background-color: #E1D6C2;
-    border: 1px solid #802F27;
+    background-color: #802F27;
+    border: 1px solid #000000;
 }
 .jumbotron {
     background-color: #E1D6C2;
@@ -36,6 +49,14 @@ img.align-center {
     margin: auto;
     margin-right: 10px;
     max-width: 800px;
+}
+
+.categorybadge {
+    text-indent: 0px;
+    position: relative;
+    top: 11px;
+    right: 11px;
+    background-color: #802F27;
 }
 
 @media screen and (max-width: 875px) {
