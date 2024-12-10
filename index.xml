@@ -1,0 +1,29 @@
+<?xml-stylesheet href="/rss.xsl" type="text/xsl"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Satish Iyer&#39;s Tech Blog</title>
+    <link>https://satishvis.github.io/</link>
+    <description>Recent content on Satish Iyer&#39;s Tech Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 10 Dec 2024 11:41:45 +0530</lastBuildDate>
+    
+        <atom:link href="https://satishvis.github.io/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    
+        <item>
+        <title>My First Post</title>
+        <link>https://satishvis.github.io/posts/my-first-post/</link>
+        <pubDate>Tue, 10 Dec 2024 11:41:45 +0530</pubDate>
+        
+        <guid>https://satishvis.github.io/posts/my-first-post/</guid>
+        <description>Satish Iyer&#39;s Tech Blog https://satishvis.github.io/posts/my-first-post/ -&lt;h2 id=&#34;introduction&#34;&gt;Introduction&lt;/h2&gt;
+&lt;p&gt;This is &lt;strong&gt;bold&lt;/strong&gt; text, and this is &lt;em&gt;italics&lt;/em&gt; text and this is &lt;code&gt;code&lt;/code&gt; text.This is *emphasised&amp;quot; text.&lt;/p&gt;
+&lt;p&gt;Visit the &lt;a href=&#34;https://gohugo.io/&#34;&gt;Hugo&lt;/a&gt; website for more information.&lt;/p&gt;
+- https://satishvis.github.io/posts/my-first-post/ - </description>
+        </item>
+    
+    
+  </channel>
+</rss> 
