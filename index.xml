@@ -6,9 +6,23 @@
     <description>Recent content on Satish Iyer&#39;s Tech Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 10 Dec 2024 19:48:25 +0530</lastBuildDate>
+    <lastBuildDate>Tue, 10 Dec 2024 22:18:01 +0530</lastBuildDate>
     
         <atom:link href="https://satishvis.github.io/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    
+        <item>
+        <title>Start Zsh Without any Overheads</title>
+        <link>https://satishvis.github.io/posts/startzshwooverheads/</link>
+        <pubDate>Tue, 10 Dec 2024 22:18:01 +0530</pubDate>
+        
+        <guid>https://satishvis.github.io/posts/startzshwooverheads/</guid>
+        <description>Satish Iyer&#39;s Tech Blog https://satishvis.github.io/posts/startzshwooverheads/ -&lt;h1 id=&#34;to-start-zsh-without-overheads&#34;&gt;To start Zsh without overheads.&lt;/h1&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;zsh -d -f ;
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;-f is local rc and -d is global rcs&lt;/p&gt;
+- https://satishvis.github.io/posts/startzshwooverheads/ - </description>
+        </item>
     
     
     

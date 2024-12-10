@@ -6,8 +6,15 @@
     <description>Recent content in Posts on Satish Iyer&#39;s Tech Blog</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 10 Dec 2024 19:48:25 +0530</lastBuildDate>
+    <lastBuildDate>Tue, 10 Dec 2024 22:18:01 +0530</lastBuildDate>
     <atom:link href="https://satishvis.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Start Zsh Without any Overheads</title>
+      <link>https://satishvis.github.io/posts/startzshwooverheads/</link>
+      <pubDate>Tue, 10 Dec 2024 22:18:01 +0530</pubDate>
+      <guid>https://satishvis.github.io/posts/startzshwooverheads/</guid>
+      <description>&lt;h1 id=&#34;to-start-zsh-without-overheads&#34;&gt;To start Zsh without overheads.&lt;/h1&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;zsh -d -f ;&#xA;&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;-f is local rc and -d is global rcs&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Arch Update Gets Locked</title>
       <link>https://satishvis.github.io/posts/archupdatelock/</link>
