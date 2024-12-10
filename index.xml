@@ -6,9 +6,22 @@
     <description>Recent content on Satish Iyer&#39;s Tech Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 10 Dec 2024 11:41:45 +0530</lastBuildDate>
+    <lastBuildDate>Tue, 10 Dec 2024 14:42:55 +0530</lastBuildDate>
     
         <atom:link href="https://satishvis.github.io/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    
+        <item>
+        <title>Test Post</title>
+        <link>https://satishvis.github.io/posts/testpost/</link>
+        <pubDate>Tue, 10 Dec 2024 14:42:55 +0530</pubDate>
+        
+        <guid>https://satishvis.github.io/posts/testpost/</guid>
+        <description>Satish Iyer&#39;s Tech Blog https://satishvis.github.io/posts/testpost/ -&lt;h1 id=&#34;this-is-a-test-post&#34;&gt;This is a test post&lt;/h1&gt;
+&lt;p&gt;Check if the github pages gets updated.&lt;/p&gt;
+- https://satishvis.github.io/posts/testpost/ - </description>
+        </item>
     
     
     
