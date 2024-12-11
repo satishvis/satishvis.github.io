@@ -2,10 +2,25 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on Satish Iyer&#39;s Tech Blog</title>
-    <link>http://localhost:1313/tags/</link>
+    <link>https://satishvis.github.io/tags/</link>
     <description>Recent content in Tags on Satish Iyer&#39;s Tech Blog</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <atom:link href="http://localhost:1313/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 11 Dec 2024 10:18:35 +0530</lastBuildDate>
+    <atom:link href="https://satishvis.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Tag1</title>
+      <link>https://satishvis.github.io/tags/tag1/</link>
+      <pubDate>Wed, 11 Dec 2024 10:18:35 +0530</pubDate>
+      <guid>https://satishvis.github.io/tags/tag1/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Tag2</title>
+      <link>https://satishvis.github.io/tags/tag2/</link>
+      <pubDate>Wed, 11 Dec 2024 10:18:35 +0530</pubDate>
+      <guid>https://satishvis.github.io/tags/tag2/</guid>
+      <description></description>
+    </item>
   </channel>
 </rss>

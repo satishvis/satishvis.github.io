@@ -2,10 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Categories on Satish Iyer&#39;s Tech Blog</title>
-    <link>http://localhost:1313/categories/</link>
+    <link>https://satishvis.github.io/categories/</link>
     <description>Recent content in Categories on Satish Iyer&#39;s Tech Blog</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <atom:link href="http://localhost:1313/categories/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 11 Dec 2024 10:18:35 +0530</lastBuildDate>
+    <atom:link href="https://satishvis.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Category1</title>
+      <link>https://satishvis.github.io/categories/category1/</link>
+      <pubDate>Wed, 11 Dec 2024 10:18:35 +0530</pubDate>
+      <guid>https://satishvis.github.io/categories/category1/</guid>
+      <description></description>
+    </item>
   </channel>
 </rss>
