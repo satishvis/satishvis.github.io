@@ -6,8 +6,15 @@
     <description>Recent content on Satish Iyer&#39;s Tech Blog</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 11 Dec 2024 10:18:35 +0530</lastBuildDate>
+    <lastBuildDate>Wed, 11 Dec 2024 11:25:50 +0530</lastBuildDate>
     <atom:link href="https://satishvis.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Checking the Dream Theme</title>
+      <link>https://satishvis.github.io/posts/checking-the-dream-theme/</link>
+      <pubDate>Wed, 11 Dec 2024 11:25:50 +0530</pubDate>
+      <guid>https://satishvis.github.io/posts/checking-the-dream-theme/</guid>
+      <description>&lt;p&gt;Cut out summary from your post content here.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Make Aliases for Hugo Posts Pages and Github Push</title>
       <link>https://satishvis.github.io/posts/make-aliases-for-hugo-posts-pages-and-github-push/</link>
@@ -20,7 +27,7 @@
       <link>https://satishvis.github.io/posts/startzshwooverheads/</link>
       <pubDate>Tue, 10 Dec 2024 22:18:01 +0530</pubDate>
       <guid>https://satishvis.github.io/posts/startzshwooverheads/</guid>
-      <description>&lt;h1 id=&#34;to-start-zsh-without-overheads&#34;&gt;To start Zsh without overheads.&lt;/h1&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;zsh -d -f ;&#xA;&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;-f is local rc and -d is global rcs&lt;/p&gt;</description>
+      <description>&lt;h1 id=&#34;to-start-zsh-without-overheads&#34;&gt;To start Zsh without overheads.&lt;/h1&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;zsh -d -f ;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Explaination:&#xA;-f is local rc and -d is global rcs&lt;/p&gt;</description>
     </item>
     <item>
       <title>Arch Update Gets Locked</title>
@@ -34,7 +41,7 @@
       <link>https://satishvis.github.io/posts/githubsetup/</link>
       <pubDate>Tue, 10 Dec 2024 16:42:10 +0530</pubDate>
       <guid>https://satishvis.github.io/posts/githubsetup/</guid>
-      <description>&lt;p&gt;Go to the .git repository and change the url from https:// to&#xA;ssh://git@github.com:xxx/&lt;!-- raw HTML omitted --&gt;&#xA;Need to remember that the bitbucket also accepts this:&#xA;&lt;a href=&#34;mailto:git@bitbucket.org&#34;&gt;git@bitbucket.org&lt;/a&gt;:&amp;lt;repo_owner&amp;gt;/&lt;!-- raw HTML omitted --&gt;.git&lt;/p&gt;&#xA;&lt;p&gt;Now one is ready to test it in any repository Good to go&lt;/p&gt;&#xA;&lt;p&gt;The following to be done before&lt;/p&gt;</description>
+      <description>&lt;p&gt;Go to the .git repository and change the url from https:// to&#xA;ssh://git@github.com:xxx/&lt;!-- raw HTML omitted --&gt;&#xA;Need to remember that the bitbucket also accepts this:&lt;/p&gt;&#xA;&lt;p&gt;&lt;a href=&#34;mailto:git@bitbucket.org&#34;&gt;git@bitbucket.org&lt;/a&gt;:&amp;lt;repo_owner&amp;gt;/&lt;!-- raw HTML omitted --&gt;.git&lt;/p&gt;&#xA;&lt;p&gt;Now one is ready to test it in any repository Good to go&lt;/p&gt;&#xA;&lt;p&gt;The following to be done before&lt;/p&gt;</description>
     </item>
     <item>
       <title>Jrnl - Manage your notes and journal entries from Command line</title>

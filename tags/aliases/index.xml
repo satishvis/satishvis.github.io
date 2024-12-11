@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Aliases on Satish Iyer&#39;s Tech Blog</title>
+    <link>https://satishvis.github.io/tags/aliases/</link>
+    <description>Recent content in Aliases on Satish Iyer&#39;s Tech Blog</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 11 Dec 2024 10:18:35 +0530</lastBuildDate>
+    <atom:link href="https://satishvis.github.io/tags/aliases/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Make Aliases for Hugo Posts Pages and Github Push</title>
+      <link>https://satishvis.github.io/posts/make-aliases-for-hugo-posts-pages-and-github-push/</link>
+      <pubDate>Wed, 11 Dec 2024 10:18:35 +0530</pubDate>
+      <guid>https://satishvis.github.io/posts/make-aliases-for-hugo-posts-pages-and-github-push/</guid>
+      <description>&lt;p&gt;Certain aliases to make our hugo posts, pages and github push easier&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Start Zsh Without any Overheads</title>
+      <link>https://satishvis.github.io/posts/startzshwooverheads/</link>
+      <pubDate>Tue, 10 Dec 2024 22:18:01 +0530</pubDate>
+      <guid>https://satishvis.github.io/posts/startzshwooverheads/</guid>
+      <description>&lt;h1 id=&#34;to-start-zsh-without-overheads&#34;&gt;To start Zsh without overheads.&lt;/h1&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;zsh -d -f ;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Explaination:&#xA;-f is local rc and -d is global rcs&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

@@ -2,40 +2,52 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://satishvis.github.io/tags/arch-package/</loc>
+    <lastmod>2024-12-11T11:25:50+05:30</lastmod>
+  </url><url>
     <loc>https://satishvis.github.io/categories/</loc>
+    <lastmod>2024-12-11T11:25:50+05:30</lastmod>
+  </url><url>
+    <loc>https://satishvis.github.io/posts/checking-the-dream-theme/</loc>
+    <lastmod>2024-12-11T11:25:50+05:30</lastmod>
+  </url><url>
+    <loc>https://satishvis.github.io/categories/hugo/</loc>
+    <lastmod>2024-12-11T11:25:50+05:30</lastmod>
+  </url><url>
+    <loc>https://satishvis.github.io/posts/</loc>
+    <lastmod>2024-12-11T11:25:50+05:30</lastmod>
+  </url><url>
+    <loc>https://satishvis.github.io/</loc>
+    <lastmod>2024-12-11T11:25:50+05:30</lastmod>
+  </url><url>
+    <loc>https://satishvis.github.io/tags/</loc>
+    <lastmod>2024-12-11T11:25:50+05:30</lastmod>
+  </url><url>
+    <loc>https://satishvis.github.io/tags/aliases/</loc>
     <lastmod>2024-12-11T10:18:35+05:30</lastmod>
   </url><url>
-    <loc>https://satishvis.github.io/categories/category1/</loc>
+    <loc>https://satishvis.github.io/tags/bash/</loc>
     <lastmod>2024-12-11T10:18:35+05:30</lastmod>
   </url><url>
     <loc>https://satishvis.github.io/posts/make-aliases-for-hugo-posts-pages-and-github-push/</loc>
     <lastmod>2024-12-11T10:18:35+05:30</lastmod>
   </url><url>
-    <loc>https://satishvis.github.io/posts/</loc>
+    <loc>https://satishvis.github.io/tags/shell/</loc>
     <lastmod>2024-12-11T10:18:35+05:30</lastmod>
   </url><url>
-    <loc>https://satishvis.github.io/</loc>
-    <lastmod>2024-12-11T10:18:35+05:30</lastmod>
-  </url><url>
-    <loc>https://satishvis.github.io/tags/tag1/</loc>
-    <lastmod>2024-12-11T10:18:35+05:30</lastmod>
-  </url><url>
-    <loc>https://satishvis.github.io/tags/tag2/</loc>
-    <lastmod>2024-12-11T10:18:35+05:30</lastmod>
-  </url><url>
-    <loc>https://satishvis.github.io/tags/</loc>
+    <loc>https://satishvis.github.io/tags/zsh/</loc>
     <lastmod>2024-12-11T10:18:35+05:30</lastmod>
   </url><url>
     <loc>https://satishvis.github.io/posts/startzshwooverheads/</loc>
-    <lastmod>2024-12-10T22:18:01+05:30</lastmod>
+    <lastmod>2024-12-11T10:18:35+05:30</lastmod>
   </url><url>
     <loc>https://satishvis.github.io/posts/archupdatelock/</loc>
     <lastmod>2024-12-10T19:48:25+05:30</lastmod>
   </url><url>
     <loc>https://satishvis.github.io/posts/githubsetup/</loc>
-    <lastmod>2024-12-10T16:42:10+05:30</lastmod>
+    <lastmod>2024-12-11T11:25:50+05:30</lastmod>
   </url><url>
     <loc>https://satishvis.github.io/posts/jrnl/</loc>
-    <lastmod>2024-12-10T16:37:07+05:30</lastmod>
+    <lastmod>2024-12-11T11:25:50+05:30</lastmod>
   </url>
 </urlset>
