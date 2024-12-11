@@ -1,187 +1,40 @@
-<?xml-stylesheet href="/rss.xsl" type="text/xsl"?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Satish Iyer&#39;s Tech Blog</title>
     <link>https://satishvis.github.io/</link>
     <description>Recent content on Satish Iyer&#39;s Tech Blog</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Tue, 10 Dec 2024 22:18:01 +0530</lastBuildDate>
-    
-        <atom:link href="https://satishvis.github.io/index.xml" rel="self" type="application/rss+xml" />
-    
-    
-    
-        <item>
-        <title>Start Zsh Without any Overheads</title>
-        <link>https://satishvis.github.io/posts/startzshwooverheads/</link>
-        <pubDate>Tue, 10 Dec 2024 22:18:01 +0530</pubDate>
-        
-        <guid>https://satishvis.github.io/posts/startzshwooverheads/</guid>
-        <description>Satish Iyer&#39;s Tech Blog https://satishvis.github.io/posts/startzshwooverheads/ -&lt;h1 id=&#34;to-start-zsh-without-overheads&#34;&gt;To start Zsh without overheads.&lt;/h1&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;zsh -d -f ;
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;-f is local rc and -d is global rcs&lt;/p&gt;
-- https://satishvis.github.io/posts/startzshwooverheads/ - </description>
-        </item>
-    
-    
-    
-        <item>
-        <title>Arch Update Gets Locked</title>
-        <link>https://satishvis.github.io/posts/archupdatelock/</link>
-        <pubDate>Tue, 10 Dec 2024 19:48:25 +0530</pubDate>
-        
-        <guid>https://satishvis.github.io/posts/archupdatelock/</guid>
-        <description>Satish Iyer&#39;s Tech Blog https://satishvis.github.io/posts/archupdatelock/ -&lt;h1 id=&#34;if-your-arch-package-manager-gets-locked&#34;&gt;If your Arch Package manager gets locked&lt;/h1&gt;
-&lt;p&gt;Sometimes the @arch linux package gets locked so we need to unlock it using `sudo rm /var/lib/pacman/db.lck``&lt;/p&gt;
-- https://satishvis.github.io/posts/archupdatelock/ - </description>
-        </item>
-    
-    
-    
-        <item>
-        <title>Github and Bitbucket setup</title>
-        <link>https://satishvis.github.io/posts/githubsetup/</link>
-        <pubDate>Tue, 10 Dec 2024 16:42:10 +0530</pubDate>
-        
-        <guid>https://satishvis.github.io/posts/githubsetup/</guid>
-        <description>Satish Iyer&#39;s Tech Blog https://satishvis.github.io/posts/githubsetup/ -&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&amp;gt; eval &lt;span style=&#34;color:#e6db74&#34;&gt;`&lt;/span&gt;ssh-agent -s&lt;span style=&#34;color:#e6db74&#34;&gt;`&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;$&amp;gt; ssh-keygen -t rsa -C &amp;lt;usename/email&amp;gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;$&amp;gt; pbcopy id_rsa_bitbucket.pub &lt;span style=&#34;color:#75715e&#34;&gt;# Use xsel or xclip in linux&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;----&amp;gt; go to Bitbucket and add this.
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;$&amp;gt; ssh-add -D  ---&amp;gt; only &lt;span style=&#34;color:#66d9ef&#34;&gt;if&lt;/span&gt; you want to delete previous entries
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;$&amp;gt; ssh-add id_rsa_bitbucket
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;$&amp;gt; ssh -T bb
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;$&amp;gt; vim config ---&amp;gt; to write the config
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;The config file should look like this:&lt;/p&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;#Bitbucket (work)
-  Host bb
-  HostName bitbucket.org
-  User git
-  IdentityFile ~/.ssh/id_rsa_bitbucket
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Go to the .git repository and change the url from https:// to
-ssh://git@github.com:xxx/&lt;!-- raw HTML omitted --&gt;
-Need to remember that the bitbucket also accepts this:
-&lt;a href=&#34;mailto:git@bitbucket.org&#34;&gt;git@bitbucket.org&lt;/a&gt;:&amp;lt;repo_owner&amp;gt;/&lt;!-- raw HTML omitted --&gt;.git&lt;/p&gt;
-&lt;p&gt;Now one is ready to test it in any repository Good to go&lt;/p&gt;
-- https://satishvis.github.io/posts/githubsetup/ - </description>
-        </item>
-    
-    
-    
-        <item>
-        <title>Jrnl - Manage your notes and journal entries from Command line</title>
-        <link>https://satishvis.github.io/posts/jrnl/</link>
-        <pubDate>Tue, 10 Dec 2024 16:37:07 +0530</pubDate>
-        
-        <guid>https://satishvis.github.io/posts/jrnl/</guid>
-        <description>Satish Iyer&#39;s Tech Blog https://satishvis.github.io/posts/jrnl/ -&lt;p&gt;Making alias for @jrnl - j in my zsh.
-Earlier it was aliased to &amp;lsquo;jobs-l&amp;rsquo;.
-Basic Usage
-jrnl has two modes: composing and viewing. Basically, whenever you don&amp;rsquo;t supply any arguments that start with a dash or double-dash, you&amp;rsquo;re in composing mode, meaning you can write your entry on the command line or an editor of your choice.&lt;/p&gt;
-&lt;p&gt;We intentionally break a convention on command line arguments: all arguments starting with a single dash will filter your journal before viewing it, and can be combined arbitrarily. Arguments with a double dash will control how your journal is displayed or exported and are mutually exclusive (ie. you can only specify one way to display or export your journal at a time).&lt;/p&gt;
-&lt;p&gt;Listing Journals
-You can list the journals accessible by jrnl&lt;/p&gt;
-&lt;p&gt;jrnl -ls
-The journals displayed correspond to those specified in the jrnl configuration file.&lt;/p&gt;
-&lt;p&gt;Composing Entries
-Composing mode is entered by either starting jrnl without any arguments – which will prompt you to write an entry or launch your editor – or by just writing an entry on the prompt, such as&lt;/p&gt;
-&lt;p&gt;jrnl today at 3am: I just met Steve Buscemi in a bar! He looked funny.
-Note&lt;/p&gt;
-&lt;p&gt;Most shell contains a certain number of reserved characters, such as # and *. Unbalanced quotes, parenthesis, and so on will also get into the way of your editing. For writing longer entries, just enter jrnl and hit return. Only then enter the text of your journal entry. Alternatively, use an external editor &lt;!-- raw HTML omitted --&gt;).&lt;/p&gt;
-&lt;p&gt;You can also import an entry directly from a file&lt;/p&gt;
-&lt;p&gt;jrnl &amp;lt; my_entry.txt
-Smart timestamps
-Timestamps that work:&lt;/p&gt;
-&lt;p&gt;at 6am
-yesterday
-last monday
-sunday at noon
-2 march 2012
-7 apr
-5/20/1998 at 23:42
-Starring entries
-To mark an entry as a favourite, simply &amp;ldquo;star&amp;rdquo; it&lt;/p&gt;
-&lt;p&gt;jrnl last sunday *: Best day of my life.
-If you don&amp;rsquo;t want to add a date (ie. your entry will be dated as now), The following options are equivalent:&lt;/p&gt;
-&lt;p&gt;jrnl *: Best day of my life.
-jrnl &lt;em&gt;Best day of my life.
-jrnl Best day of my life.&lt;/em&gt;
-Note&lt;/p&gt;
-&lt;p&gt;Just make sure that the asterisk sign is not surrounded by whitespaces, e.g. jrnl Best day of my life! * will not work (the reason being that the * sign has a special meaning on most shells).&lt;/p&gt;
-&lt;p&gt;Viewing
-jrnl -n 10
-will list you the ten latest entries (if you&amp;rsquo;re lazy, jrnl -10 will do the same),&lt;/p&gt;
-&lt;p&gt;jrnl -from &amp;ldquo;last year&amp;rdquo; -until march
-everything that happened from the start of last year to the start of last march. To only see your favourite entries, use&lt;/p&gt;
-&lt;p&gt;jrnl -starred
-Using Tags
-Keep track of people, projects or locations, by tagging them with an @ in your entries&lt;/p&gt;
-&lt;p&gt;jrnl Had a wonderful day on the @beach with @Tom and @Anna.
-You can filter your journal entries just like this:&lt;/p&gt;
-&lt;p&gt;jrnl @pinkie @WorldDomination
-Will print all entries in which either @pinkie or @WorldDomination occurred.&lt;/p&gt;
-&lt;p&gt;jrnl -n 5 -and @pineapple @lubricant
-the last five entries containing both @pineapple and @lubricant. You can change which symbols you&amp;rsquo;d like to use for tagging in the configuration.&lt;/p&gt;
-&lt;p&gt;Note&lt;/p&gt;
-&lt;p&gt;jrnl @pinkie @WorldDomination will switch to viewing mode because although no command line arguments are given, all the input strings look like tags - jrnl will assume you want to filter by tag.&lt;/p&gt;
-&lt;p&gt;Editing older entries
-You can edit selected entries after you wrote them. This is particularly useful when your journal file is encrypted. To use this feature, you need to have an editor configured in your journal configuration file (see advanced usage &lt;!-- raw HTML omitted --&gt;)&lt;/p&gt;
-&lt;p&gt;jrnl -until 1950 @texas -and @history &amp;ndash;edit
-Will open your editor with all entries tagged with @texas and @history before 1950. You can make any changes to them you want; after you save the file and close the editor, your journal will be updated.&lt;/p&gt;
-&lt;p&gt;Of course, if you are using multiple journals, you can also edit e.g. the latest entry of your work journal with jrnl work -n 1 &amp;ndash;edit. In any case, this will bring up your editor and save (and, if applicable, encrypt) your edited journal after you save and exit the editor.&lt;/p&gt;
-&lt;p&gt;You can also use this feature for deleting entries from your journal&lt;/p&gt;
-&lt;p&gt;jrnl @girlfriend -until &amp;lsquo;june 2012&amp;rsquo; &amp;ndash;edit
-Just select all text, press delete, and everything is gone&amp;hellip;&lt;/p&gt;
-&lt;p&gt;Advanced Usage
-Configuration File
-You can configure the way jrnl behaves in a configuration file. By default, this is ~/.config/jrnl/jrnl.yaml. If you have the XDG_CONFIG_HOME variable set, the configuration file will be saved as $XDG_CONFIG_HOME/jrnl/jrnl.yaml.&lt;/p&gt;
-&lt;p&gt;Note&lt;/p&gt;
-&lt;p&gt;On Windows, the configuration file is typically found at %USERPROFILE%.config\jrnl\jrnl.yaml.&lt;/p&gt;
-&lt;p&gt;The configuration file is a YAML file with the following options and can be edited with a plain text editor.&lt;/p&gt;
-&lt;p&gt;Note&lt;/p&gt;
-&lt;p&gt;Backup your config file before editing. Changes to the config file have destructive effects on your journal!&lt;/p&gt;
-&lt;p&gt;journals paths to your journal files
-editor if set, executes this command to launch an external editor for writing your entries, e.g. vim. Some editors require special options to work properly, see FAQ &lt;!-- raw HTML omitted --&gt; for details.
-encrypt if true, encrypts your journal using AES.
-tagsymbols Symbols to be interpreted as tags. (See note below)
-default_hour and default_minute if you supply a date, such as last thursday, but no specific time, the entry will be created at this time
-timeformat how to format the timestamps in your journal, see the python docs for reference
-highlight if true, tags will be highlighted in cyan.
-linewrap controls the width of the output. Set to false if you don&amp;rsquo;t want to wrap long lines.
-Note&lt;/p&gt;
-&lt;p&gt;Although it seems intuitive to use the # character for tags, there&amp;rsquo;s a drawback: on most shells, this is interpreted as a meta-character starting a comment. This means that if you type&lt;/p&gt;
-&lt;p&gt;jrnl Implemented endless scrolling on the #frontend of our website.&lt;/p&gt;
-&lt;p&gt;your bash will chop off everything after the # before passing it to jrnl. To avoid this, wrap your input into quotation marks like this:&lt;/p&gt;
-&lt;p&gt;jrnl &amp;ldquo;Implemented endless scrolling on the #frontend of our website.&amp;rdquo;&lt;/p&gt;
-&lt;p&gt;Or use the built-in prompt or an external editor to compose your entries.&lt;/p&gt;
-&lt;p&gt;Multiple journal files
-You can configure jrnlto use with multiple journals (eg. private and work) by defining more journals in your jrnl.yaml, for example:&lt;/p&gt;
-&lt;p&gt;journals:
-default: ~\journal.txt
-work: ~\work.txt
-The default journal gets created the first time you start jrnl Now you can access the work journal by using jrnl work instead of jrnl, eg.&lt;/p&gt;
-&lt;p&gt;jrnl work at 10am: Meeting with @Steve
-jrnl work -n 3
-will both use ~/work.txt, while jrnl -n 3 will display the last three entries from ~/journal.txt (and so does jrnl default -n 3).&lt;/p&gt;
-&lt;p&gt;You can also override the default options for each individual journal. If your jrnl.yaml looks like this:&lt;/p&gt;
-&lt;p&gt;encrypt: false
-journals:
-default: ~/journal.txt
-work:
-journal: ~/work.txt
-encrypt: true
-food: ~/my_recipes.txt
-Your default and your food journals won&amp;rsquo;t be encrypted, however your work journal will! You can override all options that are present at the top level of jrnl.yaml, just make sure that at the very least you specify a journal: &amp;hellip; key that points to the journal file of that journal.&lt;/p&gt;
-&lt;p&gt;Note&lt;/p&gt;
-&lt;p&gt;Changing encrypt to a different value will not encrypt or decrypt your journal file, it merely says whether or not your journal is encrypted. Hence manually changing this option will most likely result in your journal file being impossible to load.&lt;/p&gt;
-&lt;p&gt;Known Issues
-Unicode on Windows
-The Windows shell prior to Windows 7 has issues with unicode encoding. To use non-ascii characters, first tweak Python to recognize the encoding by adding &amp;lsquo;cp65001&amp;rsquo;: &amp;lsquo;utf_8&amp;rsquo;, to Lib/encoding/aliases.py. Then, change the codepage with chcp 1252 before using jrnl.&lt;/p&gt;
-- https://satishvis.github.io/posts/jrnl/ - </description>
-        </item>
-    
-    
+    <atom:link href="https://satishvis.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Start Zsh Without any Overheads</title>
+      <link>https://satishvis.github.io/posts/startzshwooverheads/</link>
+      <pubDate>Tue, 10 Dec 2024 22:18:01 +0530</pubDate>
+      <guid>https://satishvis.github.io/posts/startzshwooverheads/</guid>
+      <description>&lt;h1 id=&#34;to-start-zsh-without-overheads&#34;&gt;To start Zsh without overheads.&lt;/h1&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;zsh -d -f ;&#xA;&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;-f is local rc and -d is global rcs&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Arch Update Gets Locked</title>
+      <link>https://satishvis.github.io/posts/archupdatelock/</link>
+      <pubDate>Tue, 10 Dec 2024 19:48:25 +0530</pubDate>
+      <guid>https://satishvis.github.io/posts/archupdatelock/</guid>
+      <description>&lt;h1 id=&#34;if-your-arch-package-manager-gets-locked&#34;&gt;If your Arch Package manager gets locked&lt;/h1&gt;&#xA;&lt;p&gt;Sometimes the @arch linux package gets locked so we need to unlock it using `sudo rm /var/lib/pacman/db.lck``&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Github and Bitbucket setup</title>
+      <link>https://satishvis.github.io/posts/githubsetup/</link>
+      <pubDate>Tue, 10 Dec 2024 16:42:10 +0530</pubDate>
+      <guid>https://satishvis.github.io/posts/githubsetup/</guid>
+      <description>&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&amp;gt; eval &lt;span style=&#34;color:#e6db74&#34;&gt;`&lt;/span&gt;ssh-agent -s&lt;span style=&#34;color:#e6db74&#34;&gt;`&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;$&amp;gt; ssh-keygen -t rsa -C &amp;lt;usename/email&amp;gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;$&amp;gt; pbcopy id_rsa_bitbucket.pub &lt;span style=&#34;color:#75715e&#34;&gt;# Use xsel or xclip in linux&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;----&amp;gt; go to Bitbucket and add this.&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;$&amp;gt; ssh-add -D  ---&amp;gt; only &lt;span style=&#34;color:#66d9ef&#34;&gt;if&lt;/span&gt; you want to delete previous entries&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;$&amp;gt; ssh-add id_rsa_bitbucket&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;$&amp;gt; ssh -T bb&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;$&amp;gt; vim config ---&amp;gt; to write the config&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;The config file should look like this:&lt;/p&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;#Bitbucket (work)&#xA;  Host bb&#xA;  HostName bitbucket.org&#xA;  User git&#xA;  IdentityFile ~/.ssh/id_rsa_bitbucket&#xA;&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Go to the .git repository and change the url from https:// to&#xA;ssh://git@github.com:xxx/&lt;!-- raw HTML omitted --&gt;&#xA;Need to remember that the bitbucket also accepts this:&#xA;&lt;a href=&#34;mailto:git@bitbucket.org&#34;&gt;git@bitbucket.org&lt;/a&gt;:&amp;lt;repo_owner&amp;gt;/&lt;!-- raw HTML omitted --&gt;.git&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Jrnl - Manage your notes and journal entries from Command line</title>
+      <link>https://satishvis.github.io/posts/jrnl/</link>
+      <pubDate>Tue, 10 Dec 2024 16:37:07 +0530</pubDate>
+      <guid>https://satishvis.github.io/posts/jrnl/</guid>
+      <description>&lt;p&gt;Making alias for @jrnl - j in my zsh.&#xA;Earlier it was aliased to &amp;lsquo;jobs-l&amp;rsquo;.&#xA;Basic Usage&#xA;jrnl has two modes: composing and viewing. Basically, whenever you don&amp;rsquo;t supply any arguments that start with a dash or double-dash, you&amp;rsquo;re in composing mode, meaning you can write your entry on the command line or an editor of your choice.&lt;/p&gt;&#xA;&lt;p&gt;We intentionally break a convention on command line arguments: all arguments starting with a single dash will filter your journal before viewing it, and can be combined arbitrarily. Arguments with a double dash will control how your journal is displayed or exported and are mutually exclusive (ie. you can only specify one way to display or export your journal at a time).&lt;/p&gt;</description>
+    </item>
   </channel>
-</rss> 
+</rss>

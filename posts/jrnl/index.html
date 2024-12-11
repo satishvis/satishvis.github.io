@@ -1,52 +1,70 @@
 <!DOCTYPE html>
-<html><head>
-<title>Jrnl - Manage your notes and journal entries from Command line</title>
+<html lang="en-us"
+  x-data
+  :class="$store.darkMode.class()"
+  :data-theme="$store.darkMode.theme()">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jrnl - Manage your notes and journal entries from Command line | Satish Iyer&#39;s Tech Blog</title>
+
+    
+
+<link rel="canonical" href="https://satishvis.github.io/posts/jrnl/" />
+
+
+
+<meta name="author" content="" />
+<meta name="description" content="Making alias for @jrnl - j in my zsh. Earlier it was aliased to &lsquo;jobs-l&rsquo;. Basic Usage jrnl has two modes: composing and viewing. Basically, whenever you don&rsquo;t supply any arguments that start with a dash or double-dash, you&rsquo;re in composing mode, meaning you can write your entry on the command line or an editor of your choice.
+We intentionally break a convention on command line arguments: all arguments starting with a single dash will filter your journal before viewing it, and can be combined arbitrarily. Arguments with a double dash will control how your journal is displayed or exported and are mutually exclusive (ie. you can only specify one way to display or export your journal at a time).
+" />
+
+
+<meta name="keywords" content="">
+
+
+
+<meta name="generator" content="Hugo 0.139.3">
+
+
+<meta property="og:url" content="https://satishvis.github.io/posts/jrnl/">
+  <meta property="og:site_name" content="Satish Iyer&#39;s Tech Blog">
+  <meta property="og:title" content="Jrnl - Manage your notes and journal entries from Command line">
+  <meta property="og:description" content="Making alias for @jrnl - j in my zsh. Earlier it was aliased to ‘jobs-l’. Basic Usage jrnl has two modes: composing and viewing. Basically, whenever you don’t supply any arguments that start with a dash or double-dash, you’re in composing mode, meaning you can write your entry on the command line or an editor of your choice.
+We intentionally break a convention on command line arguments: all arguments starting with a single dash will filter your journal before viewing it, and can be combined arbitrarily. Arguments with a double dash will control how your journal is displayed or exported and are mutually exclusive (ie. you can only specify one way to display or export your journal at a time).">
+  <meta property="og:locale" content="en_us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2024-12-10T16:37:07+05:30">
+    <meta property="article:modified_time" content="2024-12-10T16:37:07+05:30">
 
 
 
 
-<meta charset="utf-8">
-<meta name="X-UA-Compatible" content="IE=edge">
-<meta name="google-site-verification" content="">
-<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
-<meta content="telephone=no" name="format-detection">
-<meta name="description" content="">
-<meta name="renderer" content="webkit">
-<meta name="theme-color" content="#ffffff">
-
-
-
-
-
-
-
-
-
-
-
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Jrnl - Manage your notes and journal entries from Command line">
+  <meta name="twitter:description" content="Making alias for @jrnl - j in my zsh. Earlier it was aliased to ‘jobs-l’. Basic Usage jrnl has two modes: composing and viewing. Basically, whenever you don’t supply any arguments that start with a dash or double-dash, you’re in composing mode, meaning you can write your entry on the command line or an editor of your choice.
+We intentionally break a convention on command line arguments: all arguments starting with a single dash will filter your journal before viewing it, and can be combined arbitrarily. Arguments with a double dash will control how your journal is displayed or exported and are mutually exclusive (ie. you can only specify one way to display or export your journal at a time).">
 
 
 
 
   
 
+<link rel="stylesheet" href="/css/output.min.css" />
 
 
 
 
-
-      <script src="/js/toc.js"></script>
     
-    <link type="text/css" rel="stylesheet" href="/vendor/css/bootstrap.min.css">
-
-<link rel="stylesheet" href="/scss/dark-mode.min.a83bf0e014e88ab83e3134cd0c80ef570a728223a9afea47ff51ed4d0df857d5.css" integrity="sha256-qDvw4BToirg&#43;MTTNDIDvVwpygiOpr&#43;pH/1HtTQ34V9U=" media="screen">
 
 
-<link rel="stylesheet"
-          href="https://fonts.googleapis.com/css?family=Material+Icons">
-
-
-
+<style>
+  pre {
+    padding: 1em;
+    overflow: auto;
+  }
+</style>
 
 
 
@@ -56,98 +74,226 @@
 
 
 
+    
 
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+  </head>
 
+  <body x-data="{
+    flip: false,
+  }">
+    
+    <div id="dream-global-bg"></div>
 
+    
+<nav class="mt-4 lg:mt-8 py-4">
 
-
-
-
-</head>
-<body>
-    	<div id="app"><div class="single-column-drawer-container" id="drawer"
-     v-bind:class="{ 'single-column-drawer-container-active': isDrawerOpen }">
-    <div class="drawer-content">
-        <div class="drawer-menu">
-            
-            
-            
-            
-            <div class="toc">
-
-
-</div>
-            
+  
+  <div class="container flex justify-between px-4">
+  
+    <section class="flex items-center gap-4">
+      <div class="avatar cursor-pointer hover:online" @click="flip = !flip" title="Flip it!">
+        <div class="h-10 rounded-full">
+          <img src="/" alt="" />
         </div>
-    </div>
-</div>
-<transition name="fade">
-    <div id="drawer-mask" v-bind:class="{ 'single-column-drawer-mask': mounted }" v-if="isDrawerOpen" v-on:click="toggleDrawer"></div>
-</transition>
-<nav id="navBar" class="navbar sticky-top navbar-light single-column-nav-container">
-    <div id="navBackground" class="nav-background"></div>
-    <div class="container container-narrow nav-content">
-        <button id="nav_dropdown_btn" class="nav-dropdown-toggle" type="button" v-on:click="toggleDrawer">
-            <i class="material-icons">
-                menu
-            </i>
-        </button>
-        <a id="navTitle" class="navbar-brand" href="https://satishvis.github.io/">
-            Satish Iyer&#39;s Tech Blog
-        </a>
+      </div>
+
+      
+    </section>
+
+    <div class="dropdown dropdown-end sm:hidden">
+      <div tabindex="0" role="button" class="btn btn-ghost btn-square" aria-label="Select an option">
+        <ion-icon name="menu" class="text-2xl"></ion-icon>
+      </div>
+      <ul tabindex="0" class="dropdown-content menu w-36 bg-base-100 rounded-box z-[1] shadow-md">
         
-        <button type="button" class="nav-darkmode-toggle" id="darkModeToggleButton2">
-            <i class="material-icons" id="darkModeToggleIcon2">
-                dark_mode
-            </i>
-        </button>
-        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<li>
+  <a class="inline-flex items-center p-2 cursor-pointer" href="/posts" title="Archives">
+    <ion-icon name="archive"></ion-icon>
+    Archives
+  </a>
+</li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </ul>
     </div>
+    <section class="hidden sm:flex sm:items-center sm:gap-2 md:gap-4">
+      
+
+      
+      
+
+      
+
+      
+      
+
+
+
+
+
+      
+      
+
+
+
+
+
+      
+      
+<a class="group inline-flex items-center p-2 rounded-full cursor-pointer hover:bg-primary" href="/posts" title="Archives">
+  <ion-icon class="group-hover:text-primary-content" name="archive"></ion-icon>
+</a>
+
+
+      
+      
+
+
+
+
+
+      
+      
+
+
+
+
+
+      
+
+      
+
+      
+    </section>
+  </div>
 </nav>
-<div class="single-column-header-container" id="pageHead"
-     v-bind:style="{ transform: 'translateZ(0px) translateY('+.3*scrollY+'px)', opacity: 1-navOpacity }">
-    <a href="https://satishvis.github.io/">
-        <div class="single-column-header-title">Satish Iyer&#39;s Tech Blog</div>
-        
 
-    </a>
+
+    <div class="flip-container" :class="{ 'flip-it': flip }">
+      <div class="flipper">
+        <div class="front">
+          <div class="container">
+            
+<div class="mt-4 px-4">
+  
+  <div>
+  
+    
+    <article class="mx-auto prose prose-quoteless dark:prose-invert" id="dream-single-post-main" itemscope itemtype="http://schema.org/Article">
+      
+  <meta itemprop="name" content="Jrnl - Manage your notes and journal entries from Command line">
+  <meta itemprop="description" content="Making alias for @jrnl - j in my zsh. Earlier it was aliased to ‘jobs-l’. Basic Usage jrnl has two modes: composing and viewing. Basically, whenever you don’t supply any arguments that start with a dash or double-dash, you’re in composing mode, meaning you can write your entry on the command line or an editor of your choice.
+We intentionally break a convention on command line arguments: all arguments starting with a single dash will filter your journal before viewing it, and can be combined arbitrarily. Arguments with a double dash will control how your journal is displayed or exported and are mutually exclusive (ie. you can only specify one way to display or export your journal at a time).">
+  <meta itemprop="datePublished" content="2024-12-10T16:37:07+05:30">
+  <meta itemprop="dateModified" content="2024-12-10T16:37:07+05:30">
+  <meta itemprop="wordCount" content="1265">
+
+      <header>
+        <h1 itemprop="headline">Jrnl - Manage your notes and journal entries from Command line</h1>
+        <p class="text-sm">
+          
+            Tuesday, Dec 10, 2024
+          
+
+          | <span>6 minute read</span>
+
+          
+          | <span>Updated at
+            
+              Tuesday, Dec 10, 2024
+            </span>
+          
+        </p>
+        <div class="flex justify-between">
+          <div class="flex items-center">
+  
+  <span>@</span>
+  
+
+  <span itemprop="author" itemscope itemtype="https://schema.org/Person">
+  
+    <span itemprop="name"></span>
+  
+  </span>
 </div>
 
-            <div id="content">
-                <div id="streamContainer" class="stream-container">
 
-    <div class="post-list-container post-list-container-shadow">
-        <div class="post">
-            
-            
-            
+          <div class="flex items-center gap-2">
+  
+  
 
-            <div class="post-head-wrapper-text-only"
-                
-            >
-                <div class="post-title">
-                    Jrnl - Manage your notes and journal entries from Command line
-                    
-                    <div class="post-meta">
-                        
-                        <time itemprop="datePublished">
-                            2024-12-10 16:37
-                        </time>
-                        
+  
+  
+  
+  
+  
+    <a class="group inline-flex items-center p-2 rounded-full cursor-pointer hover:bg-primary"
+      href="https://x.com/intent/post?text=Jrnl%20-%20Manage%20your%20notes%20and%20journal%20entries%20from%20Command%20line&amp;url=https://satishvis.github.io/posts/jrnl/" target="_blank" rel="noopener noreferrer"
+      title="Share on X">
+      <ion-icon class="group-hover:text-primary-content" name="logo-x"></ion-icon>
+    </a>
+  
+    <a class="group inline-flex items-center p-2 rounded-full cursor-pointer hover:bg-primary"
+      href="https://facebook.com/sharer/sharer.php?u=https://satishvis.github.io/posts/jrnl/" target="_blank" rel="noopener noreferrer"
+      title="Share on Facebook">
+      <ion-icon class="group-hover:text-primary-content" name="logo-facebook"></ion-icon>
+    </a>
+  
+    <a class="group inline-flex items-center p-2 rounded-full cursor-pointer hover:bg-primary"
+      href="https://wa.me/?text=Jrnl%20-%20Manage%20your%20notes%20and%20journal%20entries%20from%20Command%20line%20https://satishvis.github.io/posts/jrnl/" target="_blank" rel="noopener noreferrer"
+      title="Share on WhatsApp">
+      <ion-icon class="group-hover:text-primary-content" name="logo-whatsapp"></ion-icon>
+    </a>
+  
 
-                        
+  
+  
+</div>
 
-                        
-                        
-                    </div>
-                </div>
-            </div>
-            
-            <div class="post-body-wrapper">
-                
-                <div class="post-body" v-pre>
-                
-                    <p>Making alias for @jrnl - j in my zsh.
+        </div>
+      </header>
+
+      
+
+      <p>Making alias for @jrnl - j in my zsh.
 Earlier it was aliased to &lsquo;jobs-l&rsquo;.
 Basic Usage
 jrnl has two modes: composing and viewing. Basically, whenever you don&rsquo;t supply any arguments that start with a dash or double-dash, you&rsquo;re in composing mode, meaning you can write your entry on the command line or an editor of your choice.</p>
@@ -251,120 +397,168 @@ Your default and your food journals won&rsquo;t be encrypted, however your work 
 Unicode on Windows
 The Windows shell prior to Windows 7 has issues with unicode encoding. To use non-ascii characters, first tweak Python to recognize the encoding by adding &lsquo;cp65001&rsquo;: &lsquo;utf_8&rsquo;, to Lib/encoding/aliases.py. Then, change the codepage with chcp 1252 before using jrnl.</p>
 
-                    
-                    <HR width="100%" id="EOF">
-		    <p style="color:#777;">Last modified on 2024-12-10</p>
-                    
-                </div>
-            </div>
+
+      
+    </article>
+  </div>
+
+  
+</div>
+
+
             
+<footer class="flex justify-between items-center gap-2 px-4 py-12">
+
+  <div>
+  
+  <p>© 2024 Satish Iyer&#39;s Tech Blog</p>
+  
+
+  
+  <p class="text-sm">
+    🌱
+    <span class="text-base-content/60">
+      Powered by <a class="hover:underline" href="https://gohugo.io/" target="_blank">Hugo</a> with theme
+      <a class="hover:underline" href="https://github.com/g1eny0ung/hugo-theme-dream" target="_blank">Dream</a>.</span
+    >
+  </p>
+  
+</div>
+
+  <div
+  x-data="{ icons: [
+    { name: 'moon', status: 'y' },
+    { name: 'sunny', status: 'n' },
+    { name: 'desktop', status: 'auto' }
+  ] }"
+  class="flex items-center h-[32px] px-2 gap-2 border border-base-content/30 rounded-full"
+>
+  <template x-for="icon in icons">
+    <div
+      role="button"
+      tabindex="0"
+      :aria-label="'Select ' + icon.name + ' mode'"
+      class="group inline-flex justify-center items-center p-1 rounded-full cursor-pointer hover:bg-primary"
+      :class="$store.darkMode.icon() === icon.name && 'bg-primary'"
+      @click="$store.darkMode.toggle(icon.status)"
+    >
+      <ion-icon
+        :name="`${icon.name}-outline`"
+        class="group-hover:text-primary-content"
+        :class="$store.darkMode.icon() === icon.name && 'text-primary-content'"
+      >
+      </ion-icon>
+    </div>
+  </template>
+</div>
+
+</footer>
+
+          </div>
+        </div>
+        <div class="back">
+          <div class="container">
             
-            <nav class="post-pagination">
+            <div class="dream-grid dream-grid-about">
+  
 
-                
-                <a class="newer-posts" href="/posts/githubsetup/">
-			Next<br>Github and Bitbucket setup
-                </a>
-                
-                
-                
-                <a class="older-posts">
-			Previous<br>No older posts.
-                </a>
-                
-            </nav>
-            <div class="post-comment-wrapper">
-                
+  
 
+  
+</div>
 
+            
 
+            
+<footer class="flex justify-between items-center gap-2 px-4 py-12">
 
+  <div>
+  
+  <p>© 2024 Satish Iyer&#39;s Tech Blog</p>
+  
 
+  
+  <p class="text-sm">
+    🌱
+    <span class="text-base-content/60">
+      Powered by <a class="hover:underline" href="https://gohugo.io/" target="_blank">Hugo</a> with theme
+      <a class="hover:underline" href="https://github.com/g1eny0ung/hugo-theme-dream" target="_blank">Dream</a>.</span
+    >
+  </p>
+  
+</div>
 
+  <div
+  x-data="{ icons: [
+    { name: 'moon', status: 'y' },
+    { name: 'sunny', status: 'n' },
+    { name: 'desktop', status: 'auto' }
+  ] }"
+  class="flex items-center h-[32px] px-2 gap-2 border border-base-content/30 rounded-full"
+>
+  <template x-for="icon in icons">
+    <div
+      role="button"
+      tabindex="0"
+      :aria-label="'Select ' + icon.name + ' mode'"
+      class="group inline-flex justify-center items-center p-1 rounded-full cursor-pointer hover:bg-primary"
+      :class="$store.darkMode.icon() === icon.name && 'bg-primary'"
+      @click="$store.darkMode.toggle(icon.status)"
+    >
+      <ion-icon
+        :name="`${icon.name}-outline`"
+        class="group-hover:text-primary-content"
+        :class="$store.darkMode.icon() === icon.name && 'text-primary-content'"
+      >
+      </ion-icon>
+    </div>
+  </template>
+</div>
 
+</footer>
 
-
-
-
-
-            </div>
+          </div>
         </div>
+      </div>
     </div>
 
+    <script>
+  window.lightTheme =  null 
+  window.darkTheme =  null 
+</script>
 
-                    </div>
-            </div><div id="sideContainer" class="side-container">
+
+  <script src="https://cdn.jsdelivr.net/npm/imagesloaded@5.0.0/imagesloaded.pkgd.min.js" integrity="sha256-htrLFfZJ6v5udOG+3kNLINIKh2gvoKqwEhHYfTTMICc=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js" integrity="sha256-Nn1q/fx0H7SNLZMQ5Hw5JLaTRZp0yILA/FRexe19VdI=" crossorigin="anonymous"></script>
+
+  
+  
     
-    <a class="a-block nav-head false" href="https://satishvis.github.io/">
-    
-        <div class="nav-title">
-            Satish Iyer&#39;s Tech Blog
-        </div>
-        
-    </a>
+  
+  <script src="/js/grid.min.js"></script>
 
-    <div class="nav-link-list">
-        
-        
-    </div>
+
+
+
+  
+
+<script src="/js/main.min.js"></script>
 
     
 
-    <div class="nav-footer">
-        
 
-<br>
 
-<br>
 
-&copy;
-	
-	2024 Satish Iyer&#39;s Tech Blog
-	
 
-    </div>
+
+
     
-</div><div id="extraContainer" class="extra-container">
-    <div class="toc-wrapper">
-        
 
-        
-        <div class="toc">
-
-
-</div>
-        
-    </div>
-    <div class="pagination">
-        <a id="globalBackToTop" class="pagination-action animated-visibility" href="#top"
-            :class="{ invisible: scrollY == 0 }">
-            <i class="material-icons pagination-action-icon">
-                keyboard_arrow_up
-            </i>
-        </a>
-        
-        <a type="button" class="pagination-action" id="darkModeToggleButton">
-            <span class="material-icons pagination-action-icon" id="darkModeToggleIcon">
-                dark_mode
-            </span>
-        </a>
-        
-        
-    </div>
-</div>
-
-<div id="single-column-footer">
-
-<br>
-
-<br>
-
-&copy;
-	
-	2024 Satish Iyer&#39;s Tech Blog
-	
-</div>
-            </div>
     
-    <script src="/js/journal.js"></script></body>
+
+    
+
+    <script type="module" src="https://unpkg.com/ionicons@7.4.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.4.0/dist/ionicons/ionicons.js"></script>
+  </body>
 </html>
