@@ -6,8 +6,15 @@
     <description>Recent content in Posts on Satish Iyer&#39;s Tech Blog</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 11 Dec 2024 11:25:50 +0530</lastBuildDate>
+    <lastBuildDate>Thu, 02 Jan 2025 10:08:23 +0530</lastBuildDate>
     <atom:link href="http://localhost:1313/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Testpost</title>
+      <link>http://localhost:1313/posts/testpost/</link>
+      <pubDate>Thu, 02 Jan 2025 10:08:23 +0530</pubDate>
+      <guid>http://localhost:1313/posts/testpost/</guid>
+      <description>&lt;p&gt;Cut out summary from your post content here.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Checking the Dream Theme</title>
       <link>http://localhost:1313/posts/checking-the-dream-theme/</link>
