@@ -2,52 +2,52 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Posts on Satish Iyer&#39;s Tech Blog</title>
-    <link>http://localhost:1313/posts/</link>
+    <link>https://satishvis.github.io/posts/</link>
     <description>Recent content in Posts on Satish Iyer&#39;s Tech Blog</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Wed, 11 Dec 2024 11:25:50 +0530</lastBuildDate>
-    <atom:link href="http://localhost:1313/posts/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://satishvis.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Checking the Dream Theme</title>
-      <link>http://localhost:1313/posts/checking-the-dream-theme/</link>
+      <link>https://satishvis.github.io/posts/checking-the-dream-theme/</link>
       <pubDate>Wed, 11 Dec 2024 11:25:50 +0530</pubDate>
-      <guid>http://localhost:1313/posts/checking-the-dream-theme/</guid>
+      <guid>https://satishvis.github.io/posts/checking-the-dream-theme/</guid>
       <description>&lt;p&gt;Cut out summary from your post content here.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Make Aliases for Hugo Posts Pages and Github Push</title>
-      <link>http://localhost:1313/posts/make-aliases-for-hugo-posts-pages-and-github-push/</link>
+      <link>https://satishvis.github.io/posts/make-aliases-for-hugo-posts-pages-and-github-push/</link>
       <pubDate>Wed, 11 Dec 2024 10:18:35 +0530</pubDate>
-      <guid>http://localhost:1313/posts/make-aliases-for-hugo-posts-pages-and-github-push/</guid>
+      <guid>https://satishvis.github.io/posts/make-aliases-for-hugo-posts-pages-and-github-push/</guid>
       <description>&lt;p&gt;Certain aliases to make our hugo posts, pages and github push easier&lt;/p&gt;</description>
     </item>
     <item>
       <title>Start Zsh Without any Overheads</title>
-      <link>http://localhost:1313/posts/startzshwooverheads/</link>
+      <link>https://satishvis.github.io/posts/startzshwooverheads/</link>
       <pubDate>Tue, 10 Dec 2024 22:18:01 +0530</pubDate>
-      <guid>http://localhost:1313/posts/startzshwooverheads/</guid>
+      <guid>https://satishvis.github.io/posts/startzshwooverheads/</guid>
       <description>&lt;h1 id=&#34;to-start-zsh-without-overheads&#34;&gt;To start Zsh without overheads.&lt;/h1&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;zsh -d -f ;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Explaination:&#xA;-f is local rc and -d is global rcs&lt;/p&gt;</description>
     </item>
     <item>
       <title>Arch Update Gets Locked</title>
-      <link>http://localhost:1313/posts/archupdatelock/</link>
+      <link>https://satishvis.github.io/posts/archupdatelock/</link>
       <pubDate>Tue, 10 Dec 2024 19:48:25 +0530</pubDate>
-      <guid>http://localhost:1313/posts/archupdatelock/</guid>
+      <guid>https://satishvis.github.io/posts/archupdatelock/</guid>
       <description>&lt;h1 id=&#34;if-your-arch-package-manager-gets-locked&#34;&gt;If your Arch Package manager gets locked&lt;/h1&gt;&#xA;&lt;p&gt;This is an issue that I have encountered multiple times.&#xA;Sometimes the @arch linux package gets locked so we need to unlock it using `sudo rm /var/lib/pacman/db.lck``&lt;/p&gt;</description>
     </item>
     <item>
       <title>Github and Bitbucket setup</title>
-      <link>http://localhost:1313/posts/githubsetup/</link>
+      <link>https://satishvis.github.io/posts/githubsetup/</link>
       <pubDate>Tue, 10 Dec 2024 16:42:10 +0530</pubDate>
-      <guid>http://localhost:1313/posts/githubsetup/</guid>
+      <guid>https://satishvis.github.io/posts/githubsetup/</guid>
       <description>&lt;p&gt;Go to the .git repository and change the url from https:// to&#xA;ssh://git@github.com:xxx/&lt;!-- raw HTML omitted --&gt;&#xA;Need to remember that the bitbucket also accepts this:&lt;/p&gt;&#xA;&lt;p&gt;&lt;a href=&#34;mailto:git@bitbucket.org&#34;&gt;git@bitbucket.org&lt;/a&gt;:&amp;lt;repo_owner&amp;gt;/&lt;!-- raw HTML omitted --&gt;.git&lt;/p&gt;&#xA;&lt;p&gt;Now one is ready to test it in any repository Good to go&lt;/p&gt;&#xA;&lt;p&gt;The following to be done before&lt;/p&gt;</description>
     </item>
     <item>
       <title>Jrnl - Manage your notes and journal entries from Command line</title>
-      <link>http://localhost:1313/posts/jrnl/</link>
+      <link>https://satishvis.github.io/posts/jrnl/</link>
       <pubDate>Tue, 10 Dec 2024 16:37:07 +0530</pubDate>
-      <guid>http://localhost:1313/posts/jrnl/</guid>
+      <guid>https://satishvis.github.io/posts/jrnl/</guid>
       <description>&lt;p&gt;Making alias for @jrnl - j in my zsh.&#xA;Earlier it was aliased to &amp;lsquo;jobs-l&amp;rsquo;.&lt;/p&gt;&#xA;&lt;h1 id=&#34;basic-usage&#34;&gt;Basic Usage&lt;/h1&gt;&#xA;&lt;p&gt;jrnl has two modes: composing and viewing. Basically, whenever you don&amp;rsquo;t supply any arguments that start with a dash or double-dash, you&amp;rsquo;re in composing mode, meaning you can write your entry on the command line or an editor of your choice.&lt;/p&gt;&#xA;&lt;p&gt;We intentionally break a convention on command line arguments: all arguments starting with a single dash will filter your journal before viewing it, and can be combined arbitrarily. Arguments with a double dash will control how your journal is displayed or exported and are mutually exclusive (ie. you can only specify one way to display or export your journal at a time).&lt;/p&gt;</description>
     </item>
   </channel>
