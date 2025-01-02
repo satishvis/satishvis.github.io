@@ -3,7 +3,7 @@
   x-data
   :class="$store.darkMode.class()"
   :data-theme="$store.darkMode.theme()">
-  <head>
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Github and Bitbucket setup | Satish Iyer&#39;s Tech Blog</title>
@@ -12,7 +12,7 @@
 <link href="/img/favicon.ico" rel="icon" type="image/x-icon" />
 
 
-<link rel="canonical" href="https://satishvis.github.io/posts/githubsetup/" />
+<link rel="canonical" href="http://localhost:1313/posts/githubsetup/" />
 
 
 
@@ -28,10 +28,10 @@ The following to be done before
 
 
 
-<meta name="generator" content="Hugo 0.139.3">
+<meta name="generator" content="Hugo 0.140.2">
 
 
-<meta property="og:url" content="https://satishvis.github.io/posts/githubsetup/">
+<meta property="og:url" content="http://localhost:1313/posts/githubsetup/">
   <meta property="og:site_name" content="Satish Iyer&#39;s Tech Blog">
   <meta property="og:title" content="Github and Bitbucket setup">
   <meta property="og:description" content="Go to the .git repository and change the url from https:// to ssh://git@github.com:xxx/ Need to remember that the bitbucket also accepts this:
@@ -58,9 +58,7 @@ The following to be done before">
 
 
 
-  
-
-<link rel="stylesheet" href="/css/output.min.css" />
+<link rel="stylesheet" href="/css/output.css" />
 
 
 
@@ -110,7 +108,7 @@ The following to be done before">
       
       <div>
         
-        <a href="https://satishvis.github.io/" class="text-lg font-semibold cursor-pointer">
+        <a href="http://localhost:1313/" class="text-lg font-semibold cursor-pointer">
           Satish Iyer&#39;s Tech Blog
         </a>
         
@@ -236,11 +234,10 @@ The following to be done before">
         <div class="front">
           <div class="container">
             
-<div class="mt-4 px-4">
-  
-  <div>
-  
-    
+<div class="lg:grid lg:grid-cols-4 gap-4 mt-4 px-4">
+  <div class="hidden lg:block"></div>
+
+  <div class="lg:col-span-2">
     <article class="mx-auto prose prose-quoteless dark:prose-invert" id="dream-single-post-main" itemscope itemtype="http://schema.org/Article">
       
   <meta itemprop="name" content="Github and Bitbucket setup">
@@ -301,19 +298,19 @@ The following to be done before">
   
   
     <a class="group inline-flex items-center p-2 rounded-full cursor-pointer hover:bg-primary"
-      href="https://x.com/intent/post?text=Github%20and%20Bitbucket%20setup&amp;url=https://satishvis.github.io/posts/githubsetup/" target="_blank" rel="noopener noreferrer"
+      href="https://x.com/intent/post?text=Github%20and%20Bitbucket%20setup&amp;url=http://localhost:1313/posts/githubsetup/" target="_blank" rel="noopener noreferrer"
       title="Share on X">
       <ion-icon class="group-hover:text-primary-content" name="logo-x"></ion-icon>
     </a>
   
     <a class="group inline-flex items-center p-2 rounded-full cursor-pointer hover:bg-primary"
-      href="https://facebook.com/sharer/sharer.php?u=https://satishvis.github.io/posts/githubsetup/" target="_blank" rel="noopener noreferrer"
+      href="https://facebook.com/sharer/sharer.php?u=http://localhost:1313/posts/githubsetup/" target="_blank" rel="noopener noreferrer"
       title="Share on Facebook">
       <ion-icon class="group-hover:text-primary-content" name="logo-facebook"></ion-icon>
     </a>
   
     <a class="group inline-flex items-center p-2 rounded-full cursor-pointer hover:bg-primary"
-      href="https://wa.me/?text=Github%20and%20Bitbucket%20setup%20https://satishvis.github.io/posts/githubsetup/" target="_blank" rel="noopener noreferrer"
+      href="https://wa.me/?text=Github%20and%20Bitbucket%20setup%20http://localhost:1313/posts/githubsetup/" target="_blank" rel="noopener noreferrer"
       title="Share on WhatsApp">
       <ion-icon class="group-hover:text-primary-content" name="logo-whatsapp"></ion-icon>
     </a>
@@ -326,9 +323,10 @@ The following to be done before">
         </div>
       </header>
 
-      
+      <section id="dream-single-post-content" itemprop="articleBody">
+        
 
-      <p>Go to the .git repository and change the url from https:// to
+        <p>Go to the .git repository and change the url from https:// to
 ssh://git@github.com:xxx/<!-- raw HTML omitted -->
 Need to remember that the bitbucket also accepts this:</p>
 <p><a href="mailto:git@bitbucket.org">git@bitbucket.org</a>:&lt;repo_owner&gt;/<!-- raw HTML omitted -->.git</p>
@@ -350,12 +348,19 @@ Need to remember that the bitbucket also accepts this:</p>
   User git
   IdentityFile ~/.ssh/id_rsa_bitbucket
 </code></pre>
+      </section>
+
+      
 
       
     </article>
   </div>
 
-  
+  <div class="hidden lg:flex lg:flex-col lg:items-end">
+    
+
+    
+  </div>
 </div>
 
 
@@ -365,7 +370,7 @@ Need to remember that the bitbucket also accepts this:</p>
   <div>
   
   <p>
-    © 2024 Satish Iyer&#39;s Tech Blog
+    © 2024 - 2025 Satish Iyer&#39;s Tech Blog
   </p>
   
 
@@ -430,7 +435,7 @@ Need to remember that the bitbucket also accepts this:</p>
   <div>
   
   <p>
-    © 2024 Satish Iyer&#39;s Tech Blog
+    © 2024 - 2025 Satish Iyer&#39;s Tech Blog
   </p>
   
 
@@ -490,18 +495,16 @@ Need to remember that the bitbucket also accepts this:</p>
 
   
   
-    
-  
-  <script src="/js/grid.min.js"></script>
+  <script src="/js/grid.js"></script>
 
 
 
 
-  
-
-<script src="/js/main.min.js"></script>
+<script src="/js/main.js"></script>
 
     
+
+
 
 
 

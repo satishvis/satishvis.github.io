@@ -3,7 +3,7 @@
   x-data
   :class="$store.darkMode.class()"
   :data-theme="$store.darkMode.theme()">
-  <head>
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Make Aliases for Hugo Posts Pages and Github Push | Satish Iyer&#39;s Tech Blog</title>
@@ -12,7 +12,7 @@
 <link href="/img/favicon.ico" rel="icon" type="image/x-icon" />
 
 
-<link rel="canonical" href="https://satishvis.github.io/posts/make-aliases-for-hugo-posts-pages-and-github-push/" />
+<link rel="canonical" href="http://localhost:1313/posts/make-aliases-for-hugo-posts-pages-and-github-push/" />
 
 
 
@@ -25,10 +25,10 @@
 
 
 
-<meta name="generator" content="Hugo 0.139.3">
+<meta name="generator" content="Hugo 0.140.2">
 
 
-<meta property="og:url" content="https://satishvis.github.io/posts/make-aliases-for-hugo-posts-pages-and-github-push/">
+<meta property="og:url" content="http://localhost:1313/posts/make-aliases-for-hugo-posts-pages-and-github-push/">
   <meta property="og:site_name" content="Satish Iyer&#39;s Tech Blog">
   <meta property="og:title" content="Make Aliases for Hugo Posts Pages and Github Push">
   <meta property="og:description" content="Certain aliases to make our hugo posts, pages and github push easier">
@@ -52,9 +52,7 @@
 
 
 
-  
-
-<link rel="stylesheet" href="/css/output.min.css" />
+<link rel="stylesheet" href="/css/output.css" />
 
 
 
@@ -104,7 +102,7 @@
       
       <div>
         
-        <a href="https://satishvis.github.io/" class="text-lg font-semibold cursor-pointer">
+        <a href="http://localhost:1313/" class="text-lg font-semibold cursor-pointer">
           Satish Iyer&#39;s Tech Blog
         </a>
         
@@ -230,11 +228,10 @@
         <div class="front">
           <div class="container">
             
-<div class="mt-4 px-4">
-  
-  <div>
-  
-    
+<div class="lg:grid lg:grid-cols-4 gap-4 mt-4 px-4">
+  <div class="hidden lg:block"></div>
+
+  <div class="lg:col-span-2">
     <article class="mx-auto prose prose-quoteless dark:prose-invert" id="dream-single-post-main" itemscope itemtype="http://schema.org/Article">
       
   <meta itemprop="name" content="Make Aliases for Hugo Posts Pages and Github Push">
@@ -292,19 +289,19 @@
   
   
     <a class="group inline-flex items-center p-2 rounded-full cursor-pointer hover:bg-primary"
-      href="https://x.com/intent/post?text=Make%20Aliases%20for%20Hugo%20Posts%20Pages%20and%20Github%20Push&amp;url=https://satishvis.github.io/posts/make-aliases-for-hugo-posts-pages-and-github-push/" target="_blank" rel="noopener noreferrer"
+      href="https://x.com/intent/post?text=Make%20Aliases%20for%20Hugo%20Posts%20Pages%20and%20Github%20Push&amp;url=http://localhost:1313/posts/make-aliases-for-hugo-posts-pages-and-github-push/" target="_blank" rel="noopener noreferrer"
       title="Share on X">
       <ion-icon class="group-hover:text-primary-content" name="logo-x"></ion-icon>
     </a>
   
     <a class="group inline-flex items-center p-2 rounded-full cursor-pointer hover:bg-primary"
-      href="https://facebook.com/sharer/sharer.php?u=https://satishvis.github.io/posts/make-aliases-for-hugo-posts-pages-and-github-push/" target="_blank" rel="noopener noreferrer"
+      href="https://facebook.com/sharer/sharer.php?u=http://localhost:1313/posts/make-aliases-for-hugo-posts-pages-and-github-push/" target="_blank" rel="noopener noreferrer"
       title="Share on Facebook">
       <ion-icon class="group-hover:text-primary-content" name="logo-facebook"></ion-icon>
     </a>
   
     <a class="group inline-flex items-center p-2 rounded-full cursor-pointer hover:bg-primary"
-      href="https://wa.me/?text=Make%20Aliases%20for%20Hugo%20Posts%20Pages%20and%20Github%20Push%20https://satishvis.github.io/posts/make-aliases-for-hugo-posts-pages-and-github-push/" target="_blank" rel="noopener noreferrer"
+      href="https://wa.me/?text=Make%20Aliases%20for%20Hugo%20Posts%20Pages%20and%20Github%20Push%20http://localhost:1313/posts/make-aliases-for-hugo-posts-pages-and-github-push/" target="_blank" rel="noopener noreferrer"
       title="Share on WhatsApp">
       <ion-icon class="group-hover:text-primary-content" name="logo-whatsapp"></ion-icon>
     </a>
@@ -317,9 +314,10 @@
         </div>
       </header>
 
-      
+      <section id="dream-single-post-content" itemprop="articleBody">
+        
 
-      <p>Certain aliases to make our hugo posts, pages and github push easier</p>
+        <p>Certain aliases to make our hugo posts, pages and github push easier</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span><span style="color:#75715e"># aliases for hugo</span>
 </span></span><span style="display:flex;"><span>hpost<span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
 </span></span><span style="display:flex;"><span>   hugo new content content/posts/<span style="color:#e6db74">&#34;</span>$1<span style="color:#e6db74">&#34;</span>.md
@@ -339,12 +337,19 @@
 </span></span><span style="display:flex;"><span>   git push origin main
 </span></span><span style="display:flex;"><span><span style="color:#f92672">}</span>
 </span></span></code></pre></div>
+      </section>
+
+      
 
       
     </article>
   </div>
 
-  
+  <div class="hidden lg:flex lg:flex-col lg:items-end">
+    
+
+    
+  </div>
 </div>
 
 
@@ -354,7 +359,7 @@
   <div>
   
   <p>
-    © 2024 Satish Iyer&#39;s Tech Blog
+    © 2024 - 2025 Satish Iyer&#39;s Tech Blog
   </p>
   
 
@@ -419,7 +424,7 @@
   <div>
   
   <p>
-    © 2024 Satish Iyer&#39;s Tech Blog
+    © 2024 - 2025 Satish Iyer&#39;s Tech Blog
   </p>
   
 
@@ -479,18 +484,16 @@
 
   
   
-    
-  
-  <script src="/js/grid.min.js"></script>
+  <script src="/js/grid.js"></script>
 
 
 
 
-  
-
-<script src="/js/main.min.js"></script>
+<script src="/js/main.js"></script>
 
     
+
+
 
 
 
