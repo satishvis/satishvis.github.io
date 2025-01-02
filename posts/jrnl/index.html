@@ -42,11 +42,13 @@ We intentionally break a convention on command line arguments: all arguments sta
     <meta property="article:published_time" content="2024-12-10T16:37:07+05:30">
     <meta property="article:modified_time" content="2024-12-11T11:25:50+05:30">
     <meta property="article:tag" content="Arch Package">
+    <meta property="og:image" content="http://localhost:1313/img/cover.jpg">
 
 
 
 
-  <meta name="twitter:card" content="summary">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="http://localhost:1313/img/cover.jpg">
   <meta name="twitter:title" content="Jrnl - Manage your notes and journal entries from Command line">
   <meta name="twitter:description" content="Making alias for @jrnl - j in my zsh. Earlier it was aliased to ‘jobs-l’.
 Basic Usage jrnl has two modes: composing and viewing. Basically, whenever you don’t supply any arguments that start with a dash or double-dash, you’re in composing mode, meaning you can write your entry on the command line or an editor of your choice.
@@ -244,6 +246,7 @@ We intentionally break a convention on command line arguments: all arguments sta
   <meta itemprop="datePublished" content="2024-12-10T16:37:07+05:30">
   <meta itemprop="dateModified" content="2024-12-11T11:25:50+05:30">
   <meta itemprop="wordCount" content="1265">
+  <meta itemprop="image" content="http://localhost:1313/img/cover.jpg">
   <meta itemprop="keywords" content="Arch Package">
 
       <header>
@@ -352,10 +355,10 @@ To mark an entry as a favourite, simply &ldquo;star&rdquo; it</p>
 <p>jrnl last sunday *: Best day of my life.
 If you don&rsquo;t want to add a date (ie. your entry will be dated as now), The following options are equivalent:</p>
 <p>jrnl *: Best day of my life.
-jrnl <em>Best day of my life.
-jrnl Best day of my life.</em></p>
+jrnl *Best day of my life.
+jrnl Best day of my life.*</p>
 <h1 id="note">Note</h1>
-<p>Just make sure that the asterisk sign is not surrounded by whitespaces, e.g. jrnl Best day of my life! * will not work (the reason being that the * sign has a special meaning on most shells).</p>
+<p>Just make sure that the asterisk sign is not surrounded by whitespaces, e.g. jrnl Best day of my life! _ will not work (the reason being that the _ sign has a special meaning on most shells).</p>
 <h1 id="viewing">Viewing</h1>
 <p>jrnl -n 10
 will list you the ten latest entries (if you&rsquo;re lazy, jrnl -10 will do the same),</p>
