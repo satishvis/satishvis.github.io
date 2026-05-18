@@ -2,17 +2,24 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tag1 on Satish Iyer&#39;s Tech Blog</title>
-    <link>http://localhost:1313/tags/tag1/</link>
+    <link>https://satishvis.github.io/tags/tag1/</link>
     <description>Recent content in Tag1 on Satish Iyer&#39;s Tech Blog</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 02 Jan 2025 10:08:23 +0530</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/tag1/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 18 May 2026 13:51:52 +0530</lastBuildDate>
+    <atom:link href="https://satishvis.github.io/tags/tag1/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Emacs</title>
+      <link>https://satishvis.github.io/posts/emacs/</link>
+      <pubDate>Mon, 18 May 2026 13:51:52 +0530</pubDate>
+      <guid>https://satishvis.github.io/posts/emacs/</guid>
+      <description>&lt;p&gt;Emacs is an awesome editor.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Testpost</title>
-      <link>http://localhost:1313/posts/testpost/</link>
+      <link>https://satishvis.github.io/posts/testpost/</link>
       <pubDate>Thu, 02 Jan 2025 10:08:23 +0530</pubDate>
-      <guid>http://localhost:1313/posts/testpost/</guid>
+      <guid>https://satishvis.github.io/posts/testpost/</guid>
       <description>&lt;p&gt;Cut out summary from your post content here.&lt;/p&gt;</description>
     </item>
   </channel>
