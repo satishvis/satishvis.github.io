@@ -6,19 +6,12 @@
     <description>Recent content in Categories on Satish Iyer&#39;s Tech Blog</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 18 May 2026 13:51:52 +0530</lastBuildDate>
+    <lastBuildDate>Wed, 11 Dec 2024 11:25:50 +0530</lastBuildDate>
     <atom:link href="https://satishvis.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Category1</title>
-      <link>https://satishvis.github.io/categories/category1/</link>
-      <pubDate>Mon, 18 May 2026 13:51:52 +0530</pubDate>
-      <guid>https://satishvis.github.io/categories/category1/</guid>
-      <description></description>
-    </item>
     <item>
       <title>Hugo</title>
       <link>https://satishvis.github.io/categories/hugo/</link>
-      <pubDate>Wed, 11 Dec 2024 11:25:50 +0530</pubDate>
+      <pubDate>Wed, 11 Dec 2024 10:18:35 +0530</pubDate>
       <guid>https://satishvis.github.io/categories/hugo/</guid>
       <description></description>
     </item>
