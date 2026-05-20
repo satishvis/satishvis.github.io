@@ -13,7 +13,7 @@
       <link>http://localhost:1313/posts/anki/</link>
       <pubDate>Wed, 20 May 2026 13:29:31 +0530</pubDate>
       <guid>http://localhost:1313/posts/anki/</guid>
-      <description>&lt;p&gt;Anki is a free and open-source flashcard application.&#xA;It is available to linux and it can be edited and synced with your Android mobile.&lt;/p&gt;</description>
+      <description>&lt;p&gt;&lt;a href=&#34;https://apps.ankiweb.net&#34;&gt;Anki&lt;/a&gt; is a free and open-source flashcard application.&#xA;It is available to linux and it can be edited and synced with your Android mobile.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Last Edited Location in Nvim</title>
