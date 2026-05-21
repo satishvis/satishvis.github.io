@@ -3,7 +3,7 @@
   x-data
   :class="$store.darkMode.isDark() ? 'dark' : 'light'"
   :data-theme="$store.darkMode.theme()">
-  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jrnl - Manage your notes and journal entries from Command line | Satish Iyer&#39;s Tech Blog</title>
@@ -14,7 +14,7 @@
   
 
 
-<link rel="canonical" href="http://localhost:1313/posts/jrnl/" />
+<link rel="canonical" href="https://satishvis.github.io/posts/jrnl/" />
 
 
 
@@ -32,7 +32,7 @@ We intentionally break a convention on command line arguments: all arguments sta
 <meta name="generator" content="Hugo 0.161.1">
 
 
-<meta property="og:url" content="http://localhost:1313/posts/jrnl/">
+<meta property="og:url" content="https://satishvis.github.io/posts/jrnl/">
   <meta property="og:site_name" content="Satish Iyer&#39;s Tech Blog">
   <meta property="og:title" content="Jrnl - Manage your notes and journal entries from Command line">
   <meta property="og:description" content="Making alias for @jrnl - j in my zsh. Earlier it was aliased to ‘jobs-l’.
@@ -44,13 +44,13 @@ We intentionally break a convention on command line arguments: all arguments sta
     <meta property="article:published_time" content="2024-12-10T16:37:07+05:30">
     <meta property="article:modified_time" content="2024-12-11T11:25:50+05:30">
     <meta property="article:tag" content="Arch Package">
-    <meta property="og:image" content="http://localhost:1313/img/cover.jpg">
+    <meta property="og:image" content="https://satishvis.github.io/img/cover.jpg">
 
 
 
 
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:image" content="http://localhost:1313/img/cover.jpg">
+  <meta name="twitter:image" content="https://satishvis.github.io/img/cover.jpg">
   <meta name="twitter:title" content="Jrnl - Manage your notes and journal entries from Command line">
   <meta name="twitter:description" content="Making alias for @jrnl - j in my zsh. Earlier it was aliased to ‘jobs-l’.
 Basic Usage jrnl has two modes: composing and viewing. Basically, whenever you don’t supply any arguments that start with a dash or double-dash, you’re in composing mode, meaning you can write your entry on the command line or an editor of your choice.
@@ -59,7 +59,9 @@ We intentionally break a convention on command line arguments: all arguments sta
 
 
 
-<link rel="stylesheet" href="/css/output.css" />
+  
+
+<link rel="stylesheet" href="/css/output.min.css" />
 
 
 
@@ -121,7 +123,7 @@ We intentionally break a convention on command line arguments: all arguments sta
       
       <div>
         
-        <a href="http://localhost:1313/" class="text-lg font-semibold cursor-pointer">
+        <a href="https://satishvis.github.io/" class="text-lg font-semibold cursor-pointer">
           Satish Iyer&#39;s Tech Blog
         </a>
         
@@ -280,7 +282,7 @@ We intentionally break a convention on command line arguments: all arguments sta
   <meta itemprop="datePublished" content="2024-12-10T16:37:07+05:30">
   <meta itemprop="dateModified" content="2024-12-11T11:25:50+05:30">
   <meta itemprop="wordCount" content="1265">
-  <meta itemprop="image" content="http://localhost:1313/img/cover.jpg">
+  <meta itemprop="image" content="https://satishvis.github.io/img/cover.jpg">
   <meta itemprop="keywords" content="Arch Package">
 
       <header>
@@ -335,19 +337,19 @@ We intentionally break a convention on command line arguments: all arguments sta
   
   
     <a class="group inline-flex items-center p-2 rounded-full cursor-pointer hover:bg-primary"
-      href="https://x.com/intent/post?text=Jrnl%20-%20Manage%20your%20notes%20and%20journal%20entries%20from%20Command%20line&amp;url=http://localhost:1313/posts/jrnl/" target="_blank" rel="noopener noreferrer"
+      href="https://x.com/intent/post?text=Jrnl%20-%20Manage%20your%20notes%20and%20journal%20entries%20from%20Command%20line&amp;url=https://satishvis.github.io/posts/jrnl/" target="_blank" rel="noopener noreferrer"
       title="Share on X">
       <ion-icon class="group-hover:text-primary-content" name="logo-x"></ion-icon>
     </a>
   
     <a class="group inline-flex items-center p-2 rounded-full cursor-pointer hover:bg-primary"
-      href="https://facebook.com/sharer/sharer.php?u=http://localhost:1313/posts/jrnl/" target="_blank" rel="noopener noreferrer"
+      href="https://facebook.com/sharer/sharer.php?u=https://satishvis.github.io/posts/jrnl/" target="_blank" rel="noopener noreferrer"
       title="Share on Facebook">
       <ion-icon class="group-hover:text-primary-content" name="logo-facebook"></ion-icon>
     </a>
   
     <a class="group inline-flex items-center p-2 rounded-full cursor-pointer hover:bg-primary"
-      href="https://wa.me/?text=Jrnl%20-%20Manage%20your%20notes%20and%20journal%20entries%20from%20Command%20line%20http://localhost:1313/posts/jrnl/" target="_blank" rel="noopener noreferrer"
+      href="https://wa.me/?text=Jrnl%20-%20Manage%20your%20notes%20and%20journal%20entries%20from%20Command%20line%20https://satishvis.github.io/posts/jrnl/" target="_blank" rel="noopener noreferrer"
       title="Share on WhatsApp">
       <ion-icon class="group-hover:text-primary-content" name="logo-whatsapp"></ion-icon>
     </a>
@@ -376,7 +378,7 @@ The journals displayed correspond to those specified in the jrnl configuration f
 <p>Composing mode is entered by either starting jrnl without any arguments – which will prompt you to write an entry or launch your editor – or by just writing an entry on the prompt, such as</p>
 <p>jrnl today at 3am: I just met Steve Buscemi in a bar! He looked funny.
 Note</p>
-<p>Most shell contains a certain number of reserved characters, such as # and *. Unbalanced quotes, parenthesis, and so on will also get into the way of your editing. For writing longer entries, just enter jrnl and hit return. Only then enter the text of your journal entry. Alternatively, use an external editor <!-- raw HTML omitted -->).</p>
+<p>Most shell contains a certain number of reserved characters, such as # and *. Unbalanced quotes, parenthesis, and so on will also get into the way of your editing. For writing longer entries, just enter jrnl and hit return. Only then enter the text of your journal entry. Alternatively, use an external editor <advanced>).</p>
 <p>You can also import an entry directly from a file</p>
 <p>jrnl &lt; my_entry.txt</p>
 <h1 id="smart-timestamps">Smart timestamps</h1>
@@ -414,7 +416,7 @@ the last five entries containing both @pineapple and @lubricant. You can change 
 <h2 id="note-1">Note</h2>
 <p>jrnl @pinkie @WorldDomination will switch to viewing mode because although no command line arguments are given, all the input strings look like tags - jrnl will assume you want to filter by tag.</p>
 <h1 id="editing-older-entries">Editing older entries</h1>
-<p>You can edit selected entries after you wrote them. This is particularly useful when your journal file is encrypted. To use this feature, you need to have an editor configured in your journal configuration file (see advanced usage <!-- raw HTML omitted -->)</p>
+<p>You can edit selected entries after you wrote them. This is particularly useful when your journal file is encrypted. To use this feature, you need to have an editor configured in your journal configuration file (see advanced usage <advanced>)</p>
 <p>jrnl -until 1950 @texas -and @history &ndash;edit
 Will open your editor with all entries tagged with @texas and @history before 1950. You can make any changes to them you want; after you save the file and close the editor, your journal will be updated.</p>
 <p>Of course, if you are using multiple journals, you can also edit e.g. the latest entry of your work journal with jrnl work -n 1 &ndash;edit. In any case, this will bring up your editor and save (and, if applicable, encrypt) your edited journal after you save and exit the editor.</p>
@@ -430,7 +432,7 @@ You can configure the way jrnl behaves in a configuration file. By default, this
 <p>Note</p>
 <p>Backup your config file before editing. Changes to the config file have destructive effects on your journal!</p>
 <p>journals paths to your journal files
-editor if set, executes this command to launch an external editor for writing your entries, e.g. vim. Some editors require special options to work properly, see FAQ <!-- raw HTML omitted --> for details.
+editor if set, executes this command to launch an external editor for writing your entries, e.g. vim. Some editors require special options to work properly, see FAQ <recipes> for details.
 encrypt if true, encrypts your journal using AES.
 tagsymbols Symbols to be interpreted as tags. (See note below)
 default_hour and default_minute if you supply a date, such as last thursday, but no specific time, the entry will be created at this time
@@ -615,12 +617,16 @@ The Windows shell prior to Windows 7 has issues with unicode encoding. To use no
 
   
   
-  <script src="/js/grid.js"></script>
+    
+  
+  <script src="/js/grid.min.js"></script>
 
 
 
 
-<script src="/js/main.js"></script>
+  
+
+<script src="/js/main.min.js"></script>
 
     
 
@@ -630,7 +636,9 @@ The Windows shell prior to Windows 7 has issues with unicode encoding. To use no
 
 
 
-<script src="/js/toc.js"></script>
+  
+
+<script src="/js/toc.min.js"></script>
 
 
 
