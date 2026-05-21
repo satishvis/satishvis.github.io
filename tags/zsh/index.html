@@ -1,18 +1,20 @@
 <!DOCTYPE html>
-<html lang="en-us"
+<html lang="en-in"
   x-data
-  :class="$store.darkMode.class()"
+  :class="$store.darkMode.isDark() ? 'dark' : 'light'"
   :data-theme="$store.darkMode.theme()">
-  <head>
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Zsh | Satish Iyer&#39;s Tech Blog</title>
 
     
-<link href="/img/favicon.ico" rel="icon" type="image/x-icon" />
+  
+    <link href="/img/favicon.ico" rel="icon" type="image/x-icon" />
+  
 
 
-<link rel="canonical" href="https://satishvis.github.io/tags/zsh/" />
+<link rel="canonical" href="http://localhost:1313/tags/zsh/" />
 
 
 
@@ -24,11 +26,11 @@
 <meta name="generator" content="Hugo 0.161.1">
 
 
-<meta property="og:url" content="https://satishvis.github.io/tags/zsh/">
+<meta property="og:url" content="http://localhost:1313/tags/zsh/">
   <meta property="og:site_name" content="Satish Iyer&#39;s Tech Blog">
   <meta property="og:title" content="Zsh">
   <meta property="og:description" content="A dreamer...">
-  <meta property="og:locale" content="en_us">
+  <meta property="og:locale" content="en_in">
   <meta property="og:type" content="website">
 
 
@@ -41,9 +43,7 @@
 
 
 
-  
-
-<link rel="stylesheet" href="/css/output.min.css" />
+<link rel="stylesheet" href="/css/output.css" />
 
 
 
@@ -52,14 +52,26 @@
 
     
 
-    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <script>
+      window.lightTheme = 'emerald'
+      window.darkTheme = 'forest'
+
+      ;(function() {
+        const isDark = ('hugo-theme-dream-is-dark' in localStorage)
+          ? window.localStorage.getItem('hugo-theme-dream-is-dark') === 'y'
+          : window.matchMedia('(prefers-color-scheme: dark)').matches
+        const theme = isDark ? window.darkTheme : window.lightTheme
+
+        document.documentElement.setAttribute('data-theme', theme)
+      })()
+    </script>
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.15.1/dist/cdn.min.js" integrity="sha256-Rmqrc5SKeSLTSnQ9shSKWmJco1ks8c1hLI8UG2Np03M=" crossorigin="anonymous"></script>
   </head>
 
   <body x-data="{
     flip: false,
   }">
     
-    <div id="dream-global-bg"></div>
 
     
 <nav class="mt-4 lg:mt-8 py-4">
@@ -67,9 +79,9 @@
   
   <div class="container flex justify-between px-4">
   
-    <section class="flex items-center gap-4">
-      <div class="avatar cursor-pointer hover:online" @click="flip = !flip" title="Flip it!">
-        <div class="h-10 rounded-full">
+    <section class="flex items-center gap-2">
+      <div class="avatar cursor-pointer hover:avatar-online" @click="flip = !flip" title="Flip it!">
+        <div class="w-12 h-12 rounded-full select-none">
           <img src="/img/author.jpg" alt="Satish Iyer&#39;s Tech Blog" />
         </div>
       </div>
@@ -77,7 +89,7 @@
       
       <div>
         
-        <a href="https://satishvis.github.io/" class="text-lg font-semibold cursor-pointer">
+        <a href="http://localhost:1313/" class="text-lg font-semibold cursor-pointer">
           Satish Iyer&#39;s Tech Blog
         </a>
         
@@ -86,12 +98,24 @@
       
     </section>
 
+    
+    
+
     <div class="dropdown dropdown-end sm:hidden">
       <div tabindex="0" role="button" class="btn btn-ghost btn-square" aria-label="Select an option">
         <ion-icon name="menu" class="text-2xl"></ion-icon>
       </div>
-      <ul tabindex="0" class="dropdown-content menu w-36 bg-base-100 rounded-box z-[1] shadow-md">
+      <ul tabindex="0" class="dropdown-content menu w-36 bg-base-100 rounded-box z-1 shadow-md">
         
+
+
+
+
+
+
+
+
+
 
 
 
@@ -151,17 +175,23 @@
       
       
 
-      
-
-      
-      
-
 
 
 
 
       
       
+
+
+
+
+
+
+
+      
+      
+
+
 
 
 
@@ -271,10 +301,10 @@
     
 
     
-    <div class="dream-grid">
-    
-      <div class="w-full md:w-1/2 lg:w-1/3 p-4 dream-column">
-        <a class="card card-compact bg-base-100 hover:bg-base-content/10 shadow-xl cursor-pointer dark:border dark:border-base-content/30" href="/posts/make-aliases-for-hugo-posts-pages-and-github-push/">
+      <div class="dream-grid">
+        
+          <div class="w-full md:w-1/2 lg:w-1/3 p-4 dream-column">
+            <a class="card bg-base-100 hover:bg-base-content/10 shadow-xl cursor-pointer dark:border dark:border-base-content/30" href="/posts/make-aliases-for-hugo-posts-pages-and-github-push/">
   
 
   <div class="card-body">
@@ -282,18 +312,20 @@
 
     <p class="date text-base-content/60">
     
-      Wednesday, Dec 11, 2024
+      Wednesday,  11, 2024
     
     </p>
 
     <p>Certain aliases to make our hugo posts, pages and github push easier</p>
 
+    
     <div class="card-actions justify-between items-center mt-4">
-      <div class="flex items-center">
+      
+        <div class="flex items-center">
   
   <div class="avatar mr-1">
     <div class="w-8 rounded-full">
-      <img class="my-0" src="/img/author.jpg" alt="Satish Iyer" />
+      <img class="my-0!" src="/img/author.jpg" alt="Satish Iyer" />
     </div>
   </div>
   
@@ -307,6 +339,7 @@
   </span>
 </div>
 
+      
 
       <div class="flex items-center">
         <ion-icon name="time" class="mr-1"></ion-icon>
@@ -316,10 +349,10 @@
   </div>
 </a>
 
-      </div>
-    
-      <div class="w-full md:w-1/2 lg:w-1/3 p-4 dream-column">
-        <a class="card card-compact bg-base-100 hover:bg-base-content/10 shadow-xl cursor-pointer dark:border dark:border-base-content/30" href="/posts/startzshwooverheads/">
+          </div>
+        
+          <div class="w-full md:w-1/2 lg:w-1/3 p-4 dream-column">
+            <a class="card bg-base-100 hover:bg-base-content/10 shadow-xl cursor-pointer dark:border dark:border-base-content/30" href="/posts/startzshwooverheads/">
   
 
   <div class="card-body">
@@ -327,7 +360,7 @@
 
     <p class="date text-base-content/60">
     
-      Tuesday, Dec 10, 2024
+      Tuesday,  10, 2024
     
     </p>
 
@@ -336,12 +369,14 @@
 </span></span></code></pre></div><p>Explaination:
 -f is local rc and -d is global rcs</p>
 
+    
     <div class="card-actions justify-between items-center mt-4">
-      <div class="flex items-center">
+      
+        <div class="flex items-center">
   
   <div class="avatar mr-1">
     <div class="w-8 rounded-full">
-      <img class="my-0" src="/img/author.jpg" alt="Satish Iyer" />
+      <img class="my-0!" src="/img/author.jpg" alt="Satish Iyer" />
     </div>
   </div>
   
@@ -355,6 +390,7 @@
   </span>
 </div>
 
+      
 
       <div class="flex items-center">
         <ion-icon name="time" class="mr-1"></ion-icon>
@@ -364,9 +400,9 @@
   </div>
 </a>
 
+          </div>
+        
       </div>
-    
-    </div>
     
 
     
@@ -376,7 +412,7 @@
 
 
             
-<footer class="flex justify-between items-center gap-2 px-4 py-12">
+<footer class="flex flex-col md:flex-row justify-between items-center gap-4 px-4 py-12">
 
   <div>
   
@@ -398,11 +434,11 @@
 
   <div
   x-data="{ icons: [
-    { name: 'moon', status: 'y' },
     { name: 'sunny', status: 'n' },
+    { name: 'moon', status: 'y' },
     { name: 'desktop', status: 'auto' }
   ] }"
-  class="flex items-center h-[32px] px-2 gap-2 border border-base-content/30 rounded-full"
+  class="flex items-center gap-2 h-8 px-2 bg-base-100 border border-base-content/30 rounded-full"
 >
   <template x-for="icon in icons">
     <div
@@ -427,7 +463,9 @@
 
           </div>
         </div>
-        <div class="back">
+        
+        <div class="back" data-nosnippet>
+        
           <div class="container">
             
             <div class="dream-grid dream-grid-about">
@@ -441,7 +479,7 @@
             
 
             
-<footer class="flex justify-between items-center gap-2 px-4 py-12">
+<footer class="flex flex-col md:flex-row justify-between items-center gap-4 px-4 py-12">
 
   <div>
   
@@ -463,11 +501,11 @@
 
   <div
   x-data="{ icons: [
-    { name: 'moon', status: 'y' },
     { name: 'sunny', status: 'n' },
+    { name: 'moon', status: 'y' },
     { name: 'desktop', status: 'auto' }
   ] }"
-  class="flex items-center h-[32px] px-2 gap-2 border border-base-content/30 rounded-full"
+  class="flex items-center gap-2 h-8 px-2 bg-base-100 border border-base-content/30 rounded-full"
 >
   <template x-for="icon in icons">
     <div
@@ -495,27 +533,18 @@
       </div>
     </div>
 
-    <script>
-  window.lightTheme = "emerald"
-  window.darkTheme = "forest"
-</script>
-
-
+    
   <script src="https://cdn.jsdelivr.net/npm/imagesloaded@5.0.0/imagesloaded.pkgd.min.js" integrity="sha256-htrLFfZJ6v5udOG+3kNLINIKh2gvoKqwEhHYfTTMICc=" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js" integrity="sha256-Nn1q/fx0H7SNLZMQ5Hw5JLaTRZp0yILA/FRexe19VdI=" crossorigin="anonymous"></script>
 
   
   
-    
-  
-  <script src="/js/grid.min.js"></script>
+  <script src="/js/grid.js"></script>
 
 
 
 
-  
-
-<script src="/js/main.min.js"></script>
+<script src="/js/main.js"></script>
 
     
 
@@ -529,7 +558,9 @@
 
     
 
-    <script type="module" src="https://unpkg.com/ionicons@7.4.0/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule src="https://unpkg.com/ionicons@7.4.0/dist/ionicons/ionicons.js"></script>
+    
+
+    <script type="module" src="https://cdn.jsdelivr.net/npm/ionicons@7.4.0/dist/ionicons/ionicons.esm.js" integrity="sha256-/IFmi82bIhdYWctu0UddSlJqpnzWm7Vh2C4CM32wF/k=" crossorigin="anonymous"></script>
+    <script nomodule src="https://cdn.jsdelivr.net/npm/ionicons@7.4.0/dist/ionicons/ionicons.js" integrity="sha256-mr7eJMX3VC3F7G32mk4oWp1C6a2tlMYxUdptfT7uKI8=" crossorigin="anonymous"></script>
   </body>
 </html>

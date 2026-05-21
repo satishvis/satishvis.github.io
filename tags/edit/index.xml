@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Edit on Satish Iyer&#39;s Tech Blog</title>
-    <link>https://satishvis.github.io/tags/edit/</link>
+    <link>http://localhost:1313/tags/edit/</link>
     <description>Recent content in Edit on Satish Iyer&#39;s Tech Blog</description>
     <generator>Hugo</generator>
-    <language>en-us</language>
+    <language>en-in</language>
     <lastBuildDate>Tue, 19 May 2026 16:41:54 +0530</lastBuildDate>
-    <atom:link href="https://satishvis.github.io/tags/edit/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/tags/edit/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Last Edited Location in Nvim</title>
-      <link>https://satishvis.github.io/posts/last-edited-location-in-nvim/</link>
+      <link>http://localhost:1313/posts/last-edited-location-in-nvim/</link>
       <pubDate>Tue, 19 May 2026 16:41:54 +0530</pubDate>
-      <guid>https://satishvis.github.io/posts/last-edited-location-in-nvim/</guid>
+      <guid>http://localhost:1313/posts/last-edited-location-in-nvim/</guid>
       <description>&lt;p&gt;Cut out summary from your post content here.&#xA;Try g; and g,. They jump backward and forward in the changelist.&#xA;See :help changelist for more details.&lt;/p&gt;</description>
     </item>
   </channel>
