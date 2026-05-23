@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Suite on Satish Iyer&#39;s Tech Blog</title>
-    <link>http://localhost:1313/tags/suite/</link>
+    <link>https://satishvis.github.io/tags/suite/</link>
     <description>Recent content in Suite on Satish Iyer&#39;s Tech Blog</description>
     <generator>Hugo</generator>
     <language>en-in</language>
     <lastBuildDate>Fri, 22 May 2026 17:24:54 +0530</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/suite/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://satishvis.github.io/tags/suite/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Zoho</title>
-      <link>http://localhost:1313/posts/zoho/</link>
+      <link>https://satishvis.github.io/posts/zoho/</link>
       <pubDate>Fri, 22 May 2026 17:24:54 +0530</pubDate>
-      <guid>http://localhost:1313/posts/zoho/</guid>
+      <guid>https://satishvis.github.io/posts/zoho/</guid>
       <description>&lt;p&gt;&lt;a href=&#34;https://www.zoho.com/&#34; target=&#34;_blank&#34;&gt;Zoho&lt;/a&gt;&#xA; is comming up as the best productivity suite.&#xA;It is an upgrade of the Google suites that I was using till now.&#xA;The question however is will I be able to switch to it totally?&lt;/p&gt;</description>
     </item>
   </channel>
