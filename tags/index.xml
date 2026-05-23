@@ -2,101 +2,101 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on Satish Iyer&#39;s Tech Blog</title>
-    <link>https://satishvis.github.io/tags/</link>
+    <link>http://localhost:1313/tags/</link>
     <description>Recent content in Tags on Satish Iyer&#39;s Tech Blog</description>
     <generator>Hugo</generator>
     <language>en-in</language>
     <lastBuildDate>Sat, 23 May 2026 18:31:17 +0530</lastBuildDate>
-    <atom:link href="https://satishvis.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Arch</title>
-      <link>https://satishvis.github.io/tags/arch/</link>
+      <link>http://localhost:1313/tags/arch/</link>
       <pubDate>Sat, 23 May 2026 18:31:17 +0530</pubDate>
-      <guid>https://satishvis.github.io/tags/arch/</guid>
+      <guid>http://localhost:1313/tags/arch/</guid>
       <description></description>
     </item>
     <item>
       <title>KDE</title>
-      <link>https://satishvis.github.io/tags/kde/</link>
+      <link>http://localhost:1313/tags/kde/</link>
       <pubDate>Sat, 23 May 2026 18:31:17 +0530</pubDate>
-      <guid>https://satishvis.github.io/tags/kde/</guid>
+      <guid>http://localhost:1313/tags/kde/</guid>
       <description></description>
     </item>
     <item>
       <title>Mail</title>
-      <link>https://satishvis.github.io/tags/mail/</link>
+      <link>http://localhost:1313/tags/mail/</link>
       <pubDate>Fri, 22 May 2026 17:24:54 +0530</pubDate>
-      <guid>https://satishvis.github.io/tags/mail/</guid>
+      <guid>http://localhost:1313/tags/mail/</guid>
       <description></description>
     </item>
     <item>
       <title>Notes</title>
-      <link>https://satishvis.github.io/tags/notes/</link>
+      <link>http://localhost:1313/tags/notes/</link>
       <pubDate>Fri, 22 May 2026 17:24:54 +0530</pubDate>
-      <guid>https://satishvis.github.io/tags/notes/</guid>
+      <guid>http://localhost:1313/tags/notes/</guid>
       <description></description>
     </item>
     <item>
       <title>Suite</title>
-      <link>https://satishvis.github.io/tags/suite/</link>
+      <link>http://localhost:1313/tags/suite/</link>
       <pubDate>Fri, 22 May 2026 17:24:54 +0530</pubDate>
-      <guid>https://satishvis.github.io/tags/suite/</guid>
+      <guid>http://localhost:1313/tags/suite/</guid>
       <description></description>
     </item>
     <item>
       <title>Flashcard</title>
-      <link>https://satishvis.github.io/tags/flashcard/</link>
+      <link>http://localhost:1313/tags/flashcard/</link>
       <pubDate>Wed, 20 May 2026 13:29:31 +0530</pubDate>
-      <guid>https://satishvis.github.io/tags/flashcard/</guid>
+      <guid>http://localhost:1313/tags/flashcard/</guid>
       <description></description>
     </item>
     <item>
       <title>Edit</title>
-      <link>https://satishvis.github.io/tags/edit/</link>
+      <link>http://localhost:1313/tags/edit/</link>
       <pubDate>Tue, 19 May 2026 16:41:54 +0530</pubDate>
-      <guid>https://satishvis.github.io/tags/edit/</guid>
+      <guid>http://localhost:1313/tags/edit/</guid>
       <description></description>
     </item>
     <item>
       <title>Nvim</title>
-      <link>https://satishvis.github.io/tags/nvim/</link>
+      <link>http://localhost:1313/tags/nvim/</link>
       <pubDate>Tue, 19 May 2026 16:41:54 +0530</pubDate>
-      <guid>https://satishvis.github.io/tags/nvim/</guid>
+      <guid>http://localhost:1313/tags/nvim/</guid>
       <description></description>
     </item>
     <item>
       <title>Aliases</title>
-      <link>https://satishvis.github.io/tags/aliases/</link>
+      <link>http://localhost:1313/tags/aliases/</link>
       <pubDate>Wed, 11 Dec 2024 10:18:35 +0530</pubDate>
-      <guid>https://satishvis.github.io/tags/aliases/</guid>
+      <guid>http://localhost:1313/tags/aliases/</guid>
       <description></description>
     </item>
     <item>
       <title>Bash</title>
-      <link>https://satishvis.github.io/tags/bash/</link>
+      <link>http://localhost:1313/tags/bash/</link>
       <pubDate>Wed, 11 Dec 2024 10:18:35 +0530</pubDate>
-      <guid>https://satishvis.github.io/tags/bash/</guid>
+      <guid>http://localhost:1313/tags/bash/</guid>
       <description></description>
     </item>
     <item>
       <title>Shell</title>
-      <link>https://satishvis.github.io/tags/shell/</link>
+      <link>http://localhost:1313/tags/shell/</link>
       <pubDate>Wed, 11 Dec 2024 10:18:35 +0530</pubDate>
-      <guid>https://satishvis.github.io/tags/shell/</guid>
+      <guid>http://localhost:1313/tags/shell/</guid>
       <description></description>
     </item>
     <item>
       <title>Zsh</title>
-      <link>https://satishvis.github.io/tags/zsh/</link>
+      <link>http://localhost:1313/tags/zsh/</link>
       <pubDate>Wed, 11 Dec 2024 10:18:35 +0530</pubDate>
-      <guid>https://satishvis.github.io/tags/zsh/</guid>
+      <guid>http://localhost:1313/tags/zsh/</guid>
       <description></description>
     </item>
     <item>
       <title>Arch Package</title>
-      <link>https://satishvis.github.io/tags/arch-package/</link>
+      <link>http://localhost:1313/tags/arch-package/</link>
       <pubDate>Tue, 10 Dec 2024 19:48:25 +0530</pubDate>
-      <guid>https://satishvis.github.io/tags/arch-package/</guid>
+      <guid>http://localhost:1313/tags/arch-package/</guid>
       <description></description>
     </item>
   </channel>

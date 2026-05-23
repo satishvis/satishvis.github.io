@@ -2,24 +2,24 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Productivity on Satish Iyer&#39;s Tech Blog</title>
-    <link>https://satishvis.github.io/categories/productivity/</link>
+    <link>http://localhost:1313/categories/productivity/</link>
     <description>Recent content in Productivity on Satish Iyer&#39;s Tech Blog</description>
     <generator>Hugo</generator>
     <language>en-in</language>
     <lastBuildDate>Sat, 23 May 2026 18:31:17 +0530</lastBuildDate>
-    <atom:link href="https://satishvis.github.io/categories/productivity/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/categories/productivity/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Mimeopen</title>
-      <link>https://satishvis.github.io/posts/mimeopen/</link>
+      <link>http://localhost:1313/posts/mimeopen/</link>
       <pubDate>Sat, 23 May 2026 18:31:17 +0530</pubDate>
-      <guid>https://satishvis.github.io/posts/mimeopen/</guid>
+      <guid>http://localhost:1313/posts/mimeopen/</guid>
       <description>&lt;p&gt;A few years back I had learnt about &lt;strong&gt;Mimeopen&lt;/strong&gt; and other mime related stuff.&#xA;It is very powerful and works well if we understand the underlying stuff.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Zoho</title>
-      <link>https://satishvis.github.io/posts/zoho/</link>
+      <link>http://localhost:1313/posts/zoho/</link>
       <pubDate>Fri, 22 May 2026 17:24:54 +0530</pubDate>
-      <guid>https://satishvis.github.io/posts/zoho/</guid>
+      <guid>http://localhost:1313/posts/zoho/</guid>
       <description>&lt;p&gt;&lt;a href=&#34;https://www.zoho.com/&#34; target=&#34;_blank&#34;&gt;Zoho&lt;/a&gt;&#xA; is comming up as the best productivity suite.&#xA;It is an upgrade of the Google suites that I was using till now.&#xA;The question however is will I be able to switch to it totally?&lt;/p&gt;</description>
     </item>
   </channel>
