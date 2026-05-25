@@ -2,31 +2,31 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Productivity on Satish Iyer&#39;s Tech Blog</title>
-    <link>http://localhost:1313/categories/productivity/</link>
+    <link>https://satishvis.github.io/categories/productivity/</link>
     <description>Recent content in Productivity on Satish Iyer&#39;s Tech Blog</description>
     <generator>Hugo</generator>
     <language>en-in</language>
     <lastBuildDate>Mon, 25 May 2026 11:09:26 +0530</lastBuildDate>
-    <atom:link href="http://localhost:1313/categories/productivity/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://satishvis.github.io/categories/productivity/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Terminal Program to Find Disk Usage   Ncdu</title>
-      <link>http://localhost:1313/posts/terminal-program-to-find-disk-usage---ncdu/</link>
+      <link>https://satishvis.github.io/posts/terminal-program-to-find-disk-usage---ncdu/</link>
       <pubDate>Mon, 25 May 2026 11:09:26 +0530</pubDate>
-      <guid>http://localhost:1313/posts/terminal-program-to-find-disk-usage---ncdu/</guid>
+      <guid>https://satishvis.github.io/posts/terminal-program-to-find-disk-usage---ncdu/</guid>
       <description>&lt;p&gt;&lt;code&gt;ncdu&lt;/code&gt; is a beautiful @terminal ncurses program to find disk usage.If you need to check the usage of a particular folder the command is ncdu -x /home. Another option in @golang for the same functionality is &lt;code&gt;gdu&lt;/code&gt;. Faster abd more colorful.&lt;/p&gt;</description>
     </item>
     <item>
       <title>mimeopen</title>
-      <link>http://localhost:1313/posts/mimeopen/</link>
+      <link>https://satishvis.github.io/posts/mimeopen/</link>
       <pubDate>Sat, 23 May 2026 18:31:17 +0530</pubDate>
-      <guid>http://localhost:1313/posts/mimeopen/</guid>
+      <guid>https://satishvis.github.io/posts/mimeopen/</guid>
       <description>&lt;p&gt;A few years back I had learnt about &lt;strong&gt;Mimeopen&lt;/strong&gt; and other mime related stuff.&#xA;It is very powerful and works well if we understand the underlying stuff.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Zoho</title>
-      <link>http://localhost:1313/posts/zoho/</link>
+      <link>https://satishvis.github.io/posts/zoho/</link>
       <pubDate>Fri, 22 May 2026 17:24:54 +0530</pubDate>
-      <guid>http://localhost:1313/posts/zoho/</guid>
+      <guid>https://satishvis.github.io/posts/zoho/</guid>
       <description>&lt;p&gt;&lt;a href=&#34;https://www.zoho.com/&#34; target=&#34;_blank&#34;&gt;Zoho&lt;/a&gt;&#xA; is comming up as the best productivity suite.&#xA;It is an upgrade of the Google suites that I was using till now.&#xA;The question however is will I be able to switch to it totally?&lt;/p&gt;</description>
     </item>
   </channel>
