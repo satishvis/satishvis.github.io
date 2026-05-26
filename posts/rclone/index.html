@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html lang="en-in"
+  x-data
+  :class="$store.darkMode.isDark() ? 'dark' : 'light'"
+  :data-theme="$store.darkMode.theme()">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rclone | Satish Iyer&#39;s Tech Blog</title>
+
+    
+  
+    <link href="/img/favicon.ico" rel="icon" type="image/x-icon" />
+  
+
+
+<link rel="canonical" href="https://satishvis.github.io/posts/rclone/" />
+
+
+
+<meta name="author" content="Satish Iyer" />
+<meta name="description" content="rclone GDrive systemd startup mount script Rclone is a command line utility used for reading and writing to almost any type of cloud or remote storage. From Google Drive to Ceph, rclone supports almost any cloud-based remote storage platform you can think of. You can perform upload, download or synchronisation operations between local storage and remote cloud storage, or between remote storage directly.
+" />
+
+
+<meta name="keywords" content="Google_drive,Cloud Storage,Rclone">
+
+
+
+<meta name="generator" content="Hugo 0.161.1">
+
+
+<meta property="og:url" content="https://satishvis.github.io/posts/rclone/">
+  <meta property="og:site_name" content="Satish Iyer&#39;s Tech Blog">
+  <meta property="og:title" content="Rclone">
+  <meta property="og:description" content="rclone GDrive systemd startup mount script Rclone is a command line utility used for reading and writing to almost any type of cloud or remote storage. From Google Drive to Ceph, rclone supports almost any cloud-based remote storage platform you can think of. You can perform upload, download or synchronisation operations between local storage and remote cloud storage, or between remote storage directly.">
+  <meta property="og:locale" content="en_in">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2026-05-26T19:13:51+05:30">
+    <meta property="article:modified_time" content="2026-05-26T19:13:51+05:30">
+    <meta property="article:tag" content="Google_drive">
+    <meta property="article:tag" content="Cloud Storage">
+    <meta property="article:tag" content="Rclone">
+
+
+
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Rclone">
+  <meta name="twitter:description" content="rclone GDrive systemd startup mount script Rclone is a command line utility used for reading and writing to almost any type of cloud or remote storage. From Google Drive to Ceph, rclone supports almost any cloud-based remote storage platform you can think of. You can perform upload, download or synchronisation operations between local storage and remote cloud storage, or between remote storage directly.">
+
+
+
+
+  
+
+<link rel="stylesheet" href="/css/output.min.css" />
+
+
+
+
+    
+
+
+<style>
+  pre {
+    padding: 1em;
+    overflow: auto;
+  }
+</style>
+
+
+
+
+
+
+
+
+
+    
+
+    <script>
+      window.lightTheme = 'emerald'
+      window.darkTheme = 'forest'
+
+      ;(function() {
+        const isDark = ('hugo-theme-dream-is-dark' in localStorage)
+          ? window.localStorage.getItem('hugo-theme-dream-is-dark') === 'y'
+          : window.matchMedia('(prefers-color-scheme: dark)').matches
+        const theme = isDark ? window.darkTheme : window.lightTheme
+
+        document.documentElement.setAttribute('data-theme', theme)
+      })()
+    </script>
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.15.1/dist/cdn.min.js" integrity="sha256-Rmqrc5SKeSLTSnQ9shSKWmJco1ks8c1hLI8UG2Np03M=" crossorigin="anonymous"></script>
+  </head>
+
+  <body x-data="{
+    flip: false,
+  }">
+    
+
+    
+<nav class="mt-4 lg:mt-8 py-4">
+
+  
+  <div class="container flex justify-between px-4">
+  
+    <section class="flex items-center gap-2">
+      <div class="avatar cursor-pointer hover:avatar-online" @click="flip = !flip" title="Flip it!">
+        <div class="w-12 h-12 rounded-full select-none">
+          <img src="/img/author.jpg" alt="Satish Iyer&#39;s Tech Blog" />
+        </div>
+      </div>
+
+      
+      <div>
+        
+        <a href="https://satishvis.github.io/" class="text-lg font-semibold cursor-pointer">
+          Satish Iyer&#39;s Tech Blog
+        </a>
+        
+        
+      </div>
+      
+    </section>
+
+    
+    
+
+    <div class="dropdown dropdown-end sm:hidden">
+      <div tabindex="0" role="button" class="btn btn-ghost btn-square" aria-label="Select an option">
+        <ion-icon name="menu" class="text-2xl"></ion-icon>
+      </div>
+      <ul tabindex="0" class="dropdown-content menu w-36 bg-base-100 rounded-box z-1 shadow-md">
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<li>
+  <a class="inline-flex items-center p-2 cursor-pointer" href="/posts" title="Archives">
+    <ion-icon name="archive"></ion-icon>
+    Archives
+  </a>
+</li>
+
+
+
+
+<li>
+  <a class="inline-flex items-center p-2 cursor-pointer" href="/categories" title="All Categories">
+    <ion-icon name="grid"></ion-icon>
+    All Categories
+  </a>
+</li>
+
+
+
+
+<li>
+  <a class="inline-flex items-center p-2 cursor-pointer" href="/tags" title="All Tags">
+    <ion-icon name="pricetags"></ion-icon>
+    All Tags
+  </a>
+</li>
+
+
+
+
+
+
+      </ul>
+    </div>
+    <section class="hidden sm:flex sm:items-center sm:gap-2 md:gap-4">
+      
+
+      
+      
+
+
+
+
+
+      
+      
+
+
+
+
+
+
+
+      
+      
+
+
+
+
+
+
+
+      
+      
+<a class="group inline-flex items-center p-2 rounded-full cursor-pointer hover:bg-primary" href="/posts" title="Archives">
+  <ion-icon class="group-hover:text-primary-content" name="archive"></ion-icon>
+</a>
+
+
+      
+      
+<a class="group inline-flex items-center p-2 rounded-full cursor-pointer hover:bg-primary" href="/categories" title="All Categories">
+  <ion-icon class="group-hover:text-primary-content" name="grid"></ion-icon>
+</a>
+
+
+      
+      
+<a class="group inline-flex items-center p-2 rounded-full cursor-pointer hover:bg-primary" href="/tags" title="All Tags">
+  <ion-icon class="group-hover:text-primary-content" name="pricetags"></ion-icon>
+</a>
+
+
+      
+
+      
+
+      
+    </section>
+  </div>
+</nav>
+
+
+    <div class="flip-container" :class="{ 'flip-it': flip }">
+      <div class="flipper">
+        <div class="front">
+          <div class="container">
+            
+<div class="lg:grid lg:grid-cols-4 gap-4 mt-4 px-4">
+  <div class="hidden lg:block">
+    
+  </div>
+
+  <div class="lg:col-span-2">
+    <article class="mx-auto prose prose-quoteless dark:prose-invert" id="dream-single-post-main" itemscope itemtype="http://schema.org/Article">
+      
+  <meta itemprop="name" content="Rclone">
+  <meta itemprop="description" content="rclone GDrive systemd startup mount script Rclone is a command line utility used for reading and writing to almost any type of cloud or remote storage. From Google Drive to Ceph, rclone supports almost any cloud-based remote storage platform you can think of. You can perform upload, download or synchronisation operations between local storage and remote cloud storage, or between remote storage directly.">
+  <meta itemprop="datePublished" content="2026-05-26T19:13:51+05:30">
+  <meta itemprop="dateModified" content="2026-05-26T19:13:51+05:30">
+  <meta itemprop="wordCount" content="325">
+  <meta itemprop="keywords" content="Google_drive,Cloud Storage,Rclone">
+
+      <header>
+        <h1 itemprop="headline">Rclone</h1>
+        <p class="text-sm">
+          
+            Tuesday,  26, 2026
+          
+
+          | <span>2 minute read</span>
+
+          
+          | <span>Updated at
+            
+              Tuesday,  26, 2026
+            </span>
+          
+        </p>
+
+        
+        <div class="flex justify-between">
+          
+            <div class="flex items-center">
+  
+  <div class="avatar mr-1">
+    <div class="w-8 rounded-full">
+      <img class="my-0!" src="/img/author.jpg" alt="Satish Iyer" />
+    </div>
+  </div>
+  
+
+  <span itemprop="author" itemscope itemtype="https://schema.org/Person">
+  
+    
+      <a itemprop="url" href="https://satishvis.github.io" target="_blank">
+        <span itemprop="name">Satish Iyer</span>
+      </a>
+    
+  
+  </span>
+</div>
+
+          
+
+          <div class="flex items-center gap-2">
+  
+  
+
+  
+  
+  
+  
+  
+    <a class="group inline-flex items-center p-2 rounded-full cursor-pointer hover:bg-primary"
+      href="https://x.com/intent/post?text=Rclone&amp;url=https://satishvis.github.io/posts/rclone/" target="_blank" rel="noopener noreferrer"
+      title="Share on X">
+      <ion-icon class="group-hover:text-primary-content" name="logo-x"></ion-icon>
+    </a>
+  
+    <a class="group inline-flex items-center p-2 rounded-full cursor-pointer hover:bg-primary"
+      href="https://facebook.com/sharer/sharer.php?u=https://satishvis.github.io/posts/rclone/" target="_blank" rel="noopener noreferrer"
+      title="Share on Facebook">
+      <ion-icon class="group-hover:text-primary-content" name="logo-facebook"></ion-icon>
+    </a>
+  
+    <a class="group inline-flex items-center p-2 rounded-full cursor-pointer hover:bg-primary"
+      href="https://wa.me/?text=Rclone%20https://satishvis.github.io/posts/rclone/" target="_blank" rel="noopener noreferrer"
+      title="Share on WhatsApp">
+      <ion-icon class="group-hover:text-primary-content" name="logo-whatsapp"></ion-icon>
+    </a>
+  
+
+  
+  
+</div>
+
+        </div>
+      </header>
+
+      <section id="dream-single-post-content" itemprop="articleBody">
+        
+
+        <p>rclone GDrive systemd startup mount script
+Rclone is a command line utility used for reading and writing to almost any type of cloud or remote storage. From Google Drive to Ceph, rclone supports almost any cloud-based remote storage platform you can think of. You can perform upload, download or synchronisation operations between local storage and remote cloud storage, or between remote storage directly.</p>
+<p>In addition to this, rclone has an experimental mount feature that lets a user mount a remote cloud storage provider, such as s3 or Google Drive, as a local filesystem. You can then use the mounted filesystem as if it were a local device, albeit with some performance considerations.</p>
+<p>Before we get going, make sure you have rclone installed on your system and configured with a remote.</p>
+<p>curl <a href="https://rclone.org/install.sh" target="_blank">https://rclone.org/install.sh</a>
+ | sudo bash
+rclone config</p>
+<p>Once you have a remote defined, it’s time to create the mountpoint and systemd script. I’ll be using Google Drive for this example, but the mount command works for any supported remote.</p>
+<p>Create the mount point directory to use for the remote storage:</p>
+<p>mkdir /mnt/google-drive</p>
+<p>Next, create the below systemd script and edit it as required:</p>
+<p>vi /etc/systemd/system/rclone.service</p>
+<h1 id="etcsystemdsystemrcloneservice">/etc/systemd/system/rclone.service</h1>
+<p>[Unit]
+Description=Google Drive (rclone)
+AssertPathIsDirectory=/mnt/google-drive
+After=plexdrive.service</p>
+<p>[Service]
+Type=simple
+ExecStart=/usr/bin/rclone mount <br>
+&ndash;config=/root/.config/rclone/rclone.conf <br>
+&ndash;allow-other <br>
+&ndash;cache-tmp-upload-path=/tmp/rclone/upload <br>
+&ndash;cache-chunk-path=/tmp/rclone/chunks <br>
+&ndash;cache-workers=8 <br>
+&ndash;cache-writes <br>
+&ndash;cache-dir=/tmp/rclone/vfs <br>
+&ndash;cache-db-path=/tmp/rclone/db <br>
+&ndash;no-modtime <br>
+&ndash;drive-use-trash <br>
+&ndash;stats=0 <br>
+&ndash;checkers=16 <br>
+&ndash;bwlimit=40M <br>
+&ndash;dir-cache-time=60m <br>
+&ndash;cache-info-age=60m gdrive:/ /mnt/google-drive
+ExecStop=/bin/fusermount -u /mnt/google-drive
+Restart=always
+RestartSec=10</p>
+<p>[Install]
+WantedBy=default.target</p>
+<p>The important parts are detailed below, however, there are various other options are detailed on the rclone mount documentation page.</p>
+<pre><code>- –config – the path to the config file created by rclone config. This is usually located in the users home directory.
+- gdrive:/ /mnt/google-drive – details two things; firstly the config name created in rclone config, and secondly the mount point on the local filesystem to use.
+</code></pre>
+<p>Once all this is in place you’ll need to start the service and enable the service at system startup (if required)</p>
+<p>systemctl start rclone
+systemctl enable rclone</p>
+
+        
+      </section>
+
+      
+
+      
+    </article>
+  </div>
+
+  <div
+    x-data="tocHighlighter()"
+    @scroll.window="debouncedScroll"
+    class="hidden lg:flex lg:flex-col lg:items-end"
+  >
+    
+  </div>
+</div>
+
+
+            
+<footer class="flex flex-col md:flex-row justify-between items-center gap-4 px-4 py-12">
+
+  <div>
+  
+  <p>
+    © 2024 - 2026 Satish Iyer&#39;s Tech Blog
+  </p>
+  
+
+  
+  <p class="text-sm">
+    🌱
+    <span class="text-base-content/60">
+      Powered by <a class="hover:underline" href="https://gohugo.io/" target="_blank">Hugo</a> with theme
+      <a class="hover:underline" href="https://github.com/g1eny0ung/hugo-theme-dream" target="_blank">Dream</a>.</span
+    >
+  </p>
+  
+</div>
+
+  <div
+  x-data="{ icons: [
+    { name: 'sunny', status: 'n' },
+    { name: 'moon', status: 'y' },
+    { name: 'desktop', status: 'auto' }
+  ] }"
+  class="flex items-center gap-2 h-8 px-2 bg-base-100 border border-base-content/30 rounded-full"
+>
+  <template x-for="icon in icons">
+    <div
+      role="button"
+      tabindex="0"
+      :aria-label="'Select ' + icon.name + ' mode'"
+      class="group inline-flex justify-center items-center p-1 rounded-full cursor-pointer hover:bg-primary"
+      :class="$store.darkMode.icon() === icon.name && 'bg-primary'"
+      @click="$store.darkMode.toggle(icon.status)"
+    >
+      <ion-icon
+        :name="`${icon.name}-outline`"
+        class="group-hover:text-primary-content"
+        :class="$store.darkMode.icon() === icon.name && 'text-primary-content'"
+      >
+      </ion-icon>
+    </div>
+  </template>
+</div>
+
+</footer>
+
+          </div>
+        </div>
+        
+        <div class="back" data-nosnippet>
+        
+          <div class="container">
+            
+            <div class="dream-grid dream-grid-about">
+  
+
+  
+
+  
+</div>
+
+            
+
+            
+<footer class="flex flex-col md:flex-row justify-between items-center gap-4 px-4 py-12">
+
+  <div>
+  
+  <p>
+    © 2024 - 2026 Satish Iyer&#39;s Tech Blog
+  </p>
+  
+
+  
+  <p class="text-sm">
+    🌱
+    <span class="text-base-content/60">
+      Powered by <a class="hover:underline" href="https://gohugo.io/" target="_blank">Hugo</a> with theme
+      <a class="hover:underline" href="https://github.com/g1eny0ung/hugo-theme-dream" target="_blank">Dream</a>.</span
+    >
+  </p>
+  
+</div>
+
+  <div
+  x-data="{ icons: [
+    { name: 'sunny', status: 'n' },
+    { name: 'moon', status: 'y' },
+    { name: 'desktop', status: 'auto' }
+  ] }"
+  class="flex items-center gap-2 h-8 px-2 bg-base-100 border border-base-content/30 rounded-full"
+>
+  <template x-for="icon in icons">
+    <div
+      role="button"
+      tabindex="0"
+      :aria-label="'Select ' + icon.name + ' mode'"
+      class="group inline-flex justify-center items-center p-1 rounded-full cursor-pointer hover:bg-primary"
+      :class="$store.darkMode.icon() === icon.name && 'bg-primary'"
+      @click="$store.darkMode.toggle(icon.status)"
+    >
+      <ion-icon
+        :name="`${icon.name}-outline`"
+        class="group-hover:text-primary-content"
+        :class="$store.darkMode.icon() === icon.name && 'text-primary-content'"
+      >
+      </ion-icon>
+    </div>
+  </template>
+</div>
+
+</footer>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+    
+  <script src="https://cdn.jsdelivr.net/npm/imagesloaded@5.0.0/imagesloaded.pkgd.min.js" integrity="sha256-htrLFfZJ6v5udOG+3kNLINIKh2gvoKqwEhHYfTTMICc=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js" integrity="sha256-Nn1q/fx0H7SNLZMQ5Hw5JLaTRZp0yILA/FRexe19VdI=" crossorigin="anonymous"></script>
+
+  
+  
+    
+  
+  <script src="/js/grid.min.js"></script>
+
+
+
+
+  
+
+<script src="/js/main.min.js"></script>
+
+    
+
+
+
+
+
+
+
+  
+
+<script src="/js/toc.min.js"></script>
+
+
+
+
+
+
+
+    
+
+    
+
+    
+
+    
+
+    <script type="module" src="https://cdn.jsdelivr.net/npm/ionicons@7.4.0/dist/ionicons/ionicons.esm.js" integrity="sha256-/IFmi82bIhdYWctu0UddSlJqpnzWm7Vh2C4CM32wF/k=" crossorigin="anonymous"></script>
+    <script nomodule src="https://cdn.jsdelivr.net/npm/ionicons@7.4.0/dist/ionicons/ionicons.js" integrity="sha256-mr7eJMX3VC3F7G32mk4oWp1C6a2tlMYxUdptfT7uKI8=" crossorigin="anonymous"></script>
+  </body>
+</html>
