@@ -6,8 +6,15 @@
     <description>Recent content in Productivity on Satish Iyer&#39;s Tech Blog</description>
     <generator>Hugo</generator>
     <language>en-in</language>
-    <lastBuildDate>Tue, 26 May 2026 19:13:51 +0530</lastBuildDate>
+    <lastBuildDate>Wed, 27 May 2026 20:40:06 +0530</lastBuildDate>
     <atom:link href="https://satishvis.github.io/categories/productivity/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Emacs</title>
+      <link>https://satishvis.github.io/posts/emacs/</link>
+      <pubDate>Wed, 27 May 2026 20:40:06 +0530</pubDate>
+      <guid>https://satishvis.github.io/posts/emacs/</guid>
+      <description>&lt;p&gt;Emacs is a very powerful text editor.&#xA;It can be started in daemon mode to make it faster.&#xA;Then one should use the emacsclients to access this server.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Rclone</title>
       <link>https://satishvis.github.io/posts/rclone/</link>
