@@ -1,19 +1,24 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Editors on Satish Iyer&#39;s Tech Blog</title>
-    <link>https://satishvis.github.io/tags/editors/</link>
-    <description>Recent content in Editors on Satish Iyer&#39;s Tech Blog</description>
-    <generator>Hugo</generator>
-    <language>en-in</language>
-    <lastBuildDate>Wed, 27 May 2026 20:40:06 +0530</lastBuildDate>
-    <atom:link href="https://satishvis.github.io/tags/editors/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Emacs</title>
-      <link>https://satishvis.github.io/posts/emacs/</link>
-      <pubDate>Wed, 27 May 2026 20:40:06 +0530</pubDate>
-      <guid>https://satishvis.github.io/posts/emacs/</guid>
-      <description>&lt;p&gt;Emacs is a very powerful text editor.&#xA;It can be started in daemon mode to make it faster.&#xA;Then one should use the emacsclients to access this server.&lt;/p&gt;</description>
-    </item>
-  </channel>
+	<channel>
+		<title>Editors on Satish Iyer&#39;s Tech Blog</title>
+		<link>http://localhost:1313/tags/editors/</link>
+		<description>Recent content in Editors on Satish Iyer&#39;s Tech Blog</description>
+		<generator>Hugo</generator>
+		<language>en-in</language>
+		
+		
+		
+		
+			<lastBuildDate>Wed, 27 May 2026 20:40:06 +0530</lastBuildDate>
+		
+			<atom:link href="http://localhost:1313/tags/editors/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>Emacs</title>
+				<link>http://localhost:1313/posts/emacs/</link>
+				<pubDate>Wed, 27 May 2026 20:40:06 +0530</pubDate>
+				<guid>http://localhost:1313/posts/emacs/</guid>
+				<description>&lt;p&gt;Emacs is a very powerful text editor.&#xA;It can be started in daemon mode to make it faster.&#xA;Then one should use the emacsclients to access this server.&lt;/p&gt;</description>
+			</item>
+	</channel>
 </rss>

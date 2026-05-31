@@ -1,47 +1,59 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Productivity on Satish Iyer&#39;s Tech Blog</title>
-    <link>https://satishvis.github.io/categories/productivity/</link>
-    <description>Recent content in Productivity on Satish Iyer&#39;s Tech Blog</description>
-    <generator>Hugo</generator>
-    <language>en-in</language>
-    <lastBuildDate>Wed, 27 May 2026 20:40:06 +0530</lastBuildDate>
-    <atom:link href="https://satishvis.github.io/categories/productivity/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Emacs</title>
-      <link>https://satishvis.github.io/posts/emacs/</link>
-      <pubDate>Wed, 27 May 2026 20:40:06 +0530</pubDate>
-      <guid>https://satishvis.github.io/posts/emacs/</guid>
-      <description>&lt;p&gt;Emacs is a very powerful text editor.&#xA;It can be started in daemon mode to make it faster.&#xA;Then one should use the emacsclients to access this server.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Rclone</title>
-      <link>https://satishvis.github.io/posts/rclone/</link>
-      <pubDate>Tue, 26 May 2026 19:13:51 +0530</pubDate>
-      <guid>https://satishvis.github.io/posts/rclone/</guid>
-      <description>&lt;p&gt;rclone GDrive systemd startup mount script&#xA;Rclone is a command line utility used for reading and writing to almost any type of cloud or remote storage. From Google Drive to Ceph, rclone supports almost any cloud-based remote storage platform you can think of. You can perform upload, download or synchronisation operations between local storage and remote cloud storage, or between remote storage directly.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Terminal Program to Find Disk Usage   Ncdu</title>
-      <link>https://satishvis.github.io/posts/terminal-program-to-find-disk-usage---ncdu/</link>
-      <pubDate>Mon, 25 May 2026 11:09:26 +0530</pubDate>
-      <guid>https://satishvis.github.io/posts/terminal-program-to-find-disk-usage---ncdu/</guid>
-      <description>&lt;p&gt;&lt;code&gt;ncdu&lt;/code&gt; is a beautiful @terminal ncurses program to find disk usage.If you need to check the usage of a particular folder the command is ncdu -x /home. Another option in @golang for the same functionality is &lt;code&gt;gdu&lt;/code&gt;. Faster and more colorful.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>mimeopen</title>
-      <link>https://satishvis.github.io/posts/mimeopen/</link>
-      <pubDate>Sat, 23 May 2026 18:31:17 +0530</pubDate>
-      <guid>https://satishvis.github.io/posts/mimeopen/</guid>
-      <description>&lt;p&gt;A few years back I had learnt about &lt;strong&gt;Mimeopen&lt;/strong&gt; and other mime related stuff.&#xA;It is very powerful and works well if we understand the underlying stuff.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Zoho</title>
-      <link>https://satishvis.github.io/posts/zoho/</link>
-      <pubDate>Fri, 22 May 2026 17:24:54 +0530</pubDate>
-      <guid>https://satishvis.github.io/posts/zoho/</guid>
-      <description>&lt;p&gt;&lt;a href=&#34;https://www.zoho.com/&#34; target=&#34;_blank&#34;&gt;Zoho&lt;/a&gt;&#xA; is comming up as the best productivity suite.&#xA;It is an upgrade of the Google suites that I was using till now.&#xA;The question however is will I be able to switch to it totally?&lt;/p&gt;</description>
-    </item>
-  </channel>
+	<channel>
+		<title>Productivity on Satish Iyer&#39;s Tech Blog</title>
+		<link>http://localhost:1313/categories/productivity/</link>
+		<description>Recent content in Productivity on Satish Iyer&#39;s Tech Blog</description>
+		<generator>Hugo</generator>
+		<language>en-in</language>
+		
+		
+		
+		
+			<lastBuildDate>Sun, 31 May 2026 08:01:48 +0530</lastBuildDate>
+		
+			<atom:link href="http://localhost:1313/categories/productivity/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>Vimtips Wiki on Map Commands</title>
+				<link>http://localhost:1313/posts/vimtips-wiki-on-map-commands/</link>
+				<pubDate>Sun, 31 May 2026 08:01:48 +0530</pubDate>
+				<guid>http://localhost:1313/posts/vimtips-wiki-on-map-commands/</guid>
+				<description>&lt;p&gt;Copied but useful so posting it here.&#xA;No intention of copyright violation.&#xA;If something comes up, I will gladly delete this.&lt;/p&gt;&#xA;&lt;p&gt;The vimtips wiki on @map command of @vim.&#xA;This is the second part of the three part tutorial on mapping keys in Vim.&#xA;You can read the other two parts from the following pages:&#xA;Mapping keys in Vim - Tutorial (Part 1)&#xA;Mapping keys in Vim - Tutorial (Part 3)&lt;/p&gt;&#xA;&lt;p&gt;Finding unused keys&#xA;Further information: Unused keys&lt;/p&gt;&#xA;&lt;p&gt;In your private maps you should use key sequences that are not used by Vim and by other Vim plugins. :help map-which-keys&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>Emacs</title>
+				<link>http://localhost:1313/posts/emacs/</link>
+				<pubDate>Wed, 27 May 2026 20:40:06 +0530</pubDate>
+				<guid>http://localhost:1313/posts/emacs/</guid>
+				<description>&lt;p&gt;Emacs is a very powerful text editor.&#xA;It can be started in daemon mode to make it faster.&#xA;Then one should use the emacsclients to access this server.&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>Rclone</title>
+				<link>http://localhost:1313/posts/rclone/</link>
+				<pubDate>Tue, 26 May 2026 19:13:51 +0530</pubDate>
+				<guid>http://localhost:1313/posts/rclone/</guid>
+				<description>&lt;p&gt;rclone GDrive systemd startup mount script&#xA;Rclone is a command line utility used for reading and writing to almost any type of cloud or remote storage. From Google Drive to Ceph, rclone supports almost any cloud-based remote storage platform you can think of. You can perform upload, download or synchronisation operations between local storage and remote cloud storage, or between remote storage directly.&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>Terminal Program to Find Disk Usage   Ncdu</title>
+				<link>http://localhost:1313/posts/terminal-program-to-find-disk-usage---ncdu/</link>
+				<pubDate>Mon, 25 May 2026 11:09:26 +0530</pubDate>
+				<guid>http://localhost:1313/posts/terminal-program-to-find-disk-usage---ncdu/</guid>
+				<description>&lt;p&gt;&lt;code&gt;ncdu&lt;/code&gt; is a beautiful @terminal ncurses program to find disk usage.If you need to check the usage of a particular folder the command is ncdu -x /home. Another option in @golang for the same functionality is &lt;code&gt;gdu&lt;/code&gt;. Faster and more colorful.&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>mimeopen</title>
+				<link>http://localhost:1313/posts/mimeopen/</link>
+				<pubDate>Sat, 23 May 2026 18:31:17 +0530</pubDate>
+				<guid>http://localhost:1313/posts/mimeopen/</guid>
+				<description>&lt;p&gt;A few years back I had learnt about &lt;strong&gt;Mimeopen&lt;/strong&gt; and other mime related stuff.&#xA;It is very powerful and works well if we understand the underlying stuff.&lt;/p&gt;</description>
+			</item>
+			<item>
+				<title>Zoho</title>
+				<link>http://localhost:1313/posts/zoho/</link>
+				<pubDate>Fri, 22 May 2026 17:24:54 +0530</pubDate>
+				<guid>http://localhost:1313/posts/zoho/</guid>
+				<description>&lt;p&gt;&lt;a href=&#34;https://www.zoho.com/&#34; target=&#34;_blank&#34;&gt;Zoho&lt;/a&gt;&#xA; is comming up as the best productivity suite.&#xA;It is an upgrade of the Google suites that I was using till now.&#xA;The question however is will I be able to switch to it totally?&lt;/p&gt;</description>
+			</item>
+	</channel>
 </rss>

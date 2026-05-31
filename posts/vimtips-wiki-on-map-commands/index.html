@@ -1,0 +1,788 @@
+<!DOCTYPE html>
+<html lang="en-in"
+  x-data
+  :class="$store.darkMode.isDark() ? 'dark' : 'light'"
+  :data-theme="$store.darkMode.theme()">
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vimtips Wiki on Map Commands | Satish Iyer&#39;s Tech Blog</title>
+
+    
+  
+    <link href="/img/favicon.ico" rel="icon" type="image/x-icon" />
+  
+
+
+<link rel="canonical" href="http://localhost:1313/posts/vimtips-wiki-on-map-commands/" />
+
+
+
+<meta name="author" content="Satish Iyer" />
+<meta name="description" content="Copied but useful so posting it here. No intention of copyright violation. If something comes up, I will gladly delete this.
+The vimtips wiki on @map command of @vim. This is the second part of the three part tutorial on mapping keys in Vim. You can read the other two parts from the following pages: Mapping keys in Vim - Tutorial (Part 1) Mapping keys in Vim - Tutorial (Part 3)
+" />
+
+
+<meta name="keywords" content="Editor,Vim">
+
+
+
+<meta name="generator" content="Hugo 0.162.0">
+
+
+<meta property="og:url" content="http://localhost:1313/posts/vimtips-wiki-on-map-commands/">
+	<meta property="og:site_name" content="Satish Iyer&#39;s Tech Blog">
+	<meta property="og:title" content="Vimtips Wiki on Map Commands">
+	<meta property="og:description" content="Copied but useful so posting it here. No intention of copyright violation. If something comes up, I will gladly delete this.
+The vimtips wiki on @map command of @vim. This is the second part of the three part tutorial on mapping keys in Vim. You can read the other two parts from the following pages: Mapping keys in Vim - Tutorial (Part 1) Mapping keys in Vim - Tutorial (Part 3)">
+	<meta property="og:locale" content="en_in">
+	<meta property="og:type" content="article">
+		<meta property="article:section" content="posts">
+		<meta property="article:published_time" content="2026-05-31T08:01:48+05:30">
+		<meta property="article:modified_time" content="2026-05-31T08:01:48+05:30">
+		<meta property="article:tag" content="Editor">
+		<meta property="article:tag" content="Vim">
+
+
+
+
+	<meta name="twitter:card" content="summary">
+	<meta name="twitter:title" content="Vimtips Wiki on Map Commands">
+	<meta name="twitter:description" content="Copied but useful so posting it here. No intention of copyright violation. If something comes up, I will gladly delete this.
+The vimtips wiki on @map command of @vim. This is the second part of the three part tutorial on mapping keys in Vim. You can read the other two parts from the following pages: Mapping keys in Vim - Tutorial (Part 1) Mapping keys in Vim - Tutorial (Part 3)">
+
+
+
+
+<link rel="stylesheet" href="/css/output.css" />
+
+
+
+
+    
+
+
+<style>
+  pre {
+    padding: 1em;
+    overflow: auto;
+  }
+</style>
+
+
+
+
+
+
+
+
+
+    
+
+    <script>
+      window.lightTheme = 'emerald'
+      window.darkTheme = 'forest'
+
+      ;(function() {
+        const isDark = ('hugo-theme-dream-is-dark' in localStorage)
+          ? window.localStorage.getItem('hugo-theme-dream-is-dark') === 'y'
+          : window.matchMedia('(prefers-color-scheme: dark)').matches
+        const theme = isDark ? window.darkTheme : window.lightTheme
+
+        document.documentElement.setAttribute('data-theme', theme)
+      })()
+    </script>
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.15.1/dist/cdn.min.js" integrity="sha256-Rmqrc5SKeSLTSnQ9shSKWmJco1ks8c1hLI8UG2Np03M=" crossorigin="anonymous"></script>
+  </head>
+
+  <body x-data="{
+    flip: false,
+  }">
+    
+
+    
+<nav class="mt-4 lg:mt-8 py-4">
+
+  
+  <div class="container flex justify-between px-4">
+  
+    <section class="flex items-center gap-2">
+      <div class="avatar cursor-pointer hover:avatar-online" @click="flip = !flip" title="Flip it!">
+        <div class="w-12 h-12 rounded-full select-none">
+          <img src="/img/author.jpg" alt="Satish Iyer&#39;s Tech Blog" />
+        </div>
+      </div>
+
+      
+      <div>
+        
+        <a href="http://localhost:1313/" class="text-lg font-semibold cursor-pointer">
+          Satish Iyer&#39;s Tech Blog
+        </a>
+        
+        
+      </div>
+      
+    </section>
+
+    
+    
+
+    <div class="dropdown dropdown-end sm:hidden">
+      <div tabindex="0" role="button" class="btn btn-ghost btn-square" aria-label="Select an option">
+        <ion-icon name="menu" class="text-2xl"></ion-icon>
+      </div>
+      <ul tabindex="0" class="dropdown-content menu w-36 bg-base-100 rounded-box z-1 shadow-md">
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<li>
+  <a class="inline-flex items-center p-2 cursor-pointer" href="/posts" title="Archives">
+    <ion-icon name="archive"></ion-icon>
+    Archives
+  </a>
+</li>
+
+
+
+
+<li>
+  <a class="inline-flex items-center p-2 cursor-pointer" href="/categories" title="All Categories">
+    <ion-icon name="grid"></ion-icon>
+    All Categories
+  </a>
+</li>
+
+
+
+
+<li>
+  <a class="inline-flex items-center p-2 cursor-pointer" href="/tags" title="All Tags">
+    <ion-icon name="pricetags"></ion-icon>
+    All Tags
+  </a>
+</li>
+
+
+
+
+
+
+      </ul>
+    </div>
+    <section class="hidden sm:flex sm:items-center sm:gap-2 md:gap-4">
+      
+
+      
+      
+
+
+
+
+
+      
+      
+
+
+
+
+
+
+
+      
+      
+
+
+
+
+
+
+
+      
+      
+<a class="group inline-flex items-center p-2 rounded-full cursor-pointer hover:bg-primary" href="/posts" title="Archives">
+  <ion-icon class="group-hover:text-primary-content" name="archive"></ion-icon>
+</a>
+
+
+      
+      
+<a class="group inline-flex items-center p-2 rounded-full cursor-pointer hover:bg-primary" href="/categories" title="All Categories">
+  <ion-icon class="group-hover:text-primary-content" name="grid"></ion-icon>
+</a>
+
+
+      
+      
+<a class="group inline-flex items-center p-2 rounded-full cursor-pointer hover:bg-primary" href="/tags" title="All Tags">
+  <ion-icon class="group-hover:text-primary-content" name="pricetags"></ion-icon>
+</a>
+
+
+      
+
+      
+
+      
+    </section>
+  </div>
+</nav>
+
+
+    <div class="flip-container" :class="{ 'flip-it': flip }">
+      <div class="flipper">
+        <div class="front">
+          <div class="container">
+            
+<div class="lg:grid lg:grid-cols-4 gap-4 mt-4 px-4">
+  <div class="hidden lg:block">
+    
+  </div>
+
+  <div class="lg:col-span-2">
+    <article class="mx-auto prose prose-quoteless dark:prose-invert" id="dream-single-post-main" itemscope itemtype="http://schema.org/Article">
+      
+	<meta itemprop="name" content="Vimtips Wiki on Map Commands">
+	<meta itemprop="description" content="Copied but useful so posting it here. No intention of copyright violation. If something comes up, I will gladly delete this.
+The vimtips wiki on @map command of @vim. This is the second part of the three part tutorial on mapping keys in Vim. You can read the other two parts from the following pages: Mapping keys in Vim - Tutorial (Part 1) Mapping keys in Vim - Tutorial (Part 3)">
+	<meta itemprop="datePublished" content="2026-05-31T08:01:48+05:30">
+	<meta itemprop="dateModified" content="2026-05-31T08:01:48+05:30">
+	<meta itemprop="wordCount" content="4129">
+	<meta itemprop="keywords" content="Editor,Vim">
+
+      <header>
+        <h1 itemprop="headline">Vimtips Wiki on Map Commands</h1>
+        <p class="text-sm">
+          
+            Sunday,  31, 2026
+          
+
+          | <span>20 minute read</span>
+
+          
+          | <span>Updated at
+            
+              Sunday,  31, 2026
+            </span>
+          
+        </p>
+
+        
+        <div class="flex justify-between">
+          
+            <div class="flex items-center">
+  
+  <div class="avatar mr-1">
+    <div class="w-8 rounded-full">
+      <img class="my-0!" src="/img/author.jpg" alt="Satish Iyer" />
+    </div>
+  </div>
+  
+
+  <span itemprop="author" itemscope itemtype="https://schema.org/Person">
+  
+    
+      <a itemprop="url" href="https://author.site" target="_blank">
+        <span itemprop="name">Satish Iyer</span>
+      </a>
+    
+  
+  </span>
+</div>
+
+          
+
+          <div class="flex items-center gap-2">
+  
+  
+
+  
+  
+  
+  
+  
+    <a class="group inline-flex items-center p-2 rounded-full cursor-pointer hover:bg-primary"
+      href="https://x.com/intent/post?text=Vimtips%20Wiki%20on%20Map%20Commands&amp;url=http://localhost:1313/posts/vimtips-wiki-on-map-commands/" target="_blank" rel="noopener noreferrer"
+      title="Share on X">
+      <ion-icon class="group-hover:text-primary-content" name="logo-x"></ion-icon>
+    </a>
+  
+    <a class="group inline-flex items-center p-2 rounded-full cursor-pointer hover:bg-primary"
+      href="https://facebook.com/sharer/sharer.php?u=http://localhost:1313/posts/vimtips-wiki-on-map-commands/" target="_blank" rel="noopener noreferrer"
+      title="Share on Facebook">
+      <ion-icon class="group-hover:text-primary-content" name="logo-facebook"></ion-icon>
+    </a>
+  
+    <a class="group inline-flex items-center p-2 rounded-full cursor-pointer hover:bg-primary"
+      href="https://wa.me/?text=Vimtips%20Wiki%20on%20Map%20Commands%20http://localhost:1313/posts/vimtips-wiki-on-map-commands/" target="_blank" rel="noopener noreferrer"
+      title="Share on WhatsApp">
+      <ion-icon class="group-hover:text-primary-content" name="logo-whatsapp"></ion-icon>
+    </a>
+  
+
+  
+  
+</div>
+
+        </div>
+      </header>
+
+      <section id="dream-single-post-content" itemprop="articleBody">
+        
+
+        <p>Copied but useful so posting it here.
+No intention of copyright violation.
+If something comes up, I will gladly delete this.</p>
+<p>The vimtips wiki on @map command of @vim.
+This is the second part of the three part tutorial on mapping keys in Vim.
+You can read the other two parts from the following pages:
+Mapping keys in Vim - Tutorial (Part 1)
+Mapping keys in Vim - Tutorial (Part 3)</p>
+<p>Finding unused keys
+Further information: Unused keys</p>
+<p>In your private maps you should use key sequences that are not used by Vim and by other Vim plugins. :help map-which-keys</p>
+<p>Many of the key sequences that you can enter from the keyboard are used by Vim to implement the various internal commands. If you use a key sequence in your map that is already used by Vim, then you will not be able to use the functionality provided by Vim for that key sequence. To get a list of the key sequences used by Vim, read the following help topic:</p>
+<p>:help index.txt</p>
+<p>If you don&rsquo;t use some Vim functionality invoked by a particular key sequence or you have an alternate key sequence to use that functionality then you can use that key sequence in your maps.</p>
+<p>Some of the key sequences may be used by the existing Vim scripts and plugins. To display the list of keys that are currently mapped, use the following commands:</p>
+<p>:map
+:map!</p>
+<p>To determine the script or plugin that defines a map for a key sequence, use the following command.</p>
+<p>:verbose map <key></p>
+<p>In the above command, replace <key> with the desired key sequence. For example, to list all the locations where maps beginning with &ldquo;,&rdquo; are defined, use the following command:</p>
+<p>:verbose map ,</p>
+<p>Try to use an unused key sequence in your maps. Typically, the <F2>, <F3>, &hellip; etc function keys are unused. The function keys in combination with Control, Alt and Shift can also be used. But some of the key combinations may not work in all the terminal emulators. Most of the key combinations should work in GUI Vim.</p>
+<p>You can also prefix the desired key sequence with a backslash () or comma (,) or underscore (_), etc. and use that in your maps.</p>
+<p>Note that you cannot map the Shift or Alt or Ctrl keys alone as they are key modifiers. You have to combine these key modifiers with other keys to create a map.</p>
+<p>You should not use a frequently used Vim key sequence at the start of your maps. For example, you should not start your normal mode map key sequence with &ldquo;j&rdquo; or &ldquo;k&rdquo; or &ldquo;l&rdquo; or &ldquo;h&rdquo;. These keys are used for moving the cursor in normal mode. If you use any of these keys at the beginning of your maps, then you will obseve a delay when you enter a single &ldquo;j&rdquo; or &ldquo;k&rdquo; or &ldquo;l&rdquo; or &ldquo;h&rdquo;.
+Key notation
+When defining a map command, you can enter printable characters like &lsquo;a&rsquo;, &lsquo;V&rsquo;, etc. literally. You can enter non-printable control characters (like Ctrl-G, Alt-U, Ctrl-Shift-F2, F2, etc.) in several different ways.</p>
+<p>You can enter a non-printable control character in a map command by preceding it with CTRL-V. For example, to map the Ctrl-K key to display the buffer list, you can use the following map command:</p>
+<p>:map <press Ctrl-V><press Ctrl-K> :ls<press Ctrl-V><press Enter></p>
+<p>The Ctrl-V key sequence is used to escape the following control character.</p>
+<p>The following table shows the mapping between some of the keys on the keyboard and the equivalent Ctrl-key combination:</p>
+<p>Ctrl-I Tab
+Ctrl-[ Esc
+Ctrl-M Enter
+Ctrl-H Backspace</p>
+<p>If you use one of the Ctrl-key combination in the above table in a map, the map also applies to the corresponding key. Both the keys produce the same key scan code. For example, if you create a map for CTRL-I, then you can invoke the map by pressing Ctrl-I or the Tab key.</p>
+<p>On Unix like systems, the Ctrl-S and Ctrl-Q keys may be used for terminal flow control. If you map these keys in Vim, then when you invoke them, Vim will not receive these key sequences. To use these keys in Vim, you have to change the flow control characters used by the terminal using the &lsquo;stty start&rsquo; and stty stop&rsquo; commands to some other character or disable the terminal flow control using the following command:</p>
+<p>$ stty -ixon</p>
+<p>Similarly, Ctrl-Z is used to suspend Vim on Unix-like systems. To use Ctrl-Z in your maps, you can change the suspend character using the &lsquo;stty susp&rsquo; command.</p>
+<p>On MS-Windows, if the mswin.vim file is used, then CTRL-V is mapped to paste text from the clipboard. In this case, you can use CTRL-Q or CTRL+SHIFT+V instead of CTRL-V to escape control characters.</p>
+<p>To create a map for the Ctrl-v key, you have to enter it four times:</p>
+<p>:imap ^V^V^V^V EscapeCharacter</p>
+<p>In the above command to enter a single ^V, you have to press Ctrl and v. When Vim parses the above command, it replaces the ^V^V^V^V sequence with ^V^V (two Ctrl-V characters). When the map is invoked, Vim replaces the two Ctrl-V characters with a single Ctrl-V character.</p>
+<p>The Ctrl-J character represents the linefeed and is internally used by Vim to represent the Nul character. You cannot create a map for Ctrl-J by using the following command:</p>
+<p>&ldquo;The following command doesn&rsquo;t work
+:imap <press Ctrl-V><press Ctrl-j> Newlinecharacter</p>
+<p>You can also enter a control character by pressing Ctrl-V followed by the decimal or octal or hexadecimal value of the character. For example, to enter CTRL-P, you can press Ctrl-V followed by 016 (decimal) or x10 (hexadecimal) or o020.</p>
+<p>Instead of entering the control characters directly in a map command as described above, it is preferable to use symbolic key notation for the control characters for readability. Vim supports representing control characters using symbolic notation like <F1>, <C-W>, <C-S-F1>, etc.</p>
+<p>To determine the special key code representation that can be used in a map command, in insert mode, press the <CTRL-K> key followed by the key.</p>
+<p>A key with the Ctrl key modifier is represented using the <C-key> notation. For example Ctrl-R is represented using <C-R>. A key with the Shift key modifier is represented using the <S-key> notation. For example Shift-F2 is represented using <S-F2>. A key with the Alt key modifier is represented using <A-key> or <M-key> notation. You can combine one or more key modifiers. For example, to represent Ctrl+Shift+F3 you can use <C-S-F3>. Super is represented <D-key> in MacVim and <T-key> in gtk2 gvim. In gvim it doesn&rsquo;t work with all the keys.</p>
+<p>The Vim key notation for other special characters is listed below:</p>
+<p><BS> Backspace
+<Tab> Tab
+<CR> Enter
+<Enter> Enter
+<Return> Enter
+<Esc> Escape
+<Space> Space
+<Up> Up arrow
+<Down> Down arrow
+<Left> Left arrow
+<Right> Right arrow
+<F1> - <F12> Function keys 1 to 12
+#1, #2..#9,#0 Function keys F1 to F9, F10
+<Insert> Insert
+<Del> Delete
+<Home> Home
+<End> End
+<PageUp> Page-Up
+<PageDown> Page-Down
+<bar> the &lsquo;|&rsquo; character, which otherwise needs to be escaped &lsquo;|&rsquo;</p>
+<p>Note that Vim understands only those keys that are supplied by the operating system to Vim. If a particular key sequence is handled by a window manager or is intercepted by the operating system, then Vim will not see that key sequence. Then, you can not use that key sequence in Vim.</p>
+<p>To determine whether Vim receives a key sequence, in insert mode press <CTRL-V> followed by the key sequence. If you see some characters in the buffer, then Vim is receiving the entered key sequence.</p>
+<p>If the escape sequence received by Vim is not a standard sequence, you can set the sequence to the desired key. For example, let us say <PageUp> is generating a non-standard key sequence in your system. Then you can use the following command:</p>
+<p>:set <PageUp>=<type Ctrl-V><type PageUp></p>
+<p>In the above command, the first <PageUp> is inserted literally (8 characters). The argument after = is entered by pressing Ctrl-V followed by the <PageUp> key.</p>
+<p>You can also specify a character by its numeric value in a map. A character is represented by <Char-xxx>, where xxx is the value of the character in decimal or octal or hexadecimal.</p>
+<p>For example, the key CTRL-P has a value of 16 (decimal). This is represented by <Char-16> (in decimal), <Char-020> (in octal) and <Char-0x10> (in hexadecimal). You can create a map for <CTRL-P> using any one of the following commands:</p>
+<p>:nnoremap <C-P> {
+:nnoremap <Char-16> {
+:nnoremap <Char-020> {
+:nnoremap <Char-0x10> {</p>
+<p>You can also use the termcap entry for a key in the map. The termcap entries are represented using the format &lt;t_xx&gt; where &lsquo;xx&rsquo; is replaced with the key. You can get a list of termcap keys using the &ldquo;:set termcap&rdquo; command. For example, to map F8 you can use &lt;t_F8&gt;:</p>
+<p>:nnoremap &lt;t_F8&gt; :make<CR></p>
+<p>But it is preferable to use key notations instead of terminal codes for special keys.
+Maps with the same prefix
+If more than one mapped key sequence starts with the same subsequence of keys then when invoking the map you will notice a delay. For example, the &ldquo;;&rdquo; (semi-colon) command in normal mode repeats the previous f or t or F or T command. Assume that your map commands also start with &ldquo;;&rdquo;. When you press &ldquo;;&rdquo;, Vim needs to wait for you to enter sufficient number of characters to distinguish between the built-in internal command and your mapped commands.</p>
+<p>When the &rsquo;timeout&rsquo; option is set (which is the default), then Vim waits for the number of milliseconds specified in the &rsquo;timeoutlen&rsquo; option for a mapped key sequence to complete. The default setting for &rsquo;timeoutlen&rsquo; is one second.</p>
+<p>If the &rsquo;timeout&rsquo; option is reset, then Vim will not timeout for mapped key sequences. But it is better not to change the &rsquo;timeout&rsquo; option setting and leave the option in its default value. Instead, if you want more or less delay before a mapped key sequence times out, you can try increasing or decreasing the &rsquo;timeoutlen&rsquo; setting.</p>
+<p>Consider the following maps:</p>
+<p>:nnoremap ;g :echo &lsquo;First command&rsquo;<CR>
+:nnoremap ;k :echo &lsquo;Second command&rsquo;<CR></p>
+<p>When you press &lsquo;;&rsquo; to repeat the last &rsquo;t&rsquo; or &lsquo;f&rsquo; or &lsquo;T&rsquo; or &lsquo;F&rsquo; command, Vim will now wait for &rsquo;timeoutlen&rsquo; milliseconds to check whether you are going to enter &lsquo;g&rsquo; or &lsquo;k&rsquo;. If you enter any other character or don&rsquo;t enter any character for a second, then Vim will repeat the last &rsquo;t&rsquo; or &lsquo;f&rsquo; or &lsquo;T&rsquo; or &lsquo;F&rsquo; command. If you enter &lsquo;g&rsquo; or &lsquo;k&rsquo; after &lsquo;;&rsquo;, then Vim will execute the corresponding map.</p>
+<p>For the above described reason, it is better to avoid starting your mapped key sequence with a frequently used Vim command like j, k, l, etc.
+Map comments</p>
+<p>You cannot add a Vim comment in the same line as the map command. The comment will be included in the map command and executed when the key sequence is entered. For example, using the following command, when you press <F2>, Vim will try to execute the comment also as a series of key presses (resulting in error).</p>
+<p>:map <F2> :ls<CR> &quot; Map to display the list of buffers</p>
+<p>You can add the comment before the line that defines the map:</p>
+<p>&ldquo;Map to display the list of buffers
+:map <F2> :ls<CR>
+Supplying a count to a map
+To repeat a normal mode Vim command, you can specify a count before the command. For example, to move the cursor 3 lines up, you can use the &lsquo;3k&rsquo; command. If you specify a count before a mapped key sequence, the map may not be repated by the specified count.</p>
+<p>When a count is entered before invoking a map, the count will be prepended to the key sequence executed for the map. For example, assume you have mapped <F7> to move the cursor by 5 characters to the right:</p>
+<p>:nnoremap <F7> 5l</p>
+<p>If you invoke the above map with a count of 2 using 2<F7>, the cursor will not be moved 10 characters to the right. Instead, the cursor will be moved 25 characters to the right. This is because the count 2 is prepended to the 5 in the map resulting in 25.</p>
+<p>To allow repeating a map by a specified count, you have to define your map using either the &lsquo;=&rsquo; expression register, the execute command, or a Vim function.</p>
+<p>The &lsquo;=&rsquo; expression register allows you to specify an expression for the register contents. To use the expression register in your map, you have to combine that with the &lsquo;@&rsquo; operator. The &lsquo;@&rsquo; operator executes the contents of a register. If a count is specified before the &lsquo;@&rsquo; operator, then it executes the contents of a register by the specified count.</p>
+<p>For example, change the above map command to:</p>
+<p>:nnoremap <F7> @=&lsquo;5l&rsquo;<CR></p>
+<p>Now, if you use 2<F7>, the cursor will be moved 10 characters to the right.</p>
+<p>Some things to note about using the &lsquo;=&rsquo; register in your map. After specifying an expression, you have to use <CR> to end the command-line. If you want to use the escape character in the expression, you have to escape it using CTRL-V. For example, if you want to define a map to add the &lsquo;#&rsquo; character at the beginning of the current line, exit the insert mode and move the cursor one line down, you can use the following command:</p>
+<p>:nnoremap <F4> @=&lsquo;I#<C-V><Esc>j&rsquo;<CR></p>
+<p>Now if you press 3<F4>, the 3 lines starting from the current line are prefixed with the &lsquo;#&rsquo; character.</p>
+<p>In the above map, if you specify a key sequence after the contents of the expression register, then those keys will not be executed by the &lsquo;@&rsquo; operator. So the specified count doesn&rsquo;t apply to those keys. For example, in the above map, if you move the &lsquo;j&rsquo; out of the contents of the expression register:</p>
+<p>:nnoremap <F4> @=&lsquo;I#<C-V><Esc>&rsquo;<CR>j</p>
+<p>Now, if you execute &lsquo;3<F4>&rsquo;, three &lsquo;#&rsquo; characters will be added to the beginning of the current line and the cursor is moved to the following line.</p>
+<p>Another approach, which is useful when mapping to Ex commands, is to build a command string with the concatenate operator &lsquo;.&rsquo; and execute this with the &rsquo;execute&rsquo; command. Example:</p>
+<p>:nnoremap g<C-T> :<C-U>exe v:count1 . &ldquo;tag&rdquo;<CR></p>
+<p>This will map &lsquo;g<C-T>&rsquo; to &lsquo;:tag&rsquo; and &lsquo;5g<C-T>&rsquo; to &lsquo;:5tag&rsquo;.</p>
+<p>The v:count1 variable returns 1 if a count is not specified to the last normal mode command. The v:count variable returns 0 if a count is not specified to the last normal mode command/map. In the above map, <C-U> is used to erase the text on the command-line before invoking the function.</p>
+<p>A third approach to allow repeating a map is to use a Vim function to define the map. A Vim function can be defined to accept a count and repeat a operation that many number of times. You can use the &ldquo;range&rdquo; attribute to define a function that accepts a count.</p>
+<p>If you supply a count to a function that doesn&rsquo;t accept a range, then you will get the &lsquo;Invalid range&rsquo; error message. Example:</p>
+<p>function! Myfunc()
+&quot; Function that doesn&rsquo;t accept a range
+endfunction
+:nnoremap _w :call Myfunc()<CR></p>
+<p>If you specify a count to the _w command, then you will see the &lsquo;Invalid range&rsquo; error message.</p>
+<p>If you want your map to accept a range, then you have to specify the range attribute when defining the function as shown below:</p>
+<p>function! Myfunc() range
+echo &lsquo;range = &rsquo; . a:firstline . &lsquo;,&rsquo; . a:lastline
+endfunction
+:nnoremap _w :call Myfunc()<CR></p>
+<p>Now you can pass a count to the _w map. The a:firstline and a:lastline variables in the function refer to the starting line number and ending line number of the range supplied to the function. The default is the current line number.</p>
+<p>You can also use the internal v:count and v:count1 Vim variables in your function to get the count specified to the last normal mode command or map. Example:</p>
+<p>:nnoremap <C-W> :<C-U>call Myfunc()<CR>
+function! Myfunc()
+let c = v:count
+&quot; Do something count number of times
+endfunction</p>
+<p>Using multiple Ex commands in a map
+You can specify multiple Ex commands separated by &ldquo;|&rdquo; (bar) in the Ex command line (&rdquo;:&rdquo;). The &ldquo;|&rdquo; is used as the command separator. For example,</p>
+<p>:set invignorecase | set ignorecase?</p>
+<p>If you specify &ldquo;|&rdquo; in the {rhs} of a map, then Vim will treat it as a command separator and only the first command will be part of the map and the subsequent commands will be executed when defining the map. For example,</p>
+<p>:nnoremap <F9> :set invignorecase | set ignorecase?<CR></p>
+<p>In the above command, &ldquo;set ignorecase?&rdquo; will not be part of the map for <F9>.</p>
+<p>You have to escape the &ldquo;|&rdquo; by using backslash () or by using the <Bar> symbolic notation or by using CTRL-V. The following commands will work:</p>
+<p>:nnoremap <F9> :set invignorecase | set ignorecase?<CR></p>
+<p>:nnoremap <F9> :set invignorecase <Bar> set ignorecase?<CR>
+:nnoremap <F9> :set invignorecase <press Ctrl-V>| set ignorecase?<CR></p>
+<p>Some Ex commands use the command that follows them (separated by |) as part of the command itself. For example, the &ldquo;:global&rdquo; (or &ldquo;:g&rdquo;) command repeats the command that follows it for every matched pattern. In the following command,</p>
+<p>:g/foo/s/abc/xyz/g | echo &lsquo;Completed substitution&rsquo;</p>
+<p>The &ldquo;:echo&rdquo; command is repeated for every &lsquo;foo&rsquo; found in the current buffer. To execute the &ldquo;:echo&rdquo; command only once after the &ldquo;:g&rdquo; command completes, you have to use the &ldquo;:exe&rdquo; command.</p>
+<p>:exe &lsquo;g/foo/s/abc/xyz/ge&rsquo; | echo &lsquo;Completed substitution&rsquo;</p>
+<p>If your map uses one of these commands like &ldquo;:g&rdquo; then you have to use &ldquo;:exe&rdquo; in your map command.</p>
+<p>Another way to invoke multiple Ex commands from a map is to invoke them separately as shown below:</p>
+<p>:nnoremap <F9> :set invignorecase<CR>:set ignorecase?<CR></p>
+<p>Ex commands invoked from a map are not added to the command history. You can&rsquo;t recall the individual commands invoked by a map from the command-line.Using space characters in a map
+If you want to use a space character in the {lhs} of a map command, then you have to use <Space> or escape the space character with CTRL-V (need to use two CTRL-Vs). Example:</p>
+<p>nnoremap q<Space> M</p>
+<p>The above command creates a normal mode map for the key sequence &ldquo;q&rdquo; followed by the space character to move the cursor to the middle of the page.</p>
+<p>If you want to use the space character at the beginning of the {rhs} of a map command, then use <Space>. In other places in the {rhs}, you can use the space character by pressing the space bar. Example:</p>
+<p>inoremap <C-F4> <Space><Space><Space></p>
+<p>The above command creates an insert mode map for the key sequence CTRL-F4 to enter three space characters.</p>
+<p>Note that if you inadvertently use a space character at the end of the {rhs} in a map command, then the map may behave differently. For example, the following command maps the backspace character in normal mode to behave like the &lsquo;X&rsquo; command and delete the character before the cursor:</p>
+<p>nnoremap <BS> X</p>
+<p>If there is a space character after &ldquo;X&rdquo; in the above command, then the map will delete the character before the cursor but leave the cursor at the current location instead of moving it back by one position. You can locate these kinds of errors, by looking at the output of the &ldquo;:map&rdquo; command. In the &ldquo;:map&rdquo; output, the space character at the end of the {rhs} in a map will be shown as &ldquo;<Space>&quot;.Disabling key and mouse events
+You can disable key and mouse events by mapping them to the special string &ldquo;<Nop>&rdquo;. For example, to disable the <F4> key in normal mode, you can use the following command:</p>
+<p>:nmap <F4> <Nop></p>
+<p>You can use the mode specific map command to disable a key in a particular mode.</p>
+<p>The <Nop> sequence has a special meaning only if it appears by itself in the {rhs} of a map. You cannot use <Nop> with other keys in the {rhs} of a map. For example, the following command will not disable the <F1> key:</p>
+<p>:inoremap <F1> <Nop><Nop></p>
+<p>You can disable mouse buttons and mouse events by mapping them to <Nop>. For example to disable the <MiddleMouse> button, you can use the following command:</p>
+<p>:imap <MiddleMouse> <Nop>
+Error in mapped key sequences
+When executing the key sequences in a key map, if Vim encounters an error, then the map will be aborted and the remaining key sequences will not be executed. You will not see any error message indicating that this has happened. If you have the &rsquo;errorbells&rsquo; or &lsquo;visualbell&rsquo; option set, then you will see the screen flash or hear the audio beep.</p>
+<p>For example, consider the following key map that maps <F5> to toggle the case of the first letter of the current word.</p>
+<p>nmap <F5> wb~</p>
+<p>In most cases the above map will work as desired. But when the cursor is at the last word in the last line of a file, the above map will not work. In the last word of a file, the &ldquo;w&rdquo; command will fail and will not move the cursor to the next word. So the remaining part of the map will not be executed.</p>
+<p>One way to workaround this problem is to split the command into two parts and execute them using the &ldquo;:exec&rdquo; command:</p>
+<p>nmap <F5> :exec &rsquo;normal w&rsquo;<Bar>exec &rsquo;normal b~&rsquo;<CR>
+Maps and &lsquo;cpoptions&rsquo; option
+The &lsquo;cpoptions&rsquo; Vim option contains many flags that control the compatibility level of Vim with the Vi behavior. To get the current value of the &lsquo;cpoptions&rsquo; option, use the following command:</p>
+<p>:set cpoptions?</p>
+<p>When Vim is running in Vi-compatible mode, all the possible flags are set in the &lsquo;cpoptions&rsquo; option.</p>
+<p>The flags in the &lsquo;cpoptions&rsquo; Vim option affect map definitions and their usage. These flags are described below.</p>
+<p>If the flag &lsquo;b&rsquo; is present in &lsquo;cpoptions&rsquo;, then a &ldquo;|&rdquo; character in a map command is treated as the end of the map command. This means that you cannot use backslash () to escape the &ldquo;|&rdquo; character in map command definitions.</p>
+<p>Example:</p>
+<p>:nnoremap <F5> :set invhlsearch | set hlsearch?<CR></p>
+<p>If the &lsquo;b&rsquo; flag is present in &lsquo;cpoptions&rsquo;, then the above map command definition will fail. All the characters after the backslash will not be part of the map.</p>
+<p>If the flag &lsquo;B&rsquo; is present in &lsquo;cpoptions&rsquo;, then the backslash character is not treated as a special character in map commands. For example, let us say you want to create an insert-mode map for the <F6> key to insert the text &ldquo;Press <Home> to go to first character&rdquo;. For this, you can try using the following command:</p>
+<p>imap <F6> Press <Home> to go to first character</p>
+<p>When you press <F6> in the insert mode, the <Home> in the above map will cause Vim to move the cursor to the first character in the line and insert the reminder of the text there. To literally enter the text &ldquo;<Home>&rdquo;, you need to escape it:</p>
+<p>imap <F6> Press &lt;Home&gt; to go to first character</p>
+<p>If the flag &lsquo;B&rsquo; is not present in &lsquo;cpoptions&rsquo;, then the above map command will insert the correct text. If the flag &lsquo;B&rsquo; is present, then the backslash character is not treated as a special character and the above map will not insert the correct text. To treat <Home> literally independent of the &lsquo;cpoptions&rsquo; setting, you can use the following command:</p>
+<p>imap <F6> Press <lt>Home&gt; to go to first character</p>
+<p>In the above command, the notation <lt> is used for &ldquo;&lt;&rdquo; in &ldquo;<Home>&rdquo;.</p>
+<p>If the flag &lsquo;K&rsquo; is present in &lsquo;cpoptions&rsquo;, then you can cancel the invocation of a map in the middle of the key sequence by pressing <Esc>. For example, let us say you have the following map command:</p>
+<p>:nnoremap <F3><F3> :ls<CR></p>
+<p>If the flag &lsquo;K&rsquo; is present, then after entering the first <F3>, you can cancel the map by pressing <Esc>. If the flag &lsquo;K&rsquo; is not present, then if you don&rsquo;t press any key after the first <F3>, Vim will wait for &rsquo;timeoutlen&rsquo; milliseconds before cancelling the map (assuming the &rsquo;timeout&rsquo; option is set).</p>
+<p>If the flag &lsquo;k&rsquo; is present in &lsquo;cpoptions&rsquo;, then raw key codes are not recognized in map commands. You can enter raw key code in a map command by pressing Ctrl-V followed by a control key. For example, consider the following map command:</p>
+<p>nnoremap <press Ctrl-V><press Up arrow> gk</p>
+<p>The above command maps the raw key code for the up arrow key to invoke the gk command. If the &lsquo;k&rsquo; flag is not present in &lsquo;cpoptions&rsquo;, then the above command will properly work. If the &lsquo;k&rsquo; flag is present in &lsquo;cpoptions&rsquo;, then the above map command will not work.</p>
+<p>If the flag &lsquo;&lt;&rsquo; is present in &lsquo;cpoptions&rsquo;, then special keys codes like <Tab>, <C-K>, <F1>, etc. are not recognized in maps. For example, consider the following maps:</p>
+<p>:nnoremap <M-Right> <C-W>l
+:nnoremap <M-Left> <C-W>h</p>
+<p>If the &lsquo;&lt;&rsquo; flag is present in &lsquo;cpoptions&rsquo;, then the above map commands will not work as the special key codes <M-Right>, <M-Left> and <C-W> will not be recognized.Maps and &lsquo;paste&rsquo; option
+While pasting text into a Vim buffer, to disable automatic indentation and interpreting mapped key sequences in the inserted text, you can set the &lsquo;paste&rsquo; option. When the &lsquo;paste&rsquo; option is set, mapped key sequences are ignored. By default, the &lsquo;paste&rsquo; option is disabled. If your mapped keys are not working in a buffer, check whether the &lsquo;paste&rsquo; option is set.Map attributes
+You can modify the behavior of a key map by specifying several attributes in the map command. The supported attributes are <buffer>, <silent>, <special>, <script>, <expr>, and <unique>.
+You can specify one or more of these attributes in a map command immediately after the map command name.Buffer-local maps
+When you create a map, the mapped key can be used in all the Vim buffers. To create a map that is applicable only to specific buffers, use the <buffer> attribute to the map command. For example,</p>
+<p>:setlocal makeprg=gcc\ -o\ %&lt;
+:nnoremap <buffer> <F3> :make<CR></p>
+<p>The above command creates a map to compile the file opened in the current buffer. You can add the above set of commands to a filetype plugin. For example, you can add it to file ~/.vim/after/ftplugin/c.vim (Unix) or $HOME/vimfiles/after/ftplugin/c.vim (Windows)—create any missing directories or files. Now, you can compile a C file in the current buffer, by pressing the <F3> key. When you open a Java file, this command will not be available.</p>
+<p>When a buffer is deleted, the buffer local mappings for that buffer are removed. When a buffer is unloaded or hidden, you will not lose the mappings.</p>
+<p>When you remove a buffer local map, you have to specify the <buffer> attribute to the &ldquo;:unmap&rdquo; or &ldquo;:mapclear&rdquo; command. Without the <buffer> attribute you cannot remove the map.</p>
+<p>To display all the buffer-local mappings for the current buffer, use the following commands:</p>
+<p>:map <buffer>
+:map! <buffer></p>
+<p>To display the mode specific buffer-local maps, use the map command for that mode in the above command.
+Silent maps</p>
+<p>When a map is invoked, the sequence of keys executed is displayed on the screen. If an Ex command is invoked by the map, then you can see the Ex command at the Vim status line. To silently execute a map, use the <silent> attribute for the map. For example,</p>
+<p>:nnoremap <silent> <F2> :lchdir %:p:h<CR>:pwd<CR></p>
+<p>The above command maps the <F2> key to change to the directory of the current file and then display the current directory. When you invoke the above command, due to the <silent> attribute, you will not see the commands that are executed.</p>
+<p>If the commands invoked by the map display a message, then those messages will be visible even though <silent> attribute is specified for the map command. For example, in the above command, the current directory displayed by the &ldquo;:pwd&rdquo; command will be visible.Expression maps
+For simple maps, the action to be carried out for a key sequence can be defined without using a Vim function. But for complex maps, it is simpler to use a Vim function to implement the action for the map.</p>
+<p>You can use the <expr> attribute to a map command to invoke a Vim function and use the returned value as the key sequence to execute.</p>
+<p>For example, the following code creates a normal mode map to change to the directory of the current buffer.
+function! ChangeToLocalDir()
+lchdir %:p:h
+return &rsquo;&rsquo;
+endfunction
+nnoremap <expr> _c ChangeToLocalDir()</p>
+<p>In this example, the function returns an empty string so the map takes no action other than executing the function.</p>
+<p>The <expr> attribute can be used with all the mode specific map commands.</p>
+<p>Special characters in maps
+To use non-printable characters using the &lt;&gt; notation like <F5> in a map command, the &lsquo;&lt;&rsquo; flag should not be present in the &lsquo;cpoptions&rsquo; option. For example, the following map command will not work:</p>
+<p>:set cpo+=&lt;
+:inoremap <F7> <C-X><C-N></p>
+<p>In insert mode, if you press <F7>, instead of executing the map, the characters <F7> will be inserted. To prevent this, you can use the <special> map attribute:</p>
+<p>:inoremap <special> <F7> <C-X><C-N></p>
+<p>With the <special> map attribute, independent of the &lsquo;cpoptions&rsquo; option setting, Vim will correctly process the &lt;&gt; key codes in the {rhs} of a map command.</p>
+<p>To read the third part of this tutorial, visit the Mapping keys in Vim - Tutorial (Part_3) page.</p>
+<p>[2019-06-22 01:36:00 PM] @vim save all key maps to fileTo redirect/save the output of 🗺
+:redir &raquo; ~/mymaps.txt
+:map
+:redir END</p>
+
+        
+      </section>
+
+      
+
+      
+    </article>
+  </div>
+
+  <div
+    x-data="tocHighlighter()"
+    @scroll.window="debouncedScroll"
+    class="hidden lg:flex lg:flex-col lg:items-end"
+  >
+    
+  </div>
+</div>
+
+
+            
+<footer class="flex flex-col md:flex-row justify-between items-center gap-4 px-4 py-12">
+
+  <div>
+  
+  <p>
+    © 2024 - 2026 Satish Iyer&#39;s Tech Blog
+  </p>
+  
+
+  
+  <p class="text-sm">
+    🌱
+    <span class="text-base-content/60">
+      Powered by <a class="hover:underline" href="https://gohugo.io/" target="_blank">Hugo</a> with theme
+      <a class="hover:underline" href="https://github.com/g1eny0ung/hugo-theme-dream" target="_blank">Dream</a>.</span
+    >
+  </p>
+  
+</div>
+
+  <div
+  x-data="{ icons: [
+    { name: 'sunny', status: 'n' },
+    { name: 'moon', status: 'y' },
+    { name: 'desktop', status: 'auto' }
+  ] }"
+  class="flex items-center gap-2 h-8 px-2 bg-base-100 border border-base-content/30 rounded-full"
+>
+  <template x-for="icon in icons">
+    <div
+      role="button"
+      tabindex="0"
+      :aria-label="'Select ' + icon.name + ' mode'"
+      class="group inline-flex justify-center items-center p-1 rounded-full cursor-pointer hover:bg-primary"
+      :class="$store.darkMode.icon() === icon.name && 'bg-primary'"
+      @click="$store.darkMode.toggle(icon.status)"
+    >
+      <ion-icon
+        :name="`${icon.name}-outline`"
+        class="group-hover:text-primary-content"
+        :class="$store.darkMode.icon() === icon.name && 'text-primary-content'"
+      >
+      </ion-icon>
+    </div>
+  </template>
+</div>
+
+</footer>
+
+          </div>
+        </div>
+        
+        <div class="back" data-nosnippet>
+        
+          <div class="container">
+            
+            <div class="dream-grid dream-grid-about">
+  
+
+  
+
+  
+</div>
+
+            
+
+            
+<footer class="flex flex-col md:flex-row justify-between items-center gap-4 px-4 py-12">
+
+  <div>
+  
+  <p>
+    © 2024 - 2026 Satish Iyer&#39;s Tech Blog
+  </p>
+  
+
+  
+  <p class="text-sm">
+    🌱
+    <span class="text-base-content/60">
+      Powered by <a class="hover:underline" href="https://gohugo.io/" target="_blank">Hugo</a> with theme
+      <a class="hover:underline" href="https://github.com/g1eny0ung/hugo-theme-dream" target="_blank">Dream</a>.</span
+    >
+  </p>
+  
+</div>
+
+  <div
+  x-data="{ icons: [
+    { name: 'sunny', status: 'n' },
+    { name: 'moon', status: 'y' },
+    { name: 'desktop', status: 'auto' }
+  ] }"
+  class="flex items-center gap-2 h-8 px-2 bg-base-100 border border-base-content/30 rounded-full"
+>
+  <template x-for="icon in icons">
+    <div
+      role="button"
+      tabindex="0"
+      :aria-label="'Select ' + icon.name + ' mode'"
+      class="group inline-flex justify-center items-center p-1 rounded-full cursor-pointer hover:bg-primary"
+      :class="$store.darkMode.icon() === icon.name && 'bg-primary'"
+      @click="$store.darkMode.toggle(icon.status)"
+    >
+      <ion-icon
+        :name="`${icon.name}-outline`"
+        class="group-hover:text-primary-content"
+        :class="$store.darkMode.icon() === icon.name && 'text-primary-content'"
+      >
+      </ion-icon>
+    </div>
+  </template>
+</div>
+
+</footer>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+    
+  <script src="https://cdn.jsdelivr.net/npm/imagesloaded@5.0.0/imagesloaded.pkgd.min.js" integrity="sha256-htrLFfZJ6v5udOG+3kNLINIKh2gvoKqwEhHYfTTMICc=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js" integrity="sha256-Nn1q/fx0H7SNLZMQ5Hw5JLaTRZp0yILA/FRexe19VdI=" crossorigin="anonymous"></script>
+
+  
+  
+  <script src="/js/grid.js"></script>
+
+
+
+
+<script src="/js/main.js"></script>
+
+    
+
+
+
+
+
+
+
+<script src="/js/toc.js"></script>
+
+
+
+
+
+
+
+    
+
+    
+
+    
+
+    
+
+    <script type="module" src="https://cdn.jsdelivr.net/npm/ionicons@7.4.0/dist/ionicons/ionicons.esm.js" integrity="sha256-/IFmi82bIhdYWctu0UddSlJqpnzWm7Vh2C4CM32wF/k=" crossorigin="anonymous"></script>
+    <script nomodule src="https://cdn.jsdelivr.net/npm/ionicons@7.4.0/dist/ionicons/ionicons.js" integrity="sha256-mr7eJMX3VC3F7G32mk4oWp1C6a2tlMYxUdptfT7uKI8=" crossorigin="anonymous"></script>
+  </body>
+</html>

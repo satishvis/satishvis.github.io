@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
 	<channel>
-		<title>Editor on Satish Iyer&#39;s Tech Blog</title>
-		<link>http://localhost:1313/tags/editor/</link>
-		<description>Recent content in Editor on Satish Iyer&#39;s Tech Blog</description>
+		<title>Vim on Satish Iyer&#39;s Tech Blog</title>
+		<link>http://localhost:1313/tags/vim/</link>
+		<description>Recent content in Vim on Satish Iyer&#39;s Tech Blog</description>
 		<generator>Hugo</generator>
 		<language>en-in</language>
 		
@@ -12,20 +12,13 @@
 		
 			<lastBuildDate>Sun, 31 May 2026 08:01:48 +0530</lastBuildDate>
 		
-			<atom:link href="http://localhost:1313/tags/editor/index.xml" rel="self" type="application/rss+xml" />
+			<atom:link href="http://localhost:1313/tags/vim/index.xml" rel="self" type="application/rss+xml" />
 			<item>
 				<title>Vimtips Wiki on Map Commands</title>
 				<link>http://localhost:1313/posts/vimtips-wiki-on-map-commands/</link>
 				<pubDate>Sun, 31 May 2026 08:01:48 +0530</pubDate>
 				<guid>http://localhost:1313/posts/vimtips-wiki-on-map-commands/</guid>
 				<description>&lt;p&gt;Copied but useful so posting it here.&#xA;No intention of copyright violation.&#xA;If something comes up, I will gladly delete this.&lt;/p&gt;&#xA;&lt;p&gt;The vimtips wiki on @map command of @vim.&#xA;This is the second part of the three part tutorial on mapping keys in Vim.&#xA;You can read the other two parts from the following pages:&#xA;Mapping keys in Vim - Tutorial (Part 1)&#xA;Mapping keys in Vim - Tutorial (Part 3)&lt;/p&gt;&#xA;&lt;p&gt;Finding unused keys&#xA;Further information: Unused keys&lt;/p&gt;&#xA;&lt;p&gt;In your private maps you should use key sequences that are not used by Vim and by other Vim plugins. :help map-which-keys&lt;/p&gt;</description>
-			</item>
-			<item>
-				<title>Vim Startup Time Cost</title>
-				<link>http://localhost:1313/posts/vim-startup-time-cost/</link>
-				<pubDate>Fri, 29 May 2026 14:21:54 +0530</pubDate>
-				<guid>http://localhost:1313/posts/vim-startup-time-cost/</guid>
-				<description>&lt;p&gt;Check startup time cost of @vim:&#xA;vim &amp;ndash;startuptime timecost.txt&lt;/p&gt;</description>
 			</item>
 	</channel>
 </rss>
