@@ -10,9 +10,16 @@
 		
 		
 		
-			<lastBuildDate>Mon, 25 May 2026 11:09:26 +0530</lastBuildDate>
+			<lastBuildDate>Mon, 01 Jun 2026 14:52:35 +0530</lastBuildDate>
 		
 			<atom:link href="http://localhost:1313/tags/linux/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>Nnn File Manager Shortcuts</title>
+				<link>http://localhost:1313/posts/nnn-file-manager-shortcuts/</link>
+				<pubDate>Mon, 01 Jun 2026 14:52:35 +0530</pubDate>
+				<guid>http://localhost:1313/posts/nnn-file-manager-shortcuts/</guid>
+				<description>&lt;p&gt;The nnn command line file manager in linux program shortcuts&lt;/p&gt;</description>
+			</item>
 			<item>
 				<title>Terminal Program to Find Disk Usage   Ncdu</title>
 				<link>http://localhost:1313/posts/terminal-program-to-find-disk-usage---ncdu/</link>

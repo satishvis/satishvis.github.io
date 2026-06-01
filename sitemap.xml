@@ -4,21 +4,30 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>http://localhost:1313/categories/</loc>
-    <lastmod>2026-05-31T08:01:48+05:30</lastmod>
+    <lastmod>2026-06-01T14:52:35+05:30</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/editor/</loc>
-    <lastmod>2026-05-31T08:01:48+05:30</lastmod>
+    <loc>http://localhost:1313/tags/file-manager/</loc>
+    <lastmod>2026-06-01T14:52:35+05:30</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/linux/</loc>
+    <lastmod>2026-06-01T14:52:35+05:30</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/posts/nnn-file-manager-shortcuts/</loc>
+    <lastmod>2026-06-01T14:52:35+05:30</lastmod>
   </url><url>
     <loc>http://localhost:1313/posts/</loc>
-    <lastmod>2026-05-31T08:01:48+05:30</lastmod>
+    <lastmod>2026-06-01T14:52:35+05:30</lastmod>
   </url><url>
     <loc>http://localhost:1313/categories/productivity/</loc>
-    <lastmod>2026-05-31T08:01:48+05:30</lastmod>
+    <lastmod>2026-06-01T14:52:35+05:30</lastmod>
   </url><url>
     <loc>http://localhost:1313/</loc>
-    <lastmod>2026-05-31T08:01:48+05:30</lastmod>
+    <lastmod>2026-06-01T14:52:35+05:30</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/</loc>
+    <lastmod>2026-06-01T14:52:35+05:30</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/editor/</loc>
     <lastmod>2026-05-31T08:01:48+05:30</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/vim/</loc>
@@ -53,9 +62,6 @@
   </url><url>
     <loc>http://localhost:1313/tags/rclone/</loc>
     <lastmod>2026-05-26T19:13:51+05:30</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/linux/</loc>
-    <lastmod>2026-05-25T11:09:26+05:30</lastmod>
   </url><url>
     <loc>http://localhost:1313/posts/terminal-program-to-find-disk-usage---ncdu/</loc>
     <lastmod>2026-05-25T11:09:26+05:30</lastmod>
