@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
 	<channel>
 		<title>File Manager on Satish Iyer&#39;s Tech Blog</title>
-		<link>http://localhost:1313/tags/file-manager/</link>
+		<link>https://satishvis.github.io/tags/file-manager/</link>
 		<description>Recent content in File Manager on Satish Iyer&#39;s Tech Blog</description>
 		<generator>Hugo</generator>
 		<language>en-in</language>
@@ -12,12 +12,12 @@
 		
 			<lastBuildDate>Mon, 01 Jun 2026 14:52:35 +0530</lastBuildDate>
 		
-			<atom:link href="http://localhost:1313/tags/file-manager/index.xml" rel="self" type="application/rss+xml" />
+			<atom:link href="https://satishvis.github.io/tags/file-manager/index.xml" rel="self" type="application/rss+xml" />
 			<item>
 				<title>Nnn File Manager Shortcuts</title>
-				<link>http://localhost:1313/posts/nnn-file-manager-shortcuts/</link>
+				<link>https://satishvis.github.io/posts/nnn-file-manager-shortcuts/</link>
 				<pubDate>Mon, 01 Jun 2026 14:52:35 +0530</pubDate>
-				<guid>http://localhost:1313/posts/nnn-file-manager-shortcuts/</guid>
+				<guid>https://satishvis.github.io/posts/nnn-file-manager-shortcuts/</guid>
 				<description>&lt;p&gt;The nnn command line file manager in linux program shortcuts&lt;/p&gt;</description>
 			</item>
 	</channel>

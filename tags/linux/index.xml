@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
 	<channel>
 		<title>Linux on Satish Iyer&#39;s Tech Blog</title>
-		<link>http://localhost:1313/tags/linux/</link>
+		<link>https://satishvis.github.io/tags/linux/</link>
 		<description>Recent content in Linux on Satish Iyer&#39;s Tech Blog</description>
 		<generator>Hugo</generator>
 		<language>en-in</language>
@@ -12,19 +12,19 @@
 		
 			<lastBuildDate>Mon, 01 Jun 2026 14:52:35 +0530</lastBuildDate>
 		
-			<atom:link href="http://localhost:1313/tags/linux/index.xml" rel="self" type="application/rss+xml" />
+			<atom:link href="https://satishvis.github.io/tags/linux/index.xml" rel="self" type="application/rss+xml" />
 			<item>
 				<title>Nnn File Manager Shortcuts</title>
-				<link>http://localhost:1313/posts/nnn-file-manager-shortcuts/</link>
+				<link>https://satishvis.github.io/posts/nnn-file-manager-shortcuts/</link>
 				<pubDate>Mon, 01 Jun 2026 14:52:35 +0530</pubDate>
-				<guid>http://localhost:1313/posts/nnn-file-manager-shortcuts/</guid>
+				<guid>https://satishvis.github.io/posts/nnn-file-manager-shortcuts/</guid>
 				<description>&lt;p&gt;The nnn command line file manager in linux program shortcuts&lt;/p&gt;</description>
 			</item>
 			<item>
 				<title>Terminal Program to Find Disk Usage   Ncdu</title>
-				<link>http://localhost:1313/posts/terminal-program-to-find-disk-usage---ncdu/</link>
+				<link>https://satishvis.github.io/posts/terminal-program-to-find-disk-usage---ncdu/</link>
 				<pubDate>Mon, 25 May 2026 11:09:26 +0530</pubDate>
-				<guid>http://localhost:1313/posts/terminal-program-to-find-disk-usage---ncdu/</guid>
+				<guid>https://satishvis.github.io/posts/terminal-program-to-find-disk-usage---ncdu/</guid>
 				<description>&lt;p&gt;&lt;code&gt;ncdu&lt;/code&gt; is a beautiful @terminal ncurses program to find disk usage.If you need to check the usage of a particular folder the command is ncdu -x /home. Another option in @golang for the same functionality is &lt;code&gt;gdu&lt;/code&gt;. Faster and more colorful.&lt;/p&gt;</description>
 			</item>
 	</channel>
