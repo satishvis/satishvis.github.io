@@ -18,7 +18,7 @@
 				<link>https://satishvis.github.io/posts/desk-cli-app/</link>
 				<pubDate>Mon, 08 Jun 2026 08:44:54 +0530</pubDate>
 				<guid>https://satishvis.github.io/posts/desk-cli-app/</guid>
-				<description>&lt;p&gt;Overview of the @desk cli environment.&lt;/p&gt;&#xA;&lt;p&gt;Start with &lt;code&gt;desk init&lt;/code&gt; to create the ~/.desk folder where all desks are&#xA;stored&lt;/p&gt;&#xA;&lt;p&gt;&lt;code&gt;desk ls&lt;/code&gt; to list all desks available. One per project.&lt;/p&gt;&#xA;&lt;p&gt;Use &lt;code&gt;desk edit &amp;lt;name&amp;gt;&lt;/code&gt; to edit the sh file&lt;/p&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;/home/satish/.desk/desks&#xA;├── book.sh&#xA;├── hugo.sh&#xA;└── letters.sh&#xA;&lt;/code&gt;&lt;/pre&gt;</description>
+				<description>&lt;p&gt;Overview of the @desk cli environment.&lt;/p&gt;&#xA;&lt;p&gt;Start with &lt;code&gt;desk init&lt;/code&gt; to create the ~/.desk folder where all desks are&#xA;stored&lt;/p&gt;&#xA;&lt;p&gt;&lt;code&gt;desk ls&lt;/code&gt; to list all desks available. One per project.&lt;/p&gt;</description>
 			</item>
 			<item>
 				<title>Nnn File Manager Shortcuts</title>
