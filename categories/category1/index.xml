@@ -18,7 +18,7 @@
 				<link>https://satishvis.github.io/posts/gitea-npm-and-ssh/</link>
 				<pubDate>Sun, 28 Jun 2026 09:05:11 +0530</pubDate>
 				<guid>https://satishvis.github.io/posts/gitea-npm-and-ssh/</guid>
-				<description>&lt;p&gt;In a Proxmox Server with uses pihole as aDNS sinkhole combined with Nginx Proxy Manager as the Reverse Proxy, it is possible to get clean, secure domain names if we have a custom domain name e.g. &amp;lt;plex.yourdomain.com&amp;gt;.&lt;/p&gt;&#xA;&lt;p&gt;But in such a scenario getting native Gitea app to host your private git repositories would pose an unique challenge, since Gitea hijacks the SSH port 22 for its purpose and Gitea does not allow ssh access to its underlying file systems.&lt;/p&gt;</description>
+				<description>&lt;p&gt;In a Proxmox Server with uses pihole as a DNS sinkhole combined with Nginx Proxy Manager as the Reverse Proxy, it is possible to get clean, secure domain names if we have a custom domain name e.g. &amp;lt;plex.yourdomain.com&amp;gt;.&lt;/p&gt;&#xA;&lt;p&gt;But in such a scenario getting native Gitea app to host your private git repositories would pose an unique challenge, since Gitea hijacks the SSH port 22 for its purpose and Gitea does not allow ssh access to its underlying file systems.&lt;/p&gt;</description>
 			</item>
 	</channel>
 </rss>
