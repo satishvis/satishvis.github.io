@@ -369,7 +369,7 @@ But in such a scenario getting native Gitea app to host your private git reposit
 <p>One more problem remains. When we need to log into the server we need to remember to pass the ssh port <code>-p 2222</code> else we will not be able to log in.</p>
 <p>For this we need to update the config in the .ssh directory of the host to enable us to use the ports there, so as to automatically use that port</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span> <span style="color:#75715e"># NPM</span>
-</span></span><span style="display:flex;"><span>  Host 192.168.31.201
+</span></span><span style="display:flex;"><span>  Host &lt;192.168.xxx.xxx&gt; 
 </span></span><span style="display:flex;"><span>     AddKeysToAgent yes
 </span></span><span style="display:flex;"><span>     IdentitiesOnly yes
 </span></span><span style="display:flex;"><span>     Port <span style="color:#ae81ff">2222</span>
