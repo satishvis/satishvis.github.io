@@ -2,10 +2,31 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://satishvis.github.io/tags/bash/</loc>
-    <lastmod>2026-06-08T08:44:54+05:30</lastmod>
-  </url><url>
     <loc>https://satishvis.github.io/categories/</loc>
+    <lastmod>2026-06-28T09:05:11+05:30</lastmod>
+  </url><url>
+    <loc>https://satishvis.github.io/categories/category1/</loc>
+    <lastmod>2026-06-28T09:05:11+05:30</lastmod>
+  </url><url>
+    <loc>https://satishvis.github.io/posts/gitea-npm-and-ssh/</loc>
+    <lastmod>2026-06-28T09:05:11+05:30</lastmod>
+  </url><url>
+    <loc>https://satishvis.github.io/posts/</loc>
+    <lastmod>2026-06-28T09:05:11+05:30</lastmod>
+  </url><url>
+    <loc>https://satishvis.github.io/</loc>
+    <lastmod>2026-06-28T09:05:11+05:30</lastmod>
+  </url><url>
+    <loc>https://satishvis.github.io/tags/tag1/</loc>
+    <lastmod>2026-06-28T09:05:11+05:30</lastmod>
+  </url><url>
+    <loc>https://satishvis.github.io/tags/tag2/</loc>
+    <lastmod>2026-06-28T09:05:11+05:30</lastmod>
+  </url><url>
+    <loc>https://satishvis.github.io/tags/</loc>
+    <lastmod>2026-06-28T09:05:11+05:30</lastmod>
+  </url><url>
+    <loc>https://satishvis.github.io/tags/bash/</loc>
     <lastmod>2026-06-08T08:44:54+05:30</lastmod>
   </url><url>
     <loc>https://satishvis.github.io/tags/cli/</loc>
@@ -14,19 +35,10 @@
     <loc>https://satishvis.github.io/posts/desk-cli-app/</loc>
     <lastmod>2026-06-08T08:44:54+05:30</lastmod>
   </url><url>
-    <loc>https://satishvis.github.io/posts/</loc>
-    <lastmod>2026-06-08T08:44:54+05:30</lastmod>
-  </url><url>
     <loc>https://satishvis.github.io/categories/productivity/</loc>
     <lastmod>2026-06-08T08:44:54+05:30</lastmod>
   </url><url>
-    <loc>https://satishvis.github.io/</loc>
-    <lastmod>2026-06-08T08:44:54+05:30</lastmod>
-  </url><url>
     <loc>https://satishvis.github.io/tags/shell/</loc>
-    <lastmod>2026-06-08T08:44:54+05:30</lastmod>
-  </url><url>
-    <loc>https://satishvis.github.io/tags/</loc>
     <lastmod>2026-06-08T08:44:54+05:30</lastmod>
   </url><url>
     <loc>https://satishvis.github.io/tags/file-manager/</loc>

@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
 	<channel>
 		<title>Tag2 on Satish Iyer&#39;s Tech Blog</title>
-		<link>http://localhost:1313/tags/tag2/</link>
+		<link>https://satishvis.github.io/tags/tag2/</link>
 		<description>Recent content in Tag2 on Satish Iyer&#39;s Tech Blog</description>
 		<generator>Hugo</generator>
 		<language>en-in</language>
@@ -12,12 +12,12 @@
 		
 			<lastBuildDate>Sun, 28 Jun 2026 09:05:11 +0530</lastBuildDate>
 		
-			<atom:link href="http://localhost:1313/tags/tag2/index.xml" rel="self" type="application/rss+xml" />
+			<atom:link href="https://satishvis.github.io/tags/tag2/index.xml" rel="self" type="application/rss+xml" />
 			<item>
 				<title>Gitea NPM and SSH</title>
-				<link>http://localhost:1313/posts/gitea-npm-and-ssh/</link>
+				<link>https://satishvis.github.io/posts/gitea-npm-and-ssh/</link>
 				<pubDate>Sun, 28 Jun 2026 09:05:11 +0530</pubDate>
-				<guid>http://localhost:1313/posts/gitea-npm-and-ssh/</guid>
+				<guid>https://satishvis.github.io/posts/gitea-npm-and-ssh/</guid>
 				<description>&lt;p&gt;In a Proxmox Server with uses pihole as aDNS sinkhole combined with Nginx Proxy Manager as the Reverse Proxy, it is possible to get clean, secure domain names if we have a custom domain name e.g. &amp;lt;plex.yourdomain.com&amp;gt;.&lt;/p&gt;&#xA;&lt;p&gt;But in such a scenario getting native Gitea app to host your private git repositories would pose an unique challenge, since Gitea hijacks the SSH port 22 for its purpose and Gitea does not allow ssh access to its underlying file systems.&lt;/p&gt;</description>
 			</item>
 	</channel>

@@ -10,9 +10,16 @@
 		
 		
 		
-			<lastBuildDate>Mon, 08 Jun 2026 08:44:54 +0530</lastBuildDate>
+			<lastBuildDate>Sun, 28 Jun 2026 09:05:11 +0530</lastBuildDate>
 		
 			<atom:link href="https://satishvis.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
+			<item>
+				<title>Category1</title>
+				<link>https://satishvis.github.io/categories/category1/</link>
+				<pubDate>Sun, 28 Jun 2026 09:05:11 +0530</pubDate>
+				<guid>https://satishvis.github.io/categories/category1/</guid>
+				<description></description>
+			</item>
 			<item>
 				<title>Productivity</title>
 				<link>https://satishvis.github.io/categories/productivity/</link>
